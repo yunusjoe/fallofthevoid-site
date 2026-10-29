@@ -40,6 +40,7 @@ async function initApp() {
         }
 
         setupEventListeners();
+        setupMediaEvents();
         renderInterface();
     } catch (error) {
         console.error('Uygulama başlatılırken bir hata oluştu:', error);
@@ -107,6 +108,7 @@ function renderInterface() {
     updateLanguageButton();
     renderStaticI18nTexts();
     renderSiteMetadata();
+    renderMedia();
     renderClasses();
     renderPatches();
     renderSocialLinks();
@@ -140,7 +142,7 @@ function renderSiteMetadata() {
     if (!siteData) return;
 
     const siteLogo = document.getElementById('site-logo');
-    if (siteLogo) siteLogo.textContent = siteData.gameTitle;
+    if (siteLogo) document.getElementById('brand-title').textContent = siteData.gameTitle;
 
     const heroGameTitle = document.getElementById('hero-game-title');
     if (heroGameTitle) heroGameTitle.textContent = siteData.gameTitle;
@@ -498,4 +500,87 @@ function clearElement(element) {
     while (element.firstChild) {
         element.removeChild(element.firstChild);
     }
+}
+
+
+// Oynanış medyası site.json üzerinden yönetilir; açıklamalar güvenli metin olarak yazılır.
+let galleryIndex = 0;
+function mediaLabel(key) { return AppState.langData[key][AppState.currentLang]; }
+
+function renderMedia() {
+    const { siteData, currentLang } = AppState;
+    const media = siteData.media;
+    document.getElementById('brand-logo').src = siteData.branding.logo;
+    document.getElementById('site-favicon').href = siteData.branding.favicon;
+    document.getElementById('site-touch-icon').href = siteData.branding.touchIcon;
+    document.getElementById('hero-image').src = media.heroImage;
+    document.getElementById('trailer-poster').src = media.poster;
+    document.getElementById('trailer-duration').textContent = media.duration;
+    document.getElementById('steam-wishlist').href = siteData.store.wishlist;
+    document.getElementById('steam-demo').href = siteData.store.demo;
+    document.getElementById('trailer-trigger').setAttribute('aria-label', mediaLabel('trailer_watch'));
+    document.getElementById('media-close').textContent = mediaLabel('media_close');
+    document.getElementById('gallery-previous').textContent = mediaLabel('media_previous');
+    document.getElementById('gallery-next').textContent = mediaLabel('media_next');
+    document.getElementById('mobile-menu-toggle').setAttribute('aria-label', mediaLabel('menu_toggle'));
+    document.getElementById('lang-btn').setAttribute('aria-label', mediaLabel('language_toggle'));
+    const gallery = document.getElementById('gameplay-gallery');
+    clearElement(gallery);
+    media.gallery.forEach((item, index) => {
+        const button = document.createElement('button');
+        button.type = 'button'; button.className = 'gallery-card';
+        button.setAttribute('aria-label', mediaLabel('media_open') + ': ' + item.caption[currentLang]);
+        const image = document.createElement('img');
+        image.src = item.thumbnail; image.alt = item.alt[currentLang];
+        image.loading = 'lazy'; image.decoding = 'async'; image.width = 960; image.height = 540;
+        const caption = document.createElement('span'); caption.textContent = item.caption[currentLang];
+        button.append(image, caption);
+        button.addEventListener('click', () => openGallery(index));
+        gallery.appendChild(button);
+    });
+}
+
+function openGallery(index) {
+    galleryIndex = (index + AppState.siteData.media.gallery.length) % AppState.siteData.media.gallery.length;
+    const item = AppState.siteData.media.gallery[galleryIndex];
+    const player = document.getElementById('montage-player'); player.pause(); player.hidden = true;
+    const image = document.getElementById('gallery-full-image');
+    image.src = item.full; image.alt = item.alt[AppState.currentLang]; image.hidden = false;
+    document.getElementById('media-dialog-title').textContent = item.caption[AppState.currentLang];
+    document.getElementById('gallery-controls').hidden = false;
+    document.getElementById('gallery-counter').textContent = `${galleryIndex + 1} / ${AppState.siteData.media.gallery.length}`;
+    document.getElementById('media-error').hidden = true;
+    showMediaDialog();
+}
+
+function showMediaDialog() {
+    const dialog = document.getElementById('media-dialog');
+    if (!dialog.open) { dialog.showModal(); document.body.classList.add('media-open'); }
+}
+
+function setupMediaEvents() {
+    const dialog = document.getElementById('media-dialog');
+    const player = document.getElementById('montage-player');
+    document.getElementById('trailer-trigger').addEventListener('click', () => {
+        document.getElementById('gallery-full-image').hidden = true;
+        document.getElementById('gallery-controls').hidden = true;
+        document.getElementById('media-error').hidden = true;
+        document.getElementById('media-dialog-title').textContent = mediaLabel('media_video_title');
+        player.hidden = false; player.poster = AppState.siteData.media.poster;
+        if (!player.getAttribute('src')) player.src = AppState.siteData.media.video;
+        showMediaDialog();
+        // Sesli oynatma yalnız ziyaretçinin bu düğmeye basmasıyla başlar.
+        player.play().catch(() => { /* Tarayıcı izin vermezse yerel video kontrolleri kullanılabilir. */ });
+    });
+    player.addEventListener('error', () => { const error = document.getElementById('media-error'); error.textContent = mediaLabel('media_error'); error.hidden = false; });
+    document.getElementById('media-close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => { player.pause(); document.body.classList.remove('media-open'); });
+    dialog.addEventListener('click', event => { const bounds = dialog.getBoundingClientRect(); if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close(); });
+    document.getElementById('gallery-previous').addEventListener('click', () => openGallery(galleryIndex - 1));
+    document.getElementById('gallery-next').addEventListener('click', () => openGallery(galleryIndex + 1));
+    dialog.addEventListener('keydown', event => {
+        if (document.getElementById('gallery-controls').hidden) return;
+        if (event.key === 'ArrowLeft') { event.preventDefault(); openGallery(galleryIndex - 1); }
+        if (event.key === 'ArrowRight') { event.preventDefault(); openGallery(galleryIndex + 1); }
+    });
 }

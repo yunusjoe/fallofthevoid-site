@@ -138,5 +138,81 @@
   "skill_scaling_note": {
     "tr": "Hasar; karakter seviyesi, yetenek rütbesi ve ekipmana göre ölçeklenir. Burada yeteneklerin işleyişi ve sabit etkileri gösterilir.",
     "en": "Damage scales with character level, ability rank and equipment. Ability mechanics and fixed effects are shown here."
+  },
+  "nav_media": {
+    "tr": "Oynanış",
+    "en": "Gameplay"
+  },
+  "hero_kicker": {
+    "tr": "TEK OYUNCULU · KARANLIK FANTEZİ ARPG",
+    "en": "SINGLE PLAYER · DARK FANTASY ARPG"
+  },
+  "steam_wishlist": {
+    "tr": "Steam’de istek listene ekle",
+    "en": "Wishlist on Steam"
+  },
+  "steam_demo": {
+    "tr": "Ücretsiz demoyu oyna",
+    "en": "Play the free demo"
+  },
+  "hero_explore": {
+    "tr": "Sınıfını seç. Hiçliğe meydan oku. ↓",
+    "en": "Choose your class. Defy the Void. ↓"
+  },
+  "trailer_eyebrow": {
+    "tr": "HİÇLİĞE BİR BAKIŞ",
+    "en": "A GLIMPSE INTO THE VOID"
+  },
+  "trailer_watch": {
+    "tr": "Fragmanı izle",
+    "en": "Watch the trailer"
+  },
+  "trailer_caption": {
+    "tr": "Oyundan gerçek görüntüler",
+    "en": "Captured in game"
+  },
+  "gallery_eyebrow": {
+    "tr": "SAVAŞIN İÇİNDEN",
+    "en": "IN THE THICK OF BATTLE"
+  },
+  "gallery_title": {
+    "tr": "Hiçliği keşfet",
+    "en": "Discover the Void"
+  },
+  "gallery_subtitle": {
+    "tr": "Karanlık diyarlar, yıkıcı yetenekler ve kendi yolunu çizeceğin savaşlar.",
+    "en": "Dark realms, devastating abilities, and battles that shape your own path."
+  },
+  "media_close": {
+    "tr": "Kapat ×",
+    "en": "Close ×"
+  },
+  "media_previous": {
+    "tr": "← Önceki",
+    "en": "← Previous"
+  },
+  "media_next": {
+    "tr": "Sonraki →",
+    "en": "Next →"
+  },
+  "media_open": {
+    "tr": "Görseli büyüt",
+    "en": "Enlarge image"
+  },
+  "media_video_title": {
+    "tr": "Fall of the Void — Oynanış Montajı",
+    "en": "Fall of the Void — Gameplay Montage"
+  },
+  "media_error": {
+    "tr": "Video yüklenemedi. Bağlantını kontrol edip yeniden dene.",
+    "en": "The video could not load. Check your connection and try again."
+  },
+  "menu_toggle": {
+    "tr": "Menüyü aç veya kapat",
+    "en": "Open or close menu"
+  },
+  "language_toggle": {
+    "tr": "İngilizceye geç",
+    "en": "Switch to Turkish"
   }
 }

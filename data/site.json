@@ -58,7 +58,7 @@
   "socialLinks": [
     {
       "name": "Steam",
-      "url": "https://store.steampowered.com"
+      "url": "https://store.steampowered.com/app/5146420/Fall_of_the_Void/"
     },
     {
       "name": "Discord",
@@ -72,5 +72,94 @@
       "name": "X (Twitter)",
       "url": "https://x.com"
     }
-  ]
+  ],
+  "branding": {
+    "logo": "img/icons/brand.png",
+    "favicon": "img/icons/favicon.ico",
+    "touchIcon": "img/icons/apple-touch-icon.png"
+  },
+  "store": {
+    "wishlist": "https://store.steampowered.com/app/5146420/Fall_of_the_Void/",
+    "demo": "https://store.steampowered.com/app/5397890/Fall_of_the_Void_Demo/"
+  },
+  "media": {
+    "heroImage": "img/gameplay/hero.webp",
+    "poster": "img/gameplay/poster.webp",
+    "video": "img/gameplay/montage.mp4",
+    "duration": "01:11",
+    "gallery": [
+      {
+        "full": "img/gameplay/gallery-1.webp",
+        "thumbnail": "img/gameplay/gallery-1-thumb.webp",
+        "caption": {
+          "tr": "Kadim diyarlar",
+          "en": "Ancient realms"
+        },
+        "alt": {
+          "tr": "Karanlık taş avluda mavi bir ışık sütunu.",
+          "en": "A blue pillar of light in a dark stone courtyard."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-2.webp",
+        "thumbnail": "img/gameplay/gallery-2-thumb.webp",
+        "caption": {
+          "tr": "Büyünün gücü",
+          "en": "The power of magic"
+        },
+        "alt": {
+          "tr": "Savaş alanında mor bir büyü çemberi.",
+          "en": "A purple spell circle on the battlefield."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-3.webp",
+        "thumbnail": "img/gameplay/gallery-3-thumb.webp",
+        "caption": {
+          "tr": "Alevlerin ortasında",
+          "en": "Amid the flames"
+        },
+        "alt": {
+          "tr": "Düşmanlarla çevrili karakterin alevli saldırısı.",
+          "en": "A fiery attack from a character surrounded by enemies."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-4.webp",
+        "thumbnail": "img/gameplay/gallery-4-thumb.webp",
+        "caption": {
+          "tr": "Hiçlik enerjisi",
+          "en": "Void energy"
+        },
+        "alt": {
+          "tr": "Düşmanlara yönelen parlak mor büyüler.",
+          "en": "Bright purple spells directed at enemies."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-5.webp",
+        "thumbnail": "img/gameplay/gallery-5-thumb.webp",
+        "caption": {
+          "tr": "Yeteneklerini geliştir",
+          "en": "Master your abilities"
+        },
+        "alt": {
+          "tr": "Oyundaki yetenek geliştirme ekranı.",
+          "en": "The in-game ability upgrade screen."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-6.webp",
+        "thumbnail": "img/gameplay/gallery-6-thumb.webp",
+        "caption": {
+          "tr": "Gücünü şekillendir",
+          "en": "Shape your power"
+        },
+        "alt": {
+          "tr": "Karakterin güç seçimlerini gösteren oyun ekranı.",
+          "en": "The in-game character power selection screen."
+        }
+      }
+    ]
+  }
 }
