@@ -58,8 +58,8 @@ function loadSavedLanguage() {
 
 async function loadAllData() {
     const [siteRes, langRes, patchesRes, charactersRes] = await Promise.all([
-        fetch('data/site.json', { cache: 'no-cache' }),
-        fetch('data/lang.json', { cache: 'no-cache' }),
+        fetch('data/site.json?v=20261030-media', { cache: 'no-cache' }),
+        fetch('data/lang.json?v=20261030-media', { cache: 'no-cache' }),
         fetch('data/patches.json', { cache: 'no-cache' }),
         fetch('data/characters.json', { cache: 'no-cache' })
     ]);
