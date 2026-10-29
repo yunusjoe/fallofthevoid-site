@@ -1088,7 +1088,7 @@ ul {
 .hero-actions .btn { padding: 14px 20px; font-family: var(--font-body); font-size: .8rem; text-transform: none; letter-spacing: .2px; }
 .hero-explore { display: inline-block; margin-top: 24px; color: var(--text-secondary); font-size: .83rem; }
 .hero-explore:hover { color: var(--text-primary); }
-.trailer-card { border: 1px solid var(--media-border); padding: 12px; background: var(--bg-glass); border-radius: var(--border-radius-md); box-shadow: 0 28px 80px var(--media-shade); transform: rotate(-1deg); }
+.trailer-card { border: 1px solid var(--media-border); padding: 12px; background: var(--bg-glass); border-radius: var(--border-radius-md); box-shadow: 0 28px 80px var(--media-shade); transform: none; }
 .trailer-card-top, .trailer-card-bottom { display: flex; justify-content: space-between; align-items: center; padding: 10px 6px; gap: 12px; color: var(--text-secondary); font-size: .65rem; letter-spacing: 1.7px; }
 .trailer-card-top { color: var(--accent-purple-light); font-weight: 700; }
 .trailer-card-bottom { letter-spacing: .5px; font-size: .72rem; }

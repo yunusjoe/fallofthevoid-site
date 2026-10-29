@@ -7,7 +7,7 @@
 
 // Uygulama Durumu (State)
 const AppState = {
-    currentLang: 'tr',
+    currentLang: null,
     selectedClassId: null,
     selectedSkillSlot: 'Q',
     siteData: null,
@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 async function initApp() {
     try {
-        loadSavedLanguage();
         await loadAllData();
+        loadSavedLanguage();
         
         // İlk sınıfı varsayılan seç
         if (AppState.charactersData && AppState.charactersData.length > 0) {
@@ -68,13 +68,13 @@ function loadSavedLanguage() {
     if (savedLang === 'tr' || savedLang === 'en') {
         AppState.currentLang = savedLang;
     } else {
-        AppState.currentLang = 'tr';
+        AppState.currentLang = AppState.siteData.settings.defaultLanguage;
     }
 }
 
 async function loadAllData() {
     const [siteRes, langRes, patchesRes, charactersRes] = await Promise.all([
-        fetch('data/site.json?v=20261030-analytics', { cache: 'no-cache' }),
+        fetch('data/site.json?v=20261030-layout', { cache: 'no-cache' }),
         fetch('data/lang.json?v=20261030-media', { cache: 'no-cache' }),
         fetch('data/patches.json', { cache: 'no-cache' }),
         fetch('data/characters.json', { cache: 'no-cache' })

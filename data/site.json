@@ -53,7 +53,8 @@
         "max": 40,
         "unit": "%"
       }
-    ]
+    ],
+    "defaultLanguage": "en"
   },
   "socialLinks": [
     {
