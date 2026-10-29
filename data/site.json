@@ -3,7 +3,57 @@
   "domain": "fallofthevoid.com",
   "contactEmail": "contact@fallofthevoid.com",
   "settings": {
-    "maxStatValue": 100
+    "maxStatValue": 100,
+    "classStats": [
+      {
+        "field": "health",
+        "label": "stat_health",
+        "max": 100,
+        "unit": ""
+      },
+      {
+        "field": "mana",
+        "label": "stat_mana",
+        "max": 100,
+        "unit": ""
+      },
+      {
+        "field": "damage",
+        "label": "stat_damage",
+        "max": 50,
+        "unit": ""
+      },
+      {
+        "field": "abilityPower",
+        "label": "stat_ability_power",
+        "max": 150,
+        "unit": ""
+      },
+      {
+        "field": "armor",
+        "label": "stat_armor",
+        "max": 50,
+        "unit": ""
+      },
+      {
+        "field": "magicResist",
+        "label": "stat_magic_resist",
+        "max": 50,
+        "unit": ""
+      },
+      {
+        "field": "critChance",
+        "label": "stat_crit",
+        "max": 50,
+        "unit": "%"
+      },
+      {
+        "field": "cooldownReduction",
+        "label": "stat_cooldown",
+        "max": 40,
+        "unit": "%"
+      }
+    ]
   },
   "socialLinks": [
     {

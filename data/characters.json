@@ -1,13 +1,14 @@
 [
   {
     "id": "abyssal-pyromancer",
+    "sourceClassId": "class_abyssalpyromancer",
     "name": {
       "tr": "Abyssal Pyromancer",
       "en": "Abyssal Pyromancer"
     },
     "description": {
-      "tr": "A devastating sorcerer who commands the dark flames of the Void, melting enemies with max health true damage.",
-      "en": "A devastating sorcerer who commands the dark flames of the Void, melting enemies with max health true damage."
+      "tr": "Hiçliğin karanlık alevlerine hükmeden, düşmanları gerçek hasarla eriten ve iblis formuna bürünen yıkıcı bir büyücü.",
+      "en": "A devastating sorcerer who commands the dark flames of the Void, melting enemies with max health true damage and ascending into demonic form."
     },
     "icon": "img/icons/classes/abyssal-pyromancer.png",
     "stats": {
@@ -17,32 +18,82 @@
       "armor": 30,
       "magicResist": 30,
       "abilityPower": 150,
-      "critChance": 5,
+      "critChance": 5.0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Gölge Alev Kafatası",
+          "en": "Shadowflame Skull"
+        },
+        "description": {
+          "tr": "İmleç yönüne doğru tüm rakipleri delen mistik bir Gölge Alev Kafatası fırlatır. Kafatası isabet ettiği tüm düşmanlara Büyü Hasarı verir ve üzerlerinde Közlenen Hiçlik pasifini tetikler.\n\nKül Atılımı (E) sonrasında kafatasının hasarı %30 (İblis Formunda %90) artar.",
+          "en": "Hurls a mystical Shadowflame Skull toward the cursor, piercing all enemies. Deals scaling Magic Damage and applies Smoldering Void.\n\nAfter Ash Rush (E), damage is increased by 30% (increased to 90% during Demon Ascendance)."
+        },
+        "icon": "img/icons/skills/abyssal-pyromancer_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Boşluk Alevi Harekesi",
+          "en": "Voidflame Aegis"
+        },
+        "description": {
+          "tr": "Karakterin etrafında dönen karanlık bir alev halkası oluşturarak 5 saniye boyunca %40 Hasar Azaltma ve +%100 Kritik Hasar sağlar.\n\nİblis Yükselişi aktifken bu kalkan her saniye azami canın %3'ünü yeniler.",
+          "en": "Envelops the caster in a dark ring of void fire for 5 seconds, dealing scaling Magic Damage per second to nearby enemies. Grants 40% Damage Reduction and +100% Critical Damage.\n\nDuring Demon Ascendance, regenerates 3% Max Health per second."
+        },
+        "icon": "img/icons/skills/abyssal-pyromancer_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Kül Atılımı",
+          "en": "Ash Rush"
+        },
+        "description": {
+          "tr": "İmleç doğrultusunda ileriye atılarak kül ve alevden bir iz bırakır. Atılım sonrasındaki 5 saniye boyunca kullanılan Gölge Alev Kafatası (Q) mermilerinin hasarı %30 (İblis Formunda %90) artar.",
+          "en": "Dashes forward toward the cursor, leaving a trail of ash and void fire. For the next 5 seconds, Shadowflame Skull (Q) damage is increased by 30% (90% in Demon Form)."
+        },
+        "icon": "img/icons/skills/abyssal-pyromancer_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "İblis Yükselişi",
+          "en": "Demon Ascendance"
+        },
+        "description": {
+          "tr": "Karakter ilahi bir gölge aleviyle sarmalanarak 15 saniyeliğine iblis formuna bürünür.\nBu durumdayken tüm yetenekler güçlenir:\n• Pasif: Gerçek hasar saniyede %3'e (toplamda %9) yükselir.\n• Q: Yelpaze biçiminde 3 adet kafatası fırlatır.\n• W: Saniyede azami canın %3'ünü yeniler.\n• E: Q hasar bonusu %90'a yükselir.",
+          "en": "The caster is engulfed in divine shadowflame, assuming a demonic form for 15 seconds.\nWhile active, all skills are empowered:\n• Passive: True damage increases to 3% per sec (9% total).\n• Q: Fires 3 skulls in a spread.\n• W: Regenerates 3% Max Health per sec.\n• E: Q damage bonus increases to 90%."
+        },
+        "icon": "img/icons/skills/abyssal-pyromancer_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "K\\xF6zlenen Hi\\xE7lik",
+        "tr": "Közlenen Hiçlik",
         "en": "Smoldering Void"
       },
       "description": {
-        "tr": "Karakterin Yetenek G\\xFCc\\xFC seviyeye ba\\u011Fl\\u0131 olarak %10 ile %50 aras\\u0131nda artar.\\nYeteneklerden isabet alan t\\xFCm d\\xFC\\u015Fmanlar 3 saniye boyunca saniyede azami canlar\\u0131n\\u0131n %1'i kadar Ger\\xE7ek Hasar al\\u0131r. Bu ger\\xE7ek hasar kritik vuramaz.\\n\\u0130blis Y\\xFCkseli\\u015Fi s\\u0131ras\\u0131nda bu ger\\xE7ek hasar her saniye %3'e (toplamda %9) y\\xFCkselir.",
-        "en": "'Spell Power is increased by 10% to 50% scaling with Level."
+        "tr": "Karakterin Yetenek Gücü seviyeye bağlı olarak %10 ile %50 arasında artar.\nYeteneklerden isabet alan tüm düşmanlar 3 saniye boyunca saniyede azami canlarının %1'i kadar Gerçek Hasar alır. Bu gerçek hasar kritik vuramaz.\nİblis Yükselişi sırasında bu gerçek hasar her saniye %3'e (toplamda %9) yükselir.",
+        "en": "Spell Power is increased by 10% to 50% scaling with Level.\nAll enemies hit by abilities suffer 1% of their Maximum Health as True Damage every second for 3 seconds. This true damage cannot critically strike.\nDuring Demon Ascendance, this true damage increases to 3% per second (9% total)."
       },
-      "icon": "img/icons/skills/abyssal-pyromancer_passive.png"
-    },
-    "skills": []
+      "icon": "img/icons/skills/abyssal-pyromancer_p.png"
+    }
   },
   {
     "id": "astral-sovereign",
+    "sourceClassId": "class_astral_sovereign",
     "name": {
       "tr": "Astral Sovereign",
       "en": "Astral Sovereign"
     },
     "description": {
-      "tr": "classIcon: {fileID: 21300000, guid: 126690002e29a26488fbaef379cd0ea4, type: 3}",
-      "en": "classIcon: {fileID: 21300000, guid: 126690002e29a26488fbaef379cd0ea4, type: 3}"
+      "tr": "Düşmanları yerçekimiyle ağırlaştıran ve yıldız mühürlerini patlatan bir astral hükümdar. Hasarı normal saldırısından değil, büyülerinden gelir.",
+      "en": "An astral sovereign who slows enemies through gravity and shatters star seals. Damage comes from spells rather than basic attacks."
     },
     "icon": "img/icons/classes/astral-sovereign.png",
     "stats": {
@@ -55,31 +106,81 @@
       "critChance": 0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Yıldız Mührü",
+          "en": "Starbrand"
+        },
+        "description": {
+          "tr": "İleri ilerleyen astral dalga ölçeklenen büyü hasarı verir ve 6 saniyelik yıldız mührü bırakır.",
+          "en": "A traveling astral wave deals scaling magical damage and leaves a star seal for 6 seconds."
+        },
+        "icon": "img/icons/skills/astral-sovereign_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Takımyıldız Çöküşü",
+          "en": "Constellation Collapse"
+        },
+        "description": {
+          "tr": "Hedef alanda ölçeklenen büyü hasarı verir. Kendi yıldız mühürlerini tüketerek ölçeklenen ek büyü hasarı uygular. En az bir mühür tüketilirse kullanım başına bir kez azami mananın %2 kadarını geri kazanırsın.",
+          "en": "Deals scaling magical damage in the target area. Consumes your star seals for scaling additional magical damage. Consuming any seal restores 2% maximum mana once per cast."
+        },
+        "icon": "img/icons/skills/astral-sovereign_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Hükümdarın Yükselişi",
+          "en": "Sovereign Ascension"
+        },
+        "description": {
+          "tr": "8 saniye astral forma girersin: Yıldız Mührü ve Takımyıldız Çöküşü hasarı +%25, alınan hasar -%20. Hareket etmeye ve diğer yeteneklerini kullanmaya devam edebilirsin.",
+          "en": "Ascend for 8 seconds: Starbrand and Constellation Collapse deal 25% more damage and incoming damage is reduced by 20%. You can keep moving and using other abilities."
+        },
+        "icon": "img/icons/skills/astral-sovereign_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Göksel Yağmur",
+          "en": "Heavenfall"
+        },
+        "description": {
+          "tr": "Sabit bir alana 6 saniye yıldız yağdırır. Her 0,5 saniyede ölçeklenen büyü hasarı; 12 darbenin toplamı ölçeklenen. Kanal gerektirmez.",
+          "en": "Stars fall into a fixed area for 6 seconds. Deals scaling magical damage every 0.5 seconds, totaling scaling over 12 strikes. No channel required."
+        },
+        "icon": "img/icons/skills/astral-sovereign_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "AstralSovereign_P_CelestialDominion",
-        "en": "AstralSovereign_P_CelestialDominion"
+        "tr": "Göksel Hâkimiyet",
+        "en": "Celestial Dominion"
       },
       "description": {
-        "tr": "icon: {fileID: 21300000, guid: 126690002e29a26488fbaef379cd0ea4, type: 3}",
-        "en": "icon: {fileID: 21300000, guid: 126690002e29a26488fbaef379cd0ea4, type: 3}"
+        "tr": "Yıldız Mührü, Takımyıldız Çöküşü veya Göksel Yağmur ile hasar verdiğinde kullanım başına bir yük kazanırsın. En fazla 3 yük; yük başına büyü hasarı +%3. Yeni yük, bütün yüklerin 8 saniyelik süresini yeniler.",
+        "en": "Dealing damage with Starbrand, Constellation Collapse or Heavenfall grants one stack per cast. Maximum 3 stacks; each adds 3% spell damage. A new stack refreshes all stacks for 8 seconds."
       },
-      "icon": "img/icons/skills/astral-sovereign_passive.png"
-    },
-    "skills": []
+      "icon": "img/icons/skills/astral-sovereign_p.png"
+    }
   },
   {
     "id": "bloodreaper",
+    "sourceClassId": "class_bloodreaper",
     "name": {
       "tr": "Bloodreaper",
       "en": "Bloodreaper"
     },
     "description": {
-      "tr": "classIcon: {fileID: 2249708262835490722, guid: a803f8f61422a0f4f8bafd63e902fcda, type: 3}",
-      "en": "classIcon: {fileID: 2249708262835490722, guid: a803f8f61422a0f4f8bafd63e902fcda, type: 3}"
+      "tr": "Kızıl tırpanıyla savaş alanında süzülen, düşman sürülerini biçerek arkalarında bıraktıkları kan özleriyle beslenen ölümcül bir yakın dövüş savaşçısı.",
+      "en": "A deadly melee reaper who glides through the battlefield with a crimson scythe, mowing down hordes and feeding on the blood essence left in their wake."
     },
-    "icon": "img/icons/classes/bloodreaper.jpg",
+    "icon": "img/icons/classes/bloodreaper.png",
     "stats": {
       "health": 0,
       "mana": 0,
@@ -87,32 +188,82 @@
       "armor": 12,
       "magicResist": 0,
       "abilityPower": 0,
-      "critChance": 5,
+      "critChance": 5.0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Kızıl Tırpan",
+          "en": "Crimson Cleave"
+        },
+        "description": {
+          "tr": "Önündeki geniş yayda savrularak düşmanlara ölçeklenen Fiziksel Hasar verir. Bu darbeyle katledilen her düşman, yeteneğin bekleme süresinden 1,5 saniye iade eder.",
+          "en": "Sweep your scythe in a wide frontal arc, dealing scaling Physical Damage to enemies. Each enemy slain by this strike refunds 1.5 seconds of the cooldown."
+        },
+        "icon": "img/icons/skills/bloodreaper_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Kan Çatlağı",
+          "en": "Sanguine Rupture"
+        },
+        "description": {
+          "tr": "Tırpanını yere saplayarak etrafındaki tüm düşmanlara ölçeklenen Fiziksel Hasar verir ve onları 2 saniye boyunca %35 yavaşlatır. Patlama anında çevredeki tüm Kan Kürelerini doğrudan kendine çeker.",
+          "en": "Slam your scythe into the ground to deal scaling Physical Damage to all surrounding enemies and slow them by 35% for 2 seconds. The shockwave immediately pulls all nearby Blood Orbs directly to you."
+        },
+        "icon": "img/icons/skills/bloodreaper_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Biçici Hamle",
+          "en": "Reaping Dash"
+        },
+        "description": {
+          "tr": "İmleç yönünde hızla ileri atılarak yolundaki tüm düşmanların içinden geçer ve ölçeklenen Fiziksel Hasar verir. Atılma sırasında düşman çarpışmalarını yok sayar. 2 yük taşır.",
+          "en": "Dash forward toward the cursor, phasing through enemies and dealing scaling Physical Damage. Ignores enemy collision during the dash. Holds 2 charges."
+        },
+        "icon": "img/icons/skills/bloodreaper_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Kızıl Kasırga",
+          "en": "Crimson Maelstrom"
+        },
+        "description": {
+          "tr": "Karakterin etrafında dönen devasa kan tırpanları çağırarak 3,5 saniye boyunca saniyede 3 kez ölçeklenen Fiziksel Hasar verir ve çevredeki düşmanları merkezine doğru çeker. Yetenek etkinken tam hareket hızıyla yürüyebilirsin.",
+          "en": "Summon a whirlwind of spinning blood scythes around you for 3.5 seconds, striking 3 times per second for scaling Physical Damage and pulling nearby enemies toward the center. You can move freely at full speed while active."
+        },
+        "icon": "img/icons/skills/bloodreaper_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Bloodreaper_P_SanguineHarvest",
-        "en": "Bloodreaper_P_SanguineHarvest"
+        "tr": "Kızıl Hasat",
+        "en": "Sanguine Harvest"
       },
       "description": {
-        "tr": "icon: {fileID: 2249708262835490722, guid: a803f8f61422a0f4f8bafd63e902fcda, type: 3}",
-        "en": "icon: {fileID: 2249708262835490722, guid: a803f8f61422a0f4f8bafd63e902fcda, type: 3}"
+        "tr": "Katledilen her düşman arkasında bir Kan Küresi bırakır (kritik vuruşlar %25 ihtimalle küre düşürür). Küreye temas etmek azami canın %2'ini ve azami mananın %3'ini yeniler, ayrıca 2 saniye boyunca %15 Hareket Hızı kazandırır.",
+        "en": "Slain enemies leave behind a Blood Orb (critical strikes have a 25% chance to drop an orb). Stepping on an orb restores 2% of maximum health and 3% of maximum mana, and grants 15% Movement Speed for 2 seconds."
       },
-      "icon": "img/icons/skills/bloodreaper_passive.jpg"
-    },
-    "skills": []
+      "icon": "img/icons/skills/bloodreaper_p.png"
+    }
   },
   {
     "id": "dreamslasher",
+    "sourceClassId": "class_dreamslasher",
     "name": {
       "tr": "Dreamslasher",
       "en": "Dreamslasher"
     },
     "description": {
-      "tr": "A dreamblade duelist who seals enemies into sleep and shatters them in cascading nightmares.",
-      "en": "A dreamblade duelist who seals enemies into sleep and shatters them in cascading nightmares."
+      "tr": "Düşmanlarını uyutan ve zincirleme kâbuslarla parçalayan çevik bir rüya kılıcı ustası.",
+      "en": "A dreamblade duelist who puts foes to sleep and shatters them in cascading nightmares."
     },
     "icon": "img/icons/classes/dreamslasher.png",
     "stats": {
@@ -122,34 +273,84 @@
       "armor": 30,
       "magicResist": 30,
       "abilityPower": 30,
-      "critChance": 5,
+      "critChance": 5.0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Rüya Yarığı",
+          "en": "Dream Rift"
+        },
+        "description": {
+          "tr": "Hareket ederken imlece doğru kesik savur; ölçeklenen Fiziksel Hasar verir ve Rüya Mührü ekler. Her 3. kullanımda bir hilal fırlatır; düşman başına aynı hasarı bir kez verir.",
+          "en": "Slash toward the cursor while moving, dealing scaling Physical Damage and applying Dream Seals. Every 3. cast launches a crescent that deals the same damage once per enemy."
+        },
+        "icon": "img/icons/skills/dreamslasher_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Uyanış Adımı",
+          "en": "Awakening Step"
+        },
+        "description": {
+          "tr": "Düşmanların içinden 7m mesafeye kadar atıl; ölçeklenen Fiziksel Hasar verir ve Rüya Mührü ekler. Atılma boyunca dokunulmaz olursun. Kısa bir süre sonra başlangıç noktasındaki yankı, kesiği aynı hasarla tekrarlar.",
+          "en": "Dash up to 7m through enemies, dealing scaling Physical Damage and applying Dream Seals. You are invulnerable during the dash. After a short moment, the echo at your starting point repeats the slash for the same damage."
+        },
+        "icon": "img/icons/skills/dreamslasher_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Kâbus Çemberi",
+          "en": "Nightmare Circle"
+        },
+        "description": {
+          "tr": "10m mesafede 5 sn süren ve 4m yarıçaplı bir çember oluşturur. İçerideki düşmanlar %35 yavaşlar ve her 0,8 sn bir Rüya Mührü alır. Doğrudan hasar vermez ve uyuyan düşmanları uyandırmaz.",
+          "en": "Place a 4m radius circle within 10m for 5s. Enemies inside are 35% slower and gain a Dream Seal every 0.8s. Deals no direct damage and does not awaken sleeping enemies."
+        },
+        "icon": "img/icons/skills/dreamslasher_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Uyanışın Sonu",
+          "en": "Final Awakening"
+        },
+        "description": {
+          "tr": "Ekranda görünen ve 20m içindeki tüm uyuyan düşmanları uyandırır; ölçeklenen Fiziksel Hasar, ayrıca +%30 uyku hasarı bonusu uygular ve Kâbus Patlamalarını zincirler. Bu uyanışla öldürülen her düşman bekleme süresinden 2 sn iade eder; kullanım başına en fazla 20 sn.",
+          "en": "Awaken every sleeping enemy visible within 20m, dealing scaling Physical Damage, increased by the +30% sleep bonus, and chain Nightmare Bursts. Each enemy killed by this awakening refunds 2s of cooldown, up to 20s per cast."
+        },
+        "icon": "img/icons/skills/dreamslasher_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Dreamslasher_Passive_LucidDream",
-        "en": "Dreamslasher_Passive_LucidDream"
+        "tr": "Berrak Rüya",
+        "en": "Lucid Dream"
       },
       "description": {
-        "tr": "icon: {fileID: 21300000, guid: 3519de71a6a857cea17dfef4d0eabfb2, type: 3}",
-        "en": "icon: {fileID: 21300000, guid: 3519de71a6a857cea17dfef4d0eabfb2, type: 3}"
+        "tr": "Aktif isabetler 8 sn süren Rüya Mührü ekler. 4 mühürde düşman 2 sn uyur ve +%30 daha fazla hasar alır. Hasar onu uyandırır; 3m çevresindeki düşmanlara ölçeklenen Gerçek Hasar veren ve mühür ekleyen Kâbus Patlaması oluşturur.",
+        "en": "Active hits apply Dream Seals lasting 8s. At 4 seals, enemies sleep for 2s and take +30% more damage. Damage awakens them, causing a 3m burst dealing scaling True Damage to nearby enemies and adding seals."
       },
-      "icon": "img/icons/skills/dreamslasher_passive.png"
-    },
-    "skills": []
+      "icon": "img/icons/skills/dreamslasher_p.png"
+    }
   },
   {
     "id": "frostbreaker",
+    "sourceClassId": "class_frostbreaker",
     "name": {
       "tr": "Frostbreaker",
       "en": "Frostbreaker"
     },
     "description": {
-      "tr": "classIcon: {fileID: -6561127974559337839, guid: f3dfa0ccedfe1ca4db51a4d826c20b18, type: 3}",
-      "en": "classIcon: {fileID: -6561127974559337839, guid: f3dfa0ccedfe1ca4db51a4d826c20b18, type: 3}"
+      "tr": "Kara buzul levhalarıyla savaş alanını hazırlayan ağır bir tank. Düşmanları toplar, zemini sıkıştırır ve bağlı levhaları kırarak sürüleri biçer.",
+      "en": "A heavy tank that prepares the battlefield with black glacial plates, gathers enemies and crushes connected ice beneath the horde."
     },
-    "icon": "",
+    "icon": "img/icons/classes/frostbreaker.png",
     "stats": {
       "health": 0,
       "mana": 0,
@@ -160,31 +361,81 @@
       "critChance": 0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Buzul Döşeme",
+          "en": "Glacial Lay"
+        },
+        "description": {
+          "tr": "Ağır darbeyle ölçeklenen Fiziksel Hasar ver ve önüne üç bağlı buz levhası döşe. İki yük taşır. En fazla 6 levha bulunur; levhalar 12 saniye yaşar. Üst üste döşeme süreyi yeniler.",
+          "en": "Strike for scaling Physical Damage and lay three connected glacial plates ahead. Holds two charges. Up to 6 plates last 12 seconds. Overlapping placement refreshes duration."
+        },
+        "icon": "img/icons/skills/frostbreaker_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Kutup Mengene",
+          "en": "Polar Vice"
+        },
+        "description": {
+          "tr": "Çevrendeki düşmanlara ölçeklenen Fiziksel Hasar ver ve çekilebilir hedefleri kendine doğru çek. Levha üstündeki hedefleri 3 saniye boyunca %35 yavaşlat. Bosslar çekilmez ve yavaşlatılmaz.",
+          "en": "Deal scaling Physical Damage around you and pull movable enemies inward. Enemies on plates are slowed by 35% for 3 seconds. Bosses cannot be pulled or slowed."
+        },
+        "icon": "img/icons/skills/frostbreaker_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Fay Kırıcı",
+          "en": "Faultbreaker"
+        },
+        "description": {
+          "tr": "İmleç altındaki levhadan başlayarak bağlı ağı sırayla kır. Her levha ölçeklenen, sıkışmış levha ölçeklenen fiziksel hasar verir. Hedef başına en fazla 2 levha darbesi. Kırılan zemin savunmanı artık sağlamaz.",
+          "en": "Fracture the connected network starting from the plate under your cursor. Each plate deals scaling physical damage, or scaling when compressed. At most 2 plate hits per target. Consumed ground no longer protects you."
+        },
+        "icon": "img/icons/skills/frostbreaker_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Buzul Hasadı",
+          "en": "Glacial Harvest"
+        },
+        "description": {
+          "tr": "Mevcut levhaları sıkıştır, ardından ağı dıştan içe parçala. Her sıkışmış levha ölçeklenen, merkez darbesi ölçeklenen fiziksel hasar verir. Hedef başına en fazla 2 levha darbesi ve bir merkez darbesi. Çevrene 6 yeni levha döşe. Hazırlık sırasında hareket edemezsin; dokunulmazlık kazanmazsın.",
+          "en": "Compress your plates, then break the network from outside inward. Each compressed plate deals scaling physical damage; the central slam deals scaling. At most 2 plate hits and one central slam per target. Lay 6 fresh plates around you. You cannot move during preparation and gain no invulnerability."
+        },
+        "icon": "img/icons/skills/frostbreaker_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Frostbreaker_P_GlacialFoundation",
-        "en": "Frostbreaker_P_GlacialFoundation"
+        "tr": "Buzul Temeli",
+        "en": "Glacial Foundation"
       },
       "description": {
-        "tr": "icon: {fileID: -6561127974559337839, guid: f3dfa0ccedfe1ca4db51a4d826c20b18, type: 3}",
-        "en": "icon: {fileID: -6561127974559337839, guid: f3dfa0ccedfe1ca4db51a4d826c20b18, type: 3}"
+        "tr": "Kendi levhan üzerinde %15 hasar azaltma kazanırsın. Levha üzerinde toplam 2 saniye durmak veya levha üstündeki düşmanlara 2 normal saldırı isabet ettirmek levhayı sıkıştırır. Sıkışmış levhalar %50 fazla kırılma hasarı verir.",
+        "en": "Gain 15% damage reduction on your own plate. Stand on it for a total of 2 seconds or land 2 basic attacks on enemies standing on it to compress it. Compressed plates deal 50% more fracture damage."
       },
-      "icon": ""
-    },
-    "skills": []
+      "icon": "img/icons/skills/frostbreaker_p.png"
+    }
   },
   {
     "id": "hexgunner",
+    "sourceClassId": "class_hexgunner",
     "name": {
       "tr": "Hexgunner",
       "en": "Hexgunner"
     },
     "description": {
-      "tr": "classIcon: {fileID: -7940076996590975244, guid: 7a2b51c7efbd80c42b798e05dfcc87e4, type: 3}",
-      "en": "classIcon: {fileID: -7940076996590975244, guid: 7a2b51c7efbd80c42b798e05dfcc87e4, type: 3}"
+      "tr": "Lanetli altı hazneli tabancasıyla hüküm dağıtan, hedeflerinde Rus Ruleti çarkı çeviren, geri tepmeyle sıçrayıp horoz tokatlayan ve Öğle Vakti'nde altı kafatasını aynı anda infaz eden acımasız bir silahşör.",
+      "en": "A ruthless void gunslinger who commands a cursed six-chamber revolver, spinning Russian Roulette wheels on targets, vaulting off recoil to fan the hammer, and executing six marked skulls at High Noon."
     },
-    "icon": "",
+    "icon": "img/icons/classes/hexgunner.png",
     "stats": {
       "health": 0,
       "mana": 0,
@@ -195,28 +446,78 @@
       "critChance": 0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Hüküm Kurşunu",
+          "en": "Deadeye Piercer"
+        },
+        "description": {
+          "tr": "11m boyunca tüm düşmanları delip geçen ağır kalibreli bir mermi ateşleyerek ölçeklenen Fiziksel Hasar verir ve silindiri ilerletir. 6. Haznede ateşlenirse +%45 ek hasar verir ve 6. Hazne Patlaması tetikler. Rus Ruleti (W) taşıyan hedefi vurduğunda çarkı tek seferde 2 diş döndürür.",
+          "en": "Fires a high-caliber piercing round along a 11m line for scaling Physical Damage and advances the cylinder. If fired on the 6th Chamber, deals +45% bonus damage and triggers a 6th Chamber Blast. Hitting an enemy marked by Russian Roulette (W) spins the wheel 2 notches at once."
+        },
+        "icon": "img/icons/skills/hexgunner_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Rus Ruleti",
+          "en": "Russian Roulette"
+        },
+        "description": {
+          "tr": "10,5m içindeki bir hedefe 6 sn boyunca 6 bölmeli Rulet Çarkı kilitleyerek ölçeklenen Fiziksel Hasar verir ve 6. Hazneni anında doldurur. Hedefe vurulan her darbe çarkı döndürür ve yakındaki 2 düşmana Seken Mermiler (%40 hasar) sıkar. 6. dönüşte Vurgun İnfazı (+%80 ek hasar + hedefin eksik canının %12 kadarı alan hasarı) patlatır, %8 Azami Can iyileştirir ve çarkı yeni bir düşmana sıçratır!",
+          "en": "Locks a 6-chamber Roulette Wheel onto a target within 10.5m for 6s, dealing scaling Physical Damage and immediately priming your 6th Chamber. Every hit on the marked target spins the wheel and fires Ricochet Bullets to 2 nearby enemies (40% damage). On the 6th spin, triggers a Jackpot Execution (+80% bonus damage + 12% missing HP AoE), heals you for 8% Max HP, and jumps the wheel to a nearby enemy!"
+        },
+        "icon": "img/icons/skills/hexgunner_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Geri Tepme & Horoz Tokatlama",
+          "en": "Recoil Vault & Fan the Hammer"
+        },
+        "description": {
+          "tr": "Yakın mesafeye saçma patlatarak düşmanları %40 yavaşlatır, geri tepmeyle 4,5m geriye sıçrayıp %25 Hasar Azaltma kazanır, Hüküm Kurşunu (Q) bekleme süresini 2 sn kısaltır ve havada horozu tokatlayarak 6 merminin tamamını ölçeklenen toplam Fiziksel Hasar için boşaltır (Rus Ruleti hedefini önceliklendirir ve son mermide 6. Hazneyi patlatır)!",
+          "en": "Blasts point-blank buckshot to slow enemies by 40%, vaults 4.5m backward off the recoil with 25% Damage Reduction, refunds 2s of Deadeye Piercer (Q) cooldown, and fans the hammer to unleash all 6 cylinder rounds for scaling total Physical Damage (prioritizing the Russian Roulette target and detonating the 6th Chamber on the final round)!"
+        },
+        "icon": "img/icons/skills/hexgunner_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Öğle Vakti: Altı Kafatası",
+          "en": "High Noon: Six Skulls"
+        },
+        "description": {
+          "tr": "Öğle Vakti Halesini çağırarak +%35 Hareket Hızı kazanır ve 11m içindeki düşmanlara 6 kor Kafatası Nişangahı kilitler (tek hedef varsa 6'sı da aynı Boss'a biner). Ardından her biri ölçeklenen Fiziksel Hasar (toplam ölçeklenen) veren 6 garantili infaz atışı yapar. Otomatik olarak Rus Ruleti (W) uygular, çarkı döndürür, 6. atışta 6. Hazneyi patlatır ve Q ile E bekleme sürelerini sıfırlar!",
+          "en": "Summons the High Noon Halo, gaining +35% Move Speed while locking 6 blazing Skull Crosshairs onto enemies within 11m (all 6 can stack onto a single Boss). Then unleashes 6 guaranteed execution shots for scaling Physical Damage each (scaling total). Automatically applies & spins Russian Roulette (W), detonates the 6th Chamber, and resets Q and E cooldowns on the 6th shot!"
+        },
+        "icon": "img/icons/skills/hexgunner_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Hexgunner_P_SixthChamber",
-        "en": "Hexgunner_P_SixthChamber"
+        "tr": "Altıncı Hazne",
+        "en": "Sixth Chamber"
       },
       "description": {
-        "tr": "icon: {fileID: -7940076996590975244, guid: 7a2b51c7efbd80c42b798e05dfcc87e4, type: 3}",
-        "en": "icon: {fileID: -7940076996590975244, guid: 7a2b51c7efbd80c42b798e05dfcc87e4, type: 3}"
+        "tr": "Altıpatların 6 mermi alır . Düz vuruşlar ve Hüküm Kurşunu (Q) silindiri döndürür. 6. Hazne atışı isabet anında patlayarak %70 ek alan Fiziksel Hasarı (ölçeklenen) verir ve 4 sn boyunca %20 Zırh kırar.",
+        "en": "Your revolver holds 6 rounds . Basic attacks and Deadeye Piercer (Q) advance the cylinder. The 6th Chamber shot detonates on impact for 70% bonus AoE Physical Damage (scaling) and shatters 20% Armor for 4s."
       },
-      "icon": ""
-    },
-    "skills": []
+      "icon": "img/icons/skills/hexgunner_p.png"
+    }
   },
   {
     "id": "soulwarden",
+    "sourceClassId": "class_spiritborn",
     "name": {
       "tr": "Soulwarden",
       "en": "Soulwarden"
     },
     "description": {
-      "tr": "A swift spiritual combatant harnessing soul fragments to weave deadly spirit strikes and phantom shields.",
+      "tr": "Ruhların kadim gücünü yönlendiren, hayaletimsi kalkanlar ve ölümcül ruh darbeleriyle savaş alanını yöneten akıcı bir dövüşçü.",
       "en": "A swift spiritual combatant harnessing soul fragments to weave deadly spirit strikes and phantom shields."
     },
     "icon": "img/icons/classes/soulwarden.png",
@@ -227,34 +528,84 @@
       "armor": 10,
       "magicResist": 10,
       "abilityPower": 0,
-      "critChance": 5,
+      "critChance": 5.0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Ruh Parçaları",
+          "en": "Soul Shards"
+        },
+        "description": {
+          "tr": "Koni şeklinde 5 Ruh Parçası fırlatarak isabet alan tüm düşmanlara ölçeklenen Fiziksel Hasar Hasar verir.",
+          "en": "Fires a cone of 5 Soul Shards, dealing scaling Physical Damage to all hit enemies."
+        },
+        "icon": "img/icons/skills/soulwarden_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Çekim Alanı",
+          "en": "Gravitational Field"
+        },
+        "description": {
+          "tr": "Çevredeki tüm düşmanları merkeze çeker ve 5 sn boyunca Maksimum Canlılık değerini %50 artırır.",
+          "en": "Pulls all nearby enemies to your position and increases Max Vigor by 50% for 5s."
+        },
+        "icon": "img/icons/skills/soulwarden_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Azimli Kalkan",
+          "en": "Resilient Shield"
+        },
+        "description": {
+          "tr": "Canlılığı anında %100 doldurur. Tüm Azim yüklerini tüketerek 4 sn boyunca taban %10 + yük başına +%10 Hasar Azaltma kazandırır.",
+          "en": "Instantly refills Vigor to 100%. Consumes all Resolve stacks to grant base 10% + +10% Damage Reduction per stack for 4s."
+        },
+        "icon": "img/icons/skills/soulwarden_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Ruh Avcısı",
+          "en": "Spirit Hunter"
+        },
+        "description": {
+          "tr": "Hedeflenen yere doğru ruhani güçle atılır, zemini parçalayarak geniş alandaki tüm düşmanlara ölçeklenen Fiziksel Hasar verir ve hedefleri 1 sn sersemletir.",
+          "en": "Leaps to targeted position with immense force, shattering the ground to deal scaling Physical Damage in a wide area and 1s stunning targets."
+        },
+        "icon": "img/icons/skills/soulwarden_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Ruh S\\xF6m\\xFCr\\xFCc\\xFC",
+        "tr": "Ruh Sömürücü",
         "en": "Soul Harvester"
       },
       "description": {
-        "tr": "D\\xFC\\u015Fmanlara hasar verdi\\u011Finde hedeften Ruh S\\xF6m\\xFCrerek Maksimum Canl\\u0131l\\u0131k kayna\\u011F\\u0131n\\u0131n %{0}'ini yeniler ve +{1} Azim y\\xFCk\\xFC kazand\\u0131r\\u0131r. (Bekleme S\\xFCresi: {2}sn). Azim y\\xFCkleri Azimli Kalkan yetene\\u011Fini g\\xFC\\xE7lendirir.",
-        "en": "'When dealing damage to an enemy, drain souls to refill {0}% of your Max Vigor and grant +{1} Resolve stack. (Cooldown: {2}s)."
+        "tr": "Düşmanlara hasar verdiğinde hedeften Ruh Sömürerek Maksimum Canlılık kaynağının %10–50'ini yeniler ve +1 Azim yükü kazandırır. (Bekleme Süresi: 7–3sn). Azim yükleri Azimli Kalkan yeteneğini güçlendirir.",
+        "en": "When dealing damage to an enemy, drain souls to refill 10–50% of your Max Vigor and grant +1 Resolve stack. (Cooldown: 7–3s).\nResolve stacks empower Resolute Shield."
       },
-      "icon": "img/icons/skills/soulwarden_passive.png"
-    },
-    "skills": []
+      "icon": "img/icons/skills/soulwarden_p.png"
+    }
   },
   {
     "id": "starforger",
+    "sourceClassId": "class_starforger",
     "name": {
       "tr": "Starforger",
       "en": "Starforger"
     },
     "description": {
-      "tr": "classIcon: {fileID: -5609683819521209479, guid: a711c750de18e0e46b2b0146d27f431d, type: 3}",
-      "en": "classIcon: {fileID: -5609683819521209479, guid: a711c750de18e0e46b2b0146d27f431d, type: 3}"
+      "tr": "Savaş alanına kozmik Yıldız Kılıçları saplayan ve tek tuşla sahnedeki tüm kılıçları bumerang gibi kendine çekerek düşman sürülerini biçen göksel silah ustası.",
+      "en": "A celestial weaponsmith who impales cosmic Starblades across the battlefield and magnetically recalls every blade at once to shred enemy hordes."
     },
-    "icon": "",
+    "icon": "img/icons/classes/starforger.png",
     "stats": {
       "health": 0,
       "mana": 0,
@@ -265,29 +616,79 @@
       "critChance": 0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Hükümdar Örsü",
+          "en": "Sovereign Anvil"
+        },
+        "description": {
+          "tr": "İmleç yönünde 9 m hat boyunca gökten 3 dev kozmik kılıç indirerek ölçeklenen fiziksel hasar verir ve zemine 2 Yıldız Kılıcı saplar.",
+          "en": "Calls down 3 colossal cosmic greatswords along a 9 m line toward the cursor, dealing scaling physical damage and impaling 2 Starblades into the ground."
+        },
+        "icon": "img/icons/skills/starforger_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Manyetik Geri Çağırma",
+          "en": "Magnetic Recall"
+        },
+        "description": {
+          "tr": "Sahnedeki tüm saplı Yıldız Kılıçlarını hızla sana doğru geri çeker. İlk isabet eden kılıç ölçeklenen fiziksel hasar, aynı hedefe isabet eden her ek kılıç ölçeklenen (%35) ek fiziksel hasar verir. 3 saniye boyunca alınan hasarı %20 azaltır ve düşmana isabet eden kılıç başına azami canın %3 kadarını yeniler (en fazla %15).",
+          "en": "Magnetically rips all impaled Starblades back to your position. The first blade hitting an enemy deals scaling physical damage, and each subsequent blade deals scaling (35%) additional physical damage. Grants 20% damage reduction for 3 seconds and restores 3% maximum health per blade that hits an enemy (up to 15%)."
+        },
+        "icon": "img/icons/skills/starforger_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Kılıç Sürüşü",
+          "en": "Valkyrie Surge"
+        },
+        "description": {
+          "tr": "İmleç yönünde 6 m atılarak yolundaki düşmanlara ölçeklenen fiziksel hasar verir; başlangıç ve bitiş noktasına birer Yıldız Kılıcı saplar. Yol üzerindeki mevcut kılıçları aşırı yükleyerek sürelerini yeniler ve çevrelerine ölçeklenen (%50) ek fiziksel hasar patlatır.",
+          "en": "Dash 6 m toward the cursor, dealing scaling physical damage along your path and impaling a Starblade at both start and end points. Existing blades along your path are overcharged, refreshing their duration and erupting for scaling (50%) additional physical damage."
+        },
+        "icon": "img/icons/skills/starforger_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Sonsuz Cephanelik",
+          "en": "Infinite Arsenal"
+        },
+        "description": {
+          "tr": "5 saniye boyunca göksel demirhane geçidi açar. Her 0,5 saniyede çevrendeki düşmanların üzerine kılıç yağdırarak ölçeklenen fiziksel hasar verir (10 dalgada toplam ölçeklenen) ve her iki dalgada bir zemine yeni bir Yıldız Kılıcı saplar.",
+          "en": "Opens a celestial forge gate for 5 seconds. Every 0.5 seconds, rains cosmic blades upon nearby enemies for scaling physical damage (scaling total over 10 waves) and impales a new Starblade every second wave."
+        },
+        "icon": "img/icons/skills/starforger_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Starforger_P_CelestialArmory",
-        "en": "Starforger_P_CelestialArmory"
+        "tr": "Göksel Cephanelik",
+        "en": "Celestial Armory"
       },
       "description": {
-        "tr": "icon: {fileID: -5609683819521209479, guid: a711c750de18e0e46b2b0146d27f431d, type: 3}",
-        "en": "icon: {fileID: -5609683819521209479, guid: a711c750de18e0e46b2b0146d27f431d, type: 3}"
+        "tr": "Her 2. normal saldırın hedefin zeminine 12 saniye kalan bir Yıldız Kılıcı saplar ve çevresine ölçeklenen (saldırı gücünün %45'i) fiziksel hasar verir. Sahnede en fazla 8 kılıç bulunabilir; aktif kılıç başına tüm yetenek hasarın %4 artar (en fazla %32).",
+        "en": "Every 2nd basic attack impales a Starblade into the ground for 12 seconds, dealing scaling (45% of attack damage) physical damage around it. Up to 8 blades can exist at once; each active blade increases your skill damage by 4% (up to 32%)."
       },
-      "icon": ""
-    },
-    "skills": []
+      "icon": "img/icons/skills/starforger_p.png"
+    }
   },
   {
     "id": "stormbinder",
+    "sourceClassId": "class_stormbinder",
     "name": {
       "tr": "Stormbinder",
       "en": "Stormbinder"
     },
     "description": {
-      "tr": "classIcon: {fileID: 21300000, guid: 7571793f342f73e4aab67f92a0c060cc, type: 3}",
-      "en": "classIcon: {fileID: 21300000, guid: 7571793f342f73e4aab67f92a0c060cc, type: 3}"
+      "tr": "Uzak mesafeden yıldırım, hortum ve bulut patlamalarıyla kalabalıkları biçer. Normal saldırısı hasar yerine İletkenlik uygular.",
+      "en": "Harvests crowds at range with lightning, tornadoes and cloudbursts. Basic attacks apply Conductivity instead of damage."
     },
     "icon": "img/icons/classes/stormbinder.png",
     "stats": {
@@ -300,31 +701,81 @@
       "critChance": 0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Yıldırım Kırılması",
+          "en": "Lightning Fracture"
+        },
+        "description": {
+          "tr": "25 birim menzilde, 5 birim yarıçapındaki bütün düşmanlara ölçeklenen büyü hasarı veren dallanmış yıldırım indirir.",
+          "en": "Call branching lightning within 25 units, dealing scaling magic damage to every enemy in a 5-unit radius."
+        },
+        "icon": "img/icons/skills/stormbinder_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Gezgin Hortum",
+          "en": "Roaming Tornado"
+        },
+        "description": {
+          "tr": "25 birim ilerleyen, 3 birim yarıçapında elektrikli hortum yollar. 4 saniyede 8 kez vurur; içeride kalan düşmana toplam ölçeklenen büyü hasarı verir ve %25 yavaşlatır.",
+          "en": "Send an electric tornado 25 units forward with a 3-unit radius. Hits 8 times over 4 seconds for scaling total magic damage to enemies that remain inside and slows by 25%."
+        },
+        "icon": "img/icons/skills/stormbinder_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Bulut Patlaması",
+          "en": "Cloudburst"
+        },
+        "description": {
+          "tr": "25 birim menzilde bulut oluşturur. 0,6 saniye sonra 7 birim yarıçapındaki herkese ölçeklenen büyü hasarı verir; 2 saniye %40 yavaşlatır.",
+          "en": "Form a cloud within 25 units. After 0.6 seconds it deals scaling magic damage to all enemies in a 7-unit radius and slows them by 40% for 2 seconds."
+        },
+        "icon": "img/icons/skills/stormbinder_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Fırtınanın Gözü",
+          "en": "Eye of the Storm"
+        },
+        "description": {
+          "tr": "25 birim menzilde, 10 birim yarıçapında 6 saniye süren fırtına kurar. Saniyede ölçeklenen, sonunda ölçeklenen büyü hasarı verir. İçeride kalan herkese toplam ölçeklenen hasar; kanal gerektirmez.",
+          "en": "Create a 10-unit storm within 25 units for 6 seconds. Deals scaling magic damage each second and scaling on collapse; scaling total to every enemy that remains inside. No channel required."
+        },
+        "icon": "img/icons/skills/stormbinder_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Stormbinder_P_Conductivity",
-        "en": "Stormbinder_P_Conductivity"
+        "tr": "İletkenlik",
+        "en": "Conductivity"
       },
       "description": {
-        "tr": "icon: {fileID: 21300000, guid: 81c405a1b31d2b7408598e9b1968dd8b, type: 3}",
-        "en": "icon: {fileID: 21300000, guid: 81c405a1b31d2b7408598e9b1968dd8b, type: 3}"
+        "tr": "Normal saldırıların hasar vermez. 25 birim içindeki hedefin ve 8 birim çevresindeki düşmanların her birine elektrik küresi gönderir. Küreler ulaştığında düşmanlar 6 saniye boyunca %20 daha fazla hasar alır. Tekrar uygulama süreyi yeniler; birikmez.",
+        "en": "Your basic attacks deal no damage. Send an electric orb to your target within 25 units and each enemy within 8 units of it. On arrival, enemies take 20% more damage for 6 seconds. Reapplication refreshes duration; does not stack."
       },
-      "icon": "img/icons/skills/stormbinder_passive.png"
-    },
-    "skills": []
+      "icon": "img/icons/skills/stormbinder_p.png"
+    }
   },
   {
     "id": "tempestblade",
+    "sourceClassId": "class_tempestblade",
     "name": {
       "tr": "Tempestblade",
       "en": "Tempestblade"
     },
     "description": {
-      "tr": "classIcon: {fileID: -3278397209808298185, guid: 1618f882f5cba974ea8b959aebd94e65, type: 3}",
-      "en": "classIcon: {fileID: -3278397209808298185, guid: 1618f882f5cba974ea8b959aebd94e65, type: 3}"
+      "tr": "Rüzgârla kılıcını birleştiren çevik bir düellocu. Zincir kesikleri hortuma dönüşür; hayalet kılıcı geçtiği yolu yeniden biçer.",
+      "en": "An agile duelist whose blade rides the wind. Chained cuts become a tornado, while a ghost sword retraces their path."
     },
-    "icon": "",
+    "icon": "img/icons/classes/tempestblade.png",
     "stats": {
       "health": 0,
       "mana": 0,
@@ -335,29 +786,79 @@
       "critChance": 0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Fırtına Yarığı",
+          "en": "Tempest Rend"
+        },
+        "description": {
+          "tr": "İlk iki kesik ölçeklenen Fiziksel Hasar verir. 3,5 saniye içinde üçüncü kez kullanıldığında ileriye hortum gönderir: ölçeklenen Fiziksel Hasar. Normal düşmanları 0,45 saniye havaya savurur; bosslar savrulmaz.",
+          "en": "The first two cuts deal scaling Physical Damage. Cast a third time within 3.5 seconds to launch a tornado forward, dealing scaling Physical Damage. It knocks normal enemies up for 0.45 seconds. Bosses resist the knock-up."
+        },
+        "icon": "img/icons/skills/tempestblade_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Rüzgâr Savuşturması",
+          "en": "Wind Riposte"
+        },
+        "description": {
+          "tr": "Önündeki düşmanlara ölçeklenen Fiziksel Hasar verir. 0,45 saniye boyunca gelen hasarı %45 azaltır. Bu sırada ilk düşman isabeti aynı hasarı veren bir karşı kesik tetikler.",
+          "en": "Slash enemies in front for scaling Physical Damage. Reduce incoming damage by 45% for 0.45 seconds. The first enemy hit during this guard triggers a counter slash dealing the same damage."
+        },
+        "icon": "img/icons/skills/tempestblade_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Çapraz Geçiş",
+          "en": "Crossing Gale"
+        },
+        "description": {
+          "tr": "İmleç yönünde 5 metre atılarak yolundaki düşmanlara ölçeklenen Fiziksel Hasar verirsin. Hayalet kılıç 0,25 saniye sonra geçtiğin yolu izleyerek aynı hasarı bir kez daha verir.",
+          "en": "Dash 5 metres toward the cursor, dealing scaling Physical Damage along your path. A ghost sword follows your travelled route 0.25 seconds later, dealing the same damage once more."
+        },
+        "icon": "img/icons/skills/tempestblade_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Gök Yaran",
+          "en": "Sky Sunder"
+        },
+        "description": {
+          "tr": "8 saniye boyunca saldırı gücünü %20 artırır. Yeniden kullanım güçlenmeyi bitirir ve ölçeklenen Fiziksel Hasar veren geniş bir rüzgâr kesiği gönderir. Hasar, hedefin eksik canına göre en fazla %50 artar. İkinci kullanım mana harcamaz.",
+          "en": "Gain 20% attack damage for 8 seconds. Recast to end the buff and launch a wide wind crescent dealing scaling Physical Damage, increased by up to 50% based on the target's missing health. The recast costs no mana."
+        },
+        "icon": "img/icons/skills/tempestblade_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Tempestblade_P_EchoCut",
-        "en": "Tempestblade_P_EchoCut"
+        "tr": "Artçı Kesik",
+        "en": "Echo Cut"
       },
       "description": {
-        "tr": "icon: {fileID: -3278397209808298185, guid: 1618f882f5cba974ea8b959aebd94e65, type: 3}",
-        "en": "icon: {fileID: -3278397209808298185, guid: 1618f882f5cba974ea8b959aebd94e65, type: 3}"
+        "tr": "E sonrasında 4 saniye içinde isabet eden ilk normal saldırın, saldırı gücünün %60'i kadar fiziksel hasar veren gecikmeli bir hayalet kesik tetikler.",
+        "en": "After E, your first basic attack that hits within 4 seconds triggers a delayed ghost cut dealing physical damage equal to 60% of attack damage."
       },
-      "icon": ""
-    },
-    "skills": []
+      "icon": "img/icons/skills/tempestblade_p.png"
+    }
   },
   {
     "id": "tidecaller",
+    "sourceClassId": "class_tidecaller",
     "name": {
       "tr": "Tidecaller",
       "en": "Tidecaller"
     },
     "description": {
-      "tr": "Channeler of the abyssal oceans, bending crushing tidal waves and vortex currents to drown foes.",
-      "en": "Channeler of the abyssal oceans, bending crushing tidal waves and vortex currents to drown foes."
+      "tr": "Uçsuz bucaksız okyanus derinliklerini bükerek devasa dalgalar ve girdap akıntılarıyla düşmanlarını boğan kudretli büyücü.",
+      "en": "Master of the abyssal oceans, bending crushing tidal waves and vortex currents to drown foes."
     },
     "icon": "img/icons/classes/tidecaller.png",
     "stats": {
@@ -367,34 +868,84 @@
       "armor": 15,
       "magicResist": 15,
       "abilityPower": 90,
-      "critChance": 10,
+      "critChance": 10.0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Dalga Çarpması",
+          "en": "Crashing Wave"
+        },
+        "description": {
+          "tr": "İleriye kesici bir su dalgası fırlatarak ölçeklenen Büyü Hasarı verir, düşmanları yavaşlatır ve 1 Sırılsıklam yükü ekler. 2.5 saniye içinde tekrar kullanılırsa devasa bir Kırılan Dalga çarparak düşmanları havaya fırlatır ve Sırılsıklam yüklü hedeflere %30 fazladan hasar vurur.",
+          "en": "Fires a swift slicing wave dealing scaling Magic Damage, slowing enemies and adding 1 Drenched stack. Recast within 2.5s to slam a massive Crashing Crest that knocks enemies airborne and deals +30% bonus damage to Drenched targets."
+        },
+        "icon": "img/icons/skills/tidecaller_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Derinlik Gayzeri",
+          "en": "Abyssal Geyser"
+        },
+        "description": {
+          "tr": "Hedef alanda dönen bir su girdabı açarak düşmanları 1 saniye boyunca merkeze çeker ve sürekli hasar verir. Ardından merkezden basınçlı dev bir gayzer patlayarak alandaki tüm düşmanlara ölçeklenen Büyü Hasarı vurur, havaya fırlatır ve 2 Sırılsıklam yükü uygular.",
+          "en": "Summons a swirling water vortex pulling enemies inward for 1s. Then erupts into a massive high-pressure geyser dealing scaling Magic Damage, knocking enemies airborne and applying 2 Drenched stacks."
+        },
+        "icon": "img/icons/skills/tidecaller_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Akıntıya Kapıl",
+          "en": "Riptide Surge"
+        },
+        "description": {
+          "tr": "Dalga üstünde hızla kayarak atılır, temas ettiği düşmanları yana savurur ve ölçeklenen Büyü Hasarı verir. Arkasında bıraktığı su izinde dururken +%35 Hareket Hızı ve %20 Hasar Azaltma kazanırsın. Su izi düşmanları %40 yavaşlatır.",
+          "en": "Surfs forward on a wave, knocking aside enemies hit and dealing scaling Magic Damage. Leaves behind a water trail granting you +35% Movement Speed and 20% Damage Reduction. Enemies in the trail are slowed by 40%."
+        },
+        "icon": "img/icons/skills/tidecaller_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Tsunami",
+          "en": "Tsunami"
+        },
+        "description": {
+          "tr": "Önündeki tüm düşmanları içine hapsedip sürükleyen devasa bir okyanus dalgası çağırır. Temas eden her düşmana ölçeklenen Büyü Hasarı vurur ve dalga son menzile ulaştığında patlayarak anında 4 Sırılsıklam Yükü patlatır!",
+          "en": "Summons a colossal sweeping tidal wave that carries and drowns all enemies in its path, dealing scaling Magic Damage and erupting at destination to instantly detonate 4 Drenched Stacks!"
+        },
+        "icon": "img/icons/skills/tidecaller_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
         "tr": "Sırılsıklam",
         "en": "Drenched"
       },
       "description": {
-        "tr": "Yetenekler ve Temel Sald\\u0131r\\u0131lar hedeflere S\\u0131r\\u0131ls\\u0131klam y\\xFCk\\xFC biriktirir (en fazla 4). 4 y\\xFCke ula\\u015F\\u0131ld\\u0131\\u011F\\u0131nda su infilak eder: hedefe {flatDamage} (+%{maxHpPct} Azami Can) B\\xFCy\\xFC Hasar\\u0131 verir, {stunDuration}sn Sersemletir, Ak\\u0131nt\\u0131ya Kap\\u0131l (E) bekleme s\\xFCresini {cdRefund}sn azalt\\u0131r ve Tidecaller'a {msDuration}sn boyunca +%{msBuff} Hareket H\\u0131z\\u0131 kazand\\u0131r\\u0131r.",
-        "en": "'Skills and Basic Attacks apply Drenched stacks (up to 4). At 4 stacks, the water erupts: dealing {flatDamage} (+{maxHpPct}% Max HP) Magic Damage, Stunning for {stunDuration}s, reducing Riptide Surge (E) cooldown by {cdRefund}s, and granting Tidecaller +{msBuff}% Movement Speed for {msDuration}s.'"
+        "tr": "Yetenekler ve Temel Saldırılar hedeflere Sırılsıklam yükü biriktirir (en fazla 4). 4 yüke ulaşıldığında su infilak eder: hedefe ölçeklenen (+%2–6 + 0,004 × Yetenek Gücü Azami Can) Büyü Hasarı verir, 0,75sn Sersemletir, Akıntıya Kapıl (E) bekleme süresini 1,5sn azaltır ve Tidecaller'a 3sn boyunca +%15 Hareket Hızı kazandırır.",
+        "en": "Skills and Basic Attacks apply Drenched stacks (up to 4). At 4 stacks, the water erupts: dealing scaling (+2–6 + 0.004 × Ability Power% Max HP) Magic Damage, Stunning for 0.75s, reducing Riptide Surge (E) cooldown by 1.5s, and granting Tidecaller +15% Movement Speed for 3s."
       },
-      "icon": "img/icons/skills/tidecaller_passive.png"
-    },
-    "skills": []
+      "icon": "img/icons/skills/tidecaller_p.png"
+    }
   },
   {
     "id": "voidlord",
+    "sourceClassId": "class_voidlord",
     "name": {
       "tr": "Voidlord",
       "en": "Voidlord"
     },
     "description": {
-      "tr": "classIcon: {fileID: -3273033591457530592, guid: 88717791bc99c814680219c729f3ec4b, type: 3}",
-      "en": "classIcon: {fileID: -3273033591457530592, guid: 88717791bc99c814680219c729f3ec4b, type: 3}"
+      "tr": "Hiçliği iradesine boyun eğdiren bir alan büyücüsü. Karanlık dalgalarla düşman sürülerini biçer, çöken yarıklarla onları bir araya toplar ve tutulmanın gücüyle yok eder.",
+      "en": "An area mage who bends the Void to their will. Dark waves reap enemy hordes, collapsing rifts gather them, and an eclipse consumes them."
     },
-    "icon": "",
+    "icon": "img/icons/classes/voidlord.png",
     "stats": {
       "health": 0,
       "mana": 0,
@@ -405,28 +956,78 @@
       "critChance": 0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Uçurum Dalgası",
+          "en": "Abyssal Wave"
+        },
+        "description": {
+          "tr": "İmleç yönüne geniş bir karanlık dalga göndererek geçtiği düşmanlara ölçeklenen Büyü Hasarı verir. Her hedef aynı dalgadan yalnız bir kez etkilenir.",
+          "en": "Send a wide dark wave toward the cursor, dealing scaling Magic Damage to enemies in its path. Each target is hit once per wave."
+        },
+        "icon": "img/icons/skills/voidlord_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Çöken Hiçlik",
+          "en": "Crushing Void"
+        },
+        "description": {
+          "tr": "İmleç konumunda açılan yarık ölçeklenen Büyü Hasarı verir ve düşmanları kısa süreliğine merkeze çeker. Bosslar çekilmez.",
+          "en": "Open a rift at the cursor, dealing scaling Magic Damage and briefly pulling enemies inward. Bosses cannot be pulled."
+        },
+        "icon": "img/icons/skills/voidlord_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Yarık Geçişi",
+          "en": "Riftwalk"
+        },
+        "description": {
+          "tr": "İmleç yönünde 6 metre atılarak yolundaki düşmanlara bir kez ölçeklenen Büyü Hasarı verirsin.",
+          "en": "Dash 6 metres toward the cursor, dealing scaling Magic Damage once to enemies along the path."
+        },
+        "icon": "img/icons/skills/voidlord_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Olay Ufku",
+          "en": "Event Horizon"
+        },
+        "description": {
+          "tr": "Seni takip eden karanlık alan 6 saniye boyunca her 0,5 saniyede ölçeklenen Büyü Hasarı verir. Alanda kalan hedef 12 isabetle toplam ölçeklenen hasar alır.",
+          "en": "A dark field follows you for 6 seconds, dealing scaling Magic Damage every 0.5 seconds. A target remaining inside takes 12 hits for scaling total damage."
+        },
+        "icon": "img/icons/skills/voidlord_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Voidlord_P_EndlessDominion",
-        "en": "Voidlord_P_EndlessDominion"
+        "tr": "Sonsuz Hüküm",
+        "en": "Endless Dominion"
       },
       "description": {
-        "tr": "icon: {fileID: -3273033591457530592, guid: 88717791bc99c814680219c729f3ec4b, type: 3}",
-        "en": "icon: {fileID: -3273033591457530592, guid: 88717791bc99c814680219c729f3ec4b, type: 3}"
+        "tr": "Kendi saldırılarınla öldürdüğün her düşman azami mananın %2'ini yeniler. Aynı yetenekle 3 farklı düşmana hasar verdiğinde azami canının %3'ini yenilersin. Can yenileme her yetenek kullanımında bir kez tetiklenir.",
+        "en": "Each enemy slain by your attacks restores 2% of maximum mana. Damaging 3 different enemies with one ability restores 3% of maximum health, once per cast."
       },
-      "icon": ""
-    },
-    "skills": []
+      "icon": "img/icons/skills/voidlord_p.png"
+    }
   },
   {
     "id": "voidwyrm",
+    "sourceClassId": "class_voidwyrm",
     "name": {
       "tr": "Voidwyrm",
       "en": "Voidwyrm"
     },
     "description": {
-      "tr": "A cosmic sorcerer who summons three-headed Nether Hydras from void rifts, overcharges them with singularity beams, and shifts positions across the battlefield.",
+      "tr": "Hiçlik yarıklarından üç başlı Hiçlik Hidraları çağıran, tekillik ışınlarıyla onları aşırı yükleyen ve sahadaki hidralarla boyutsal olarak yer değiştiren kozmik bir büyücü.",
       "en": "A cosmic sorcerer who summons three-headed Nether Hydras from void rifts, overcharges them with singularity beams, and shifts positions across the battlefield."
     },
     "icon": "img/icons/classes/voidwyrm.png",
@@ -437,31 +1038,81 @@
       "armor": 0,
       "magicResist": 0,
       "abilityPower": 0,
-      "critChance": 5,
+      "critChance": 5.0,
       "cooldownReduction": 0
     },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Hiçlik Hidrası",
+          "en": "Nether Hydra"
+        },
+        "description": {
+          "tr": "İmleç konumuna 12 saniye boyunca savaşan 3 başlı bir Hiçlik Hidrası çağırır. Her baş düşmanlara ölçeklenen Büyü Hasarı veren hiçlik okları ateşler (yaylım başına toplam ölçeklenen hasar). Sahada en fazla 2 Hidra bulunabilir; 3. Hidra çağrıldığında en eskisi aşırı yüklenerek patlar ve çevresine ölçeklenen Büyü Hasarı verir.",
+          "en": "Summons a 3-headed Nether Hydra at the cursor for 12 seconds. Each head fires void bolts dealing scaling Magic Damage (scaling total damage per 3-bolt volley). Up to 2 Hydras can be active at once; summoning a 3rd overloads the oldest, detonating it for scaling Magic Damage in an area."
+        },
+        "icon": "img/icons/skills/voidwyrm_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Tekillik Işını",
+          "en": "Singularity Beam"
+        },
+        "description": {
+          "tr": "İmleç yönünde tüm düşmanları delip geçen yoğun bir Tekillik Işını ateşleyerek hattaki hedeflere ölçeklenen Büyü Hasarı verir. Işın sahadaki Hidraların içinden geçerse onları 4 saniyeliğine aşırı yükleyerek saldırı hızlarını iki katına çıkarır.",
+          "en": "Fires a piercing Singularity Beam toward the cursor, dealing scaling Magic Damage to all enemies in its line. Passing through active Hydras overcharges them for 4 seconds, doubling their attack speed."
+        },
+        "icon": "img/icons/skills/voidwyrm_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Boyut Adımı",
+          "en": "Warp Step"
+        },
+        "description": {
+          "tr": "İmleç yönünde boyuttan süzülerek hızla kayar. İmleç sahadaki bir Hidranın yakınındaysa onunla yer değiştirir, bekleme süresinin %50'sini iade alır ve varış noktasında şok dalgası patlatarak çevredeki düşmanlara ölçeklenen Büyü Hasarı verir ve onları 1.5 saniyeliğine %45 yavaşlatır.",
+          "en": "Glides swiftly through a dimensional rift toward the cursor. If cast near an active Hydra, swaps positions with it, refunding 50% cooldown and unleashing a shockwave on arrival that deals scaling Magic Damage and slows nearby enemies by 45% for 1.5 seconds."
+        },
+        "icon": "img/icons/skills/voidwyrm_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Boyut Çöküşü",
+          "en": "Planar Collapse"
+        },
+        "description": {
+          "tr": "Hedef konumda devasa bir Boyut Çenesi açarak düşmanları merkeze çeker, havaya savurur ve ölçeklenen Büyü Hasarı verir. Sahadaki tüm aktif Hidralar yer altına dalarak feda edilir; feda edilen her Hidra patlama hasarını +%25 artırır (2 Hidra ile en fazla ölçeklenen hasar).",
+          "en": "Erupts a colossal Dimensional Maw at the target location, pulling enemies inward, launching them airborne, and dealing scaling Magic Damage. All active Hydras submerge and are consumed, each increasing the eruption damage by +25% (up to scaling damage with 2 Hydras)."
+        },
+        "icon": "img/icons/skills/voidwyrm_r.png"
+      }
+    ],
     "passive": {
-      "slot": "Passive",
+      "slot": "P",
       "name": {
-        "tr": "Hi\\xE7lik Ba\\u011F\\u0131",
+        "tr": "Hiçlik Bağı",
         "en": "Void Tether"
       },
       "description": {
-        "tr": "Sahada aktif olan her Hidra sana +%8 Hareket H\\u0131z\\u0131 ve +%5 Bekleme S\\xFCresi Azalmas\\u0131 kazand\\u0131r\\u0131r. Temel sald\\u0131r\\u0131lar\\u0131n hedefi i\\u015Faretler ve t\\xFCm Hidralar i\\u015Faretlenen d\\xFC\\u015Fmana odaklan\\u0131r. 3. Hidra \\xE7a\\u011Fr\\u0131ld\\u0131\\u011F\\u0131nda en eski Hidra patlayarak yak\\u0131ndaki d\\xFC\\u015Fmanlara alan hasar\\u0131 verir ve onlar\\u0131 geri savurur.",
+        "tr": "Sahada aktif olan her Hidra sana +%8 Hareket Hızı ve +%5 Bekleme Süresi Azalması kazandırır. Temel saldırıların hedefi işaretler ve tüm Hidralar işaretlenen düşmana odaklanır. 3. Hidra çağrıldığında en eski Hidra patlayarak yakındaki düşmanlara alan hasarı verir ve onları geri savurur.",
         "en": "Each active Hydra grants you +8% Movement Speed and +5% Cooldown Reduction. Basic attacks mark enemies, commanding all Hydras to focus fire on the marked target. Summoning a 3rd Hydra overloads the oldest, detonating it to deal area damage and knock back nearby foes."
       },
-      "icon": "img/icons/skills/voidwyrm_passive.png"
-    },
-    "skills": []
+      "icon": "img/icons/skills/voidwyrm_p.png"
+    }
   },
   {
     "id": "wraithlord",
+    "sourceClassId": "class_wraithlord",
     "name": {
       "tr": "Wraithlord",
       "en": "Wraithlord"
     },
     "description": {
-      "tr": "A dark harbinger who siphons the souls of the living to unleash spectral volleys and unholy apocalypses.",
+      "tr": "Yaşayanların ruhlarını emerek tayf voleybolları ve karanlık kıyametler başlatan kudretli bir gölge efendisi.",
       "en": "A dark harbinger who siphons the souls of the living to unleash spectral volleys and unholy apocalypses."
     },
     "icon": "img/icons/classes/wraithlord.png",
@@ -472,105 +1123,155 @@
       "armor": 10,
       "magicResist": 10,
       "abilityPower": 100,
-      "critChance": 5,
-      "cooldownReduction": 10
-    },
-    "passive": {
-      "slot": "Passive",
-      "name": {
-        "tr": "Wraithlord_Passive_SoulSiphon",
-        "en": "Wraithlord_Passive_SoulSiphon"
-      },
-      "description": {
-        "tr": "icon: {fileID: 21300000, guid: 434607433cbc7094497a54c5d97b6dfb, type: 3}",
-        "en": "icon: {fileID: 21300000, guid: 434607433cbc7094497a54c5d97b6dfb, type: 3}"
-      },
-      "icon": "img/icons/skills/wraithlord_passive.png"
-    },
-    "skills": []
-  },
-  {
-    "id": "void-harvester",
-    "name": {
-      "tr": "Void Harvester",
-      "en": "Void Harvester"
-    },
-    "description": {
-      "tr": "Hiçliğin yıkıcı enerjisini hasat ederek düşmanların yaşam özünü tüketen kadim karanlık sınıf.",
-      "en": "An ancient dark class that harvests the destructive essence of the void to siphon enemy vitality."
-    },
-    "icon": "img/icons/classes/void-harvester.png",
-    "stats": {
-      "health": 65,
-      "mana": 80,
-      "damage": 25,
-      "armor": 15,
-      "magicResist": 20,
-      "abilityPower": 90,
-      "critChance": 10,
-      "cooldownReduction": 15
-    },
-    "passive": {
-      "slot": "Passive",
-      "name": {
-        "tr": "Ruh Parçalanması",
-        "en": "Soul Shard Harvest"
-      },
-      "description": {
-        "tr": "Katledilen düşmanlar ruh parçaları bırakır; toplanan her parça yetenek gücünü ve can çalmayı artırır.",
-        "en": "Slain foes drop soul fragments, increasing ability power and omnivamp."
-      },
-      "icon": "img/icons/skills/void-harvester_passive.png"
+      "critChance": 5.0,
+      "cooldownReduction": 10.0
     },
     "skills": [
       {
         "slot": "Q",
         "name": {
-          "tr": "Hiçlik Tırpanı",
-          "en": "Void Scythe"
+          "tr": "Ruhani Salvo",
+          "en": "Spectral Volley"
         },
         "description": {
-          "tr": "Önündeki konik alana hiçlik enerjisi savurarak ağır büyü hasarı verir.",
-          "en": "Sweeps void energy in a cone dealing heavy magic damage."
+          "tr": "Rakipleri takip eden ruhani varlıklar fırlatarak ölçeklenen Büyü Hasarı verir. Ruh Gücü yüklerinin tamamını tüketerek hasarı artırır. Kıyamet modundayken 5 yerine 10 adet fırlatır. Kabir Ateşi ile işaretli hedeflere alan hasarı olarak patlar.",
+          "en": "Fires a burst of seeking spectral spirits that deal scaling Magic Damage as area damage. Consumes all Soul Power to fire extra spirits. Fires 10 spirits instead of 5 during Apocalypse. Explodes on Withered enemies."
+        },
+        "icon": "img/icons/skills/wraithlord_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Kabir Ateşi",
+          "en": "Gravefire Nova"
+        },
+        "description": {
+          "tr": "Yakındaki rakiplerin altındaki zemini hayalet ateşiyle tutuşturarak ölçeklenen Büyü Hasarı verir ve 5sn boyunca Çürüme uygulayarak zamanla hasar verir. Vurulan her rakip sana +1 Ruh Gücü yükü kazandırır.",
+          "en": "Ignites the ground with green-blue ghostly fire under nearby enemies, dealing scaling Magic Damage and applying Wither for 5s. Each hit enemy grants you a stack of Soul Power."
+        },
+        "icon": "img/icons/skills/wraithlord_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Karanlık Yükseliş",
+          "en": "Unholy Ascension"
+        },
+        "description": {
+          "tr": "Yüce karanlıkla bütünleşerek 5 saniye boyunca:\n• +%20 Kritik Şans\n• +%200 Kritik Hasar\n• +%20 Büyü Nüfuzu\nkazanırsın. Süre boyunca her saniye Maksimum Canının %10'unu yenilersin.\nEğer Kıyamet (R) aktif değilse her saniye mana tüketir ve -%15 Hasar Azaltma cezası alırsın.",
+          "en": "Merge with the supreme darkness for 5s to gain:\n• +20% Critical Strike Chance\n• +200% Critical Strike Damage\n• +20% Magic Penetration\nRegenerate 10% of your Max Health each second.\nIf Apocalypse (R) is inactive, drains mana each second and suffers a -15% Damage Reduction penalty."
+        },
+        "icon": "img/icons/skills/wraithlord_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Kıyamet",
+          "en": "Apocalypse"
+        },
+        "description": {
+          "tr": "Gölge enerjisinden büyük bir şok dalgası yayarak ölçeklenen Büyü Hasarı verir ve rakipleri 4sn sersemletir. 7sn boyunca karanlık boyuta geçerek sınırsız mana kazanır, Karanlık Yükseliş'in mana tüketimini ve savunma cezasını tamamen yok sayar.",
+          "en": "Releases a shockwave of shadow energy, dealing scaling Magic Damage and stunning enemies for 4s. Enters a dark realm for 7s, granting infinite mana, negating Unholy Ascension's drain/penalty, and spawning shards on kill."
+        },
+        "icon": "img/icons/skills/wraithlord_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Ruh Sömürüsü",
+        "en": "Soul Siphon"
+      },
+      "description": {
+        "tr": "Normal saldırıların menzillidir ve en fazla 7 rakipten ruh sömürerek ölçeklenen Büyü Hasarı verir. Seken vuruşlar hedefleri 3sn boyunca %20 yavaşlatır ve 3sn boyunca +%20 daha fazla hasar almalarını sağlar. Yerde Ruh Parçacıkları düşürme şansı vardır.",
+        "en": "Your basic attacks are ranged and siphon life from up to 7 enemies, dealing scaling Magic Damage. Bounced attacks slow targets by 20% for 3s and increase their damage taken by 20% for 3s. Has a chance to drop Soul Shards."
+      },
+      "icon": "img/icons/skills/wraithlord_p.png"
+    }
+  },
+  {
+    "id": "void-harvester",
+    "sourceClassId": "class_nechronomancer",
+    "name": {
+      "tr": "Void Harvester",
+      "en": "Void Harvester"
+    },
+    "description": {
+      "tr": "Kozmik Hiçlik'in ve entropinin gücünü kullanan kadim bir savaşçı. Gerçeklikteki yarıklardan sızan güçle düşmanların yaşam özünü emer ve varlıklarını kozmik bir çöküşle yok eder.",
+      "en": "An entropic wielder of the cosmic Void. Siphons the vitality of enemies through reality tears, erasing their existence in a singularity collapse."
+    },
+    "icon": "img/icons/classes/void-harvester.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Araf Akıntısı",
+          "en": "Nether Torrent"
+        },
+        "description": {
+          "tr": "İleriye doğru delici bir araf enerjisi akıntısı püskürterek ölçeklenen Gölge Hasarı verir. Düşmanların hareket hızını 3 saniye boyunca %30 yavaşlatır. 1 Hiçlik Yarığı yükü kazandırır.",
+          "en": "Unleash a piercing torrent of nether energy forward, dealing scaling Shadow Damage. Enemies hit are slowed by 30% for 3 seconds. Grants 1 Void Rift stack."
         },
         "icon": "img/icons/skills/void-harvester_q.png"
       },
       {
         "slot": "W",
         "name": {
-          "tr": "Entropik Çürüme",
-          "en": "Entropic Decay"
+          "tr": "Öz Girdabı",
+          "en": "Essence Vortex"
         },
         "description": {
-          "tr": "Hedef alanı çürüterek zamanla hasar verir ve düşmanların zırhını eritir.",
-          "en": "Afflicts the target area with decay, melting armor over time."
+          "tr": "6,5 metre içindeki düşmanların yaşam özünü emerek ölçeklenen Gölge Hasarı verir. Vurulan her düşman başına 25 (+%35 AP) can yeniler; mevcut her Hiçlik Yarığı yükü bu iyileşmeyi %20 artırır.",
+          "en": "Manifest an entropic vortex that drains enemies within 6.5 meters, dealing scaling Shadow Damage. Restores 25 (+35% AP) health per enemy struck; active Void Rift stacks increase this healing by 20% each."
         },
         "icon": "img/icons/skills/void-harvester_w.png"
       },
       {
         "slot": "E",
         "name": {
-          "tr": "Ruh Çekimi",
-          "en": "Essence Siphon"
+          "tr": "Hiçlik Adımı",
+          "en": "Phase Stride"
         },
         "description": {
-          "tr": "Yakındaki düşmanların hareket hızını yavaşlatır ve canlarını kendine çeker.",
-          "en": "Slows nearby enemies and siphons their life essence."
+          "tr": "İmleç yönünde 8 metreye kadar hızla sıçrar. Başlangıç ve bitiş noktalarında patlayan şok dalgaları ölçeklenen Gölge Hasarı verir ve düşmanları 0,5 saniye sersemletir. 1 Hiçlik Yarığı yükü kazandırır.",
+          "en": "Phase rapidly up to 8 meters toward your cursor. Resonant shockwaves erupt at your origin and arrival, dealing scaling Shadow Damage and stunning targets for 0.5 seconds. Grants 1 Void Rift stack."
         },
         "icon": "img/icons/skills/void-harvester_e.png"
       },
       {
         "slot": "R",
         "name": {
-          "tr": "Hiçlik Sureti (Apex)",
-          "en": "Void Avatar"
+          "tr": "Kozmik Çöküş",
+          "en": "Singularity Collapse"
         },
         "description": {
-          "tr": "Saf hiçlik formuna bürünerek tüm yeteneklerin bekleme süresini sıfırlar ve hasarı ikiye katlar.",
-          "en": "Transforms into pure void avatar, resetting cooldowns and doubling damage."
+          "tr": "Hedef alanda gerçekliği yırtarak devasa bir kara delik patlaması yaratır ve ölçeklenen Gölge Hasarı verir. Tüm Hiçlik Yarığı yüklerini tüketir; tüketilen yük başına hasar %35 artar.",
+          "en": "Tear open a massive cosmic black hole at the target area, detonating for scaling Shadow Damage. Consumes all active Void Rift stacks, amplifying damage by 35% for each stack consumed."
         },
         "icon": "img/icons/skills/void-harvester_r.png"
       }
-    ]
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Entropik Yankı",
+        "en": "Entropic Echo"
+      },
+      "description": {
+        "tr": "Yetenekler ve saldırılar 1 Hiçlik Yarığı yükü üretir (Maks 5). Her yük hasarı %6 artırır. Can %35'in altına düştüğünde Hiçlik Taşkını tetiklenir: Saldırı ve yetenek hızı %20 artar.",
+        "en": "Abilities and basic attacks generate 1 Void Rift stack (Max 5). Each stack increases damage by 6%. When health falls below 35%, Void Surge triggers: Attack and casting speed increases by 20%."
+      },
+      "icon": "img/icons/skills/void-harvester_p.png"
+    }
   }
 ]

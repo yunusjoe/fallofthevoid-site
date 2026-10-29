@@ -100,27 +100,43 @@
     "en": "Bonus Mana"
   },
   "stat_damage": {
-    "tr": "Saldırı Gücü",
-    "en": "Attack Damage"
+    "tr": "Bonus Saldırı Gücü",
+    "en": "Bonus Attack Damage"
   },
   "stat_armor": {
-    "tr": "Zırh",
-    "en": "Armor"
+    "tr": "Bonus Zırh",
+    "en": "Bonus Armor"
   },
   "stat_magic_resist": {
-    "tr": "Büyü Direnci",
-    "en": "Magic Resist"
+    "tr": "Bonus Büyü Direnci",
+    "en": "Bonus Magic Resist"
   },
   "stat_ability_power": {
-    "tr": "Yetenek Gücü",
-    "en": "Ability Power"
+    "tr": "Bonus Yetenek Gücü",
+    "en": "Bonus Ability Power"
   },
   "stat_crit": {
-    "tr": "Kritik İhtimali",
-    "en": "Crit Chance"
+    "tr": "Bonus Kritik İhtimali",
+    "en": "Bonus Crit Chance"
   },
   "stat_cooldown": {
-    "tr": "Bekleme Süresi",
-    "en": "Cooldown Red."
+    "tr": "Bonus Bekleme Süresi",
+    "en": "Bonus Cooldown Red."
+  },
+  "class_badge": {
+    "tr": "Oynanabilir sınıf",
+    "en": "Playable class"
+  },
+  "active_skill_label": {
+    "tr": "Aktif Yetenek",
+    "en": "Active Ability"
+  },
+  "class_stats_note": {
+    "tr": "Sınıfa özgü bonuslar gösterilir. Toplam karakter değerleri seviye, ekipman ve diğer güçlerle değişir.",
+    "en": "Class-specific bonuses are shown. Total character stats vary with level, equipment and other powers."
+  },
+  "skill_scaling_note": {
+    "tr": "Hasar; karakter seviyesi, yetenek rütbesi ve ekipmana göre ölçeklenir. Burada yeteneklerin işleyişi ve sabit etkileri gösterilir.",
+    "en": "Damage scales with character level, ability rank and equipment. Ability mechanics and fixed effects are shown here."
   }
 }

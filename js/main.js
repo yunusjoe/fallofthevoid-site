@@ -57,10 +57,10 @@ function loadSavedLanguage() {
 
 async function loadAllData() {
     const [siteRes, langRes, patchesRes, charactersRes] = await Promise.all([
-        fetch('data/site.json'),
-        fetch('data/lang.json'),
-        fetch('data/patches.json'),
-        fetch('data/characters.json')
+        fetch('data/site.json', { cache: 'no-cache' }),
+        fetch('data/lang.json', { cache: 'no-cache' }),
+        fetch('data/patches.json', { cache: 'no-cache' }),
+        fetch('data/characters.json', { cache: 'no-cache' })
     ]);
 
     if (!siteRes.ok || !langRes.ok || !patchesRes.ok || !charactersRes.ok) {
@@ -103,6 +103,7 @@ function toggleLanguage() {
 }
 
 function renderInterface() {
+    document.documentElement.lang = AppState.currentLang;
     updateLanguageButton();
     renderStaticI18nTexts();
     renderSiteMetadata();
@@ -164,6 +165,7 @@ function renderClasses() {
     const container = document.getElementById('characters-container');
     if (!container || !AppState.charactersData || AppState.charactersData.length === 0) return;
 
+    const previousScroll = container.querySelector('.class-selector-bar')?.scrollLeft || 0;
     clearElement(container);
 
     const { currentLang, langData, selectedClassId } = AppState;
@@ -177,6 +179,7 @@ function renderClasses() {
         const tabBtn = document.createElement('button');
         tabBtn.className = `class-tab-btn ${cls.id === currentClass.id ? 'active' : ''}`;
         tabBtn.type = 'button';
+        tabBtn.setAttribute('aria-pressed', String(cls.id === currentClass.id));
 
         if (cls.icon) {
             const iconImg = document.createElement('img');
@@ -201,6 +204,7 @@ function renderClasses() {
     });
 
     container.appendChild(selectorBar);
+    selectorBar.scrollLeft = previousScroll;
 
     // 2. Seçili Sınıfın Sinematik Vitrin Alanı
     const showcase = document.createElement('div');
@@ -230,7 +234,7 @@ function renderClasses() {
 
     const classBadge = document.createElement('span');
     classBadge.className = 'class-role-badge';
-    classBadge.textContent = 'ARPG HERO CLASS';
+    classBadge.textContent = langData.class_badge[currentLang];
 
     titleWrap.appendChild(classNameEl);
     titleWrap.appendChild(classBadge);
@@ -247,16 +251,12 @@ function renderClasses() {
     const statsContainer = document.createElement('div');
     statsContainer.className = 'class-stat-list';
 
-    const statConfig = [
-        { key: 'stat_health', val: currentClass.stats.health, max: 100, unit: '' },
-        { key: 'stat_mana', val: currentClass.stats.mana, max: 100, unit: '' },
-        { key: 'stat_damage', val: currentClass.stats.damage, max: 50, unit: '' },
-        { key: 'stat_ability_power', val: currentClass.stats.abilityPower, max: 120, unit: '' },
-        { key: 'stat_armor', val: currentClass.stats.armor, max: 50, unit: '' },
-        { key: 'stat_magic_resist', val: currentClass.stats.magicResist, max: 50, unit: '' },
-        { key: 'stat_crit', val: currentClass.stats.critChance, max: 50, unit: '%' },
-        { key: 'stat_cooldown', val: currentClass.stats.cooldownReduction, max: 40, unit: '%' }
-    ];
+    const statConfig = AppState.siteData.settings.classStats.map(stat => ({
+        key: stat.label,
+        val: currentClass.stats[stat.field],
+        max: stat.max,
+        unit: stat.unit
+    }));
 
     statConfig.forEach(st => {
         const statItem = document.createElement('div');
@@ -271,7 +271,7 @@ function renderClasses() {
 
         const val = document.createElement('span');
         val.className = 'stat-value';
-        val.textContent = `${st.val}${st.unit}`;
+        val.textContent = `${new Intl.NumberFormat(currentLang).format(st.val)}${st.unit}`;
 
         sHeader.appendChild(label);
         sHeader.appendChild(val);
@@ -282,7 +282,7 @@ function renderClasses() {
 
         const fill = document.createElement('div');
         fill.className = 'stat-bar-fill';
-        const percent = Math.min(100, Math.max(5, (st.val / st.max) * 100));
+        const percent = Math.min(100, Math.max(0, (st.val / st.max) * 100));
         fill.style.width = `${percent}%`;
 
         track.appendChild(fill);
@@ -291,6 +291,10 @@ function renderClasses() {
     });
 
     leftPanel.appendChild(statsContainer);
+    const statsNote = document.createElement('p');
+    statsNote.className = 'class-data-note';
+    statsNote.textContent = langData.class_stats_note[currentLang];
+    leftPanel.appendChild(statsNote);
     showcase.appendChild(leftPanel);
 
     // Sağ Panel: Yetenek Seti (Q, W, E, R & Pasif)
@@ -315,7 +319,7 @@ function renderClasses() {
         currentClass.skills.forEach(s => {
             allSkills.push({
                 ...s,
-                slotLabel: s.slot
+                slotLabel: langData.active_skill_label[currentLang]
             });
         });
     }
@@ -330,6 +334,9 @@ function renderClasses() {
         const sBtn = document.createElement('button');
         sBtn.className = `skill-select-btn ${skill.slot === activeSkill.slot ? 'active' : ''}`;
         sBtn.type = 'button';
+        sBtn.setAttribute('aria-pressed', String(skill.slot === activeSkill.slot));
+        sBtn.setAttribute('aria-label', `${skill.slot}: ${skill.name[currentLang]}`);
+        sBtn.title = skill.name[currentLang];
 
         if (skill.icon) {
             const sImg = document.createElement('img');
@@ -388,11 +395,16 @@ function renderClasses() {
 
         const sDesc = document.createElement('p');
         sDesc.className = 'skill-box-desc';
-        sDesc.textContent = activeSkill.description[currentLang] || 'Yetenek açıklaması yükleniyor...';
+        sDesc.textContent = activeSkill.description[currentLang];
         skillDetailBox.appendChild(sDesc);
 
         rightPanel.appendChild(skillDetailBox);
     }
+
+    const scalingNote = document.createElement('p');
+    scalingNote.className = 'class-data-note';
+    scalingNote.textContent = langData.skill_scaling_note[currentLang];
+    rightPanel.appendChild(scalingNote);
 
     showcase.appendChild(rightPanel);
     container.appendChild(showcase);
