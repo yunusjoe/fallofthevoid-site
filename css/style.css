@@ -411,7 +411,7 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   5. Karakterler Bölümü
+   5. Sınıflar Bölümü (ARPG Hero Classes & Skill Showcase)
    -------------------------------------------------------------------------- */
 .characters-section {
     background-color: var(--bg-secondary);
@@ -419,88 +419,156 @@ ul {
     border-bottom: 1px solid var(--border-subtle);
 }
 
-.characters-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
+/* Üst Sınıf Seçim Butonları Şeridi */
+.class-selector-bar {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 12px 4px 24px 4px;
+    margin-bottom: 36px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-purple) transparent;
 }
 
-.character-card {
+.class-selector-bar::-webkit-scrollbar {
+    height: 6px;
+}
+
+.class-selector-bar::-webkit-scrollbar-thumb {
+    background: var(--accent-purple-dark);
+    border-radius: 999px;
+}
+
+.class-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
-    border-radius: var(--border-radius-md);
-    padding: 32px 28px;
-    transition: all var(--transition-normal);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    border-radius: var(--border-radius-sm);
+    color: var(--text-secondary);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
 }
 
-.character-card::before {
+.class-tab-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-purple-glow);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.class-tab-btn.active {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(76, 29, 149, 0.4));
+    border-color: var(--accent-purple-glow);
+    color: #ffffff;
+    box-shadow: 0 0 16px rgba(168, 85, 247, 0.35);
+}
+
+.class-tab-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.class-tab-name {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Sınıf Vitrini (İki Kolonlu Panel) */
+.class-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius-lg);
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.class-showcase::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-purple-dark), var(--accent-purple-glow), var(--accent-purple-dark));
-    opacity: 0;
-    transition: opacity var(--transition-normal);
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-purple-dark), var(--accent-purple-glow), var(--accent-cyan), var(--accent-purple-dark));
 }
 
-.character-card:hover {
-    transform: translateY(-6px);
-    background: var(--bg-card-hover);
-    border-color: var(--border-glow);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(168, 85, 247, 0.2);
-}
-
-.character-card:hover::before {
-    opacity: 1;
-}
-
-.character-header {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.character-name {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    letter-spacing: 1px;
-}
-
-.character-role {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 4px 10px;
-    background: rgba(139, 92, 246, 0.15);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--border-radius-sm);
-    color: var(--accent-purple-light);
-}
-
-.character-bio {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 28px;
-    flex-grow: 1;
-}
-
-/* Stat Gösterge Çubukları */
-.character-stats {
+/* Sol Panel: Sınıf Bilgileri */
+.class-info-panel {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    gap: 24px;
+}
+
+.class-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.class-main-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius-md);
+    object-fit: cover;
+    border: 2px solid var(--accent-purple-glow);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+}
+
+.class-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.class-title-text {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.class-role-badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 3px 10px;
+    background: rgba(139, 92, 246, 0.15);
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    color: var(--accent-purple-light);
+    text-transform: uppercase;
+}
+
+.class-detail-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Stat Gösterge Listesi */
+.class-stat-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 20px;
 }
 
@@ -520,11 +588,12 @@ ul {
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-size: 0.8rem;
 }
 
 .stat-value {
     color: var(--accent-purple-light);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .stat-bar-track {
@@ -539,7 +608,147 @@ ul {
     height: 100%;
     background: linear-gradient(90deg, var(--accent-purple-dark), var(--accent-purple-glow));
     border-radius: 999px;
-    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Sağ Panel: Yetenek Seti */
+.class-skills-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(15, 9, 28, 0.6);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius-md);
+    padding: 28px;
+}
+
+.skills-section-heading {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+}
+
+.skills-button-bar {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.skill-select-btn {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-subtle);
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    transition: all var(--transition-fast);
+}
+
+.skill-select-btn:hover {
+    border-color: var(--accent-purple-light);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(168, 85, 247, 0.3);
+}
+
+.skill-select-btn.active {
+    border-color: var(--accent-purple-glow);
+    box-shadow: 0 0 16px rgba(168, 85, 247, 0.6);
+    transform: translateY(-2px);
+}
+
+.skill-btn-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skill-slot-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(7, 4, 13, 0.9);
+    border-top-left-radius: 4px;
+    color: var(--accent-purple-light);
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 2px 6px;
+    border-top: 1px solid var(--border-subtle);
+    border-left: 1px solid var(--border-subtle);
+}
+
+/* Seçili Yetenek Detay Kutusu */
+.skill-detail-box {
+    background: rgba(7, 4, 13, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 160px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.skill-box-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.skill-big-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--border-radius-sm);
+    object-fit: cover;
+    border: 1px solid var(--accent-purple-glow);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+.skill-name-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.skill-name-text {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.skill-type-pill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-purple-light);
+}
+
+.skill-box-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .class-showcase {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+    .class-stat-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --------------------------------------------------------------------------

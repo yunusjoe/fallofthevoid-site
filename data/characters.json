@@ -1,61 +1,575 @@
 [
   {
-    "id": "shadow-warden",
-    "name": "Kaelen",
-    "role": {
-      "tr": "Karanlık Muhafız",
-      "en": "Shadow Warden"
+    "id": "abyssal-pyromancer",
+    "name": {
+      "tr": "Abyssal Pyromancer",
+      "en": "Abyssal Pyromancer"
     },
-    "bio": {
-      "tr": "Hiçliğin karanlığında dövülmüş zırhıyla Kaelen, düşmanlarının ruhlarını emerek hayatta kalan kadim bir öncü savaşçıdır.",
-      "en": "Forged in the darkness of the abyss, Kaelen is an ancient vanguard who siphons the souls of his foes to endure relentless battles."
+    "description": {
+      "tr": "A devastating sorcerer who commands the dark flames of the Void, melting enemies with max health true damage.",
+      "en": "A devastating sorcerer who commands the dark flames of the Void, melting enemies with max health true damage."
     },
-    "stats": [
-      {
-        "key": "stat_power",
-        "value": 85
+    "icon": "img/icons/classes/abyssal-pyromancer.png",
+    "stats": {
+      "health": 100,
+      "mana": 100,
+      "damage": 10,
+      "armor": 30,
+      "magicResist": 30,
+      "abilityPower": 150,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "K\\xF6zlenen Hi\\xE7lik",
+        "en": "Smoldering Void"
       },
-      {
-        "key": "stat_defense",
-        "value": 90
+      "description": {
+        "tr": "Karakterin Yetenek G\\xFCc\\xFC seviyeye ba\\u011Fl\\u0131 olarak %10 ile %50 aras\\u0131nda artar.\\nYeteneklerden isabet alan t\\xFCm d\\xFC\\u015Fmanlar 3 saniye boyunca saniyede azami canlar\\u0131n\\u0131n %1'i kadar Ger\\xE7ek Hasar al\\u0131r. Bu ger\\xE7ek hasar kritik vuramaz.\\n\\u0130blis Y\\xFCkseli\\u015Fi s\\u0131ras\\u0131nda bu ger\\xE7ek hasar her saniye %3'e (toplamda %9) y\\xFCkselir.",
+        "en": "'Spell Power is increased by 10% to 50% scaling with Level."
       },
-      {
-        "key": "stat_agility",
-        "value": 55
-      },
-      {
-        "key": "stat_void",
-        "value": 75
-      }
-    ]
+      "icon": "img/icons/skills/abyssal-pyromancer_passive.png"
+    },
+    "skills": []
   },
   {
-    "id": "void-weaver",
-    "name": "Lyra",
-    "role": {
-      "tr": "Void Dokuyucusu",
-      "en": "Void Weaver"
+    "id": "astral-sovereign",
+    "name": {
+      "tr": "Astral Sovereign",
+      "en": "Astral Sovereign"
     },
-    "bio": {
-      "tr": "Gerçekliğin dokusunu bükebilen Lyra, uzak mesafeden boyutsal yarıklar açarak düşman saflarını yerle bir eden yıkıcı bir büyücüdür.",
-      "en": "Bending the fabric of reality itself, Lyra is a devastating sorceress who tears open dimensional rifts from afar to obliterate enemy lines."
+    "description": {
+      "tr": "classIcon: {fileID: 21300000, guid: 126690002e29a26488fbaef379cd0ea4, type: 3}",
+      "en": "classIcon: {fileID: 21300000, guid: 126690002e29a26488fbaef379cd0ea4, type: 3}"
     },
-    "stats": [
+    "icon": "img/icons/classes/astral-sovereign.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "AstralSovereign_P_CelestialDominion",
+        "en": "AstralSovereign_P_CelestialDominion"
+      },
+      "description": {
+        "tr": "icon: {fileID: 21300000, guid: 126690002e29a26488fbaef379cd0ea4, type: 3}",
+        "en": "icon: {fileID: 21300000, guid: 126690002e29a26488fbaef379cd0ea4, type: 3}"
+      },
+      "icon": "img/icons/skills/astral-sovereign_passive.png"
+    },
+    "skills": []
+  },
+  {
+    "id": "bloodreaper",
+    "name": {
+      "tr": "Bloodreaper",
+      "en": "Bloodreaper"
+    },
+    "description": {
+      "tr": "classIcon: {fileID: 2249708262835490722, guid: a803f8f61422a0f4f8bafd63e902fcda, type: 3}",
+      "en": "classIcon: {fileID: 2249708262835490722, guid: a803f8f61422a0f4f8bafd63e902fcda, type: 3}"
+    },
+    "icon": "img/icons/classes/bloodreaper.jpg",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 15,
+      "armor": 12,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Bloodreaper_P_SanguineHarvest",
+        "en": "Bloodreaper_P_SanguineHarvest"
+      },
+      "description": {
+        "tr": "icon: {fileID: 2249708262835490722, guid: a803f8f61422a0f4f8bafd63e902fcda, type: 3}",
+        "en": "icon: {fileID: 2249708262835490722, guid: a803f8f61422a0f4f8bafd63e902fcda, type: 3}"
+      },
+      "icon": "img/icons/skills/bloodreaper_passive.jpg"
+    },
+    "skills": []
+  },
+  {
+    "id": "dreamslasher",
+    "name": {
+      "tr": "Dreamslasher",
+      "en": "Dreamslasher"
+    },
+    "description": {
+      "tr": "A dreamblade duelist who seals enemies into sleep and shatters them in cascading nightmares.",
+      "en": "A dreamblade duelist who seals enemies into sleep and shatters them in cascading nightmares."
+    },
+    "icon": "img/icons/classes/dreamslasher.png",
+    "stats": {
+      "health": 150,
+      "mana": 100,
+      "damage": 100,
+      "armor": 30,
+      "magicResist": 30,
+      "abilityPower": 30,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Dreamslasher_Passive_LucidDream",
+        "en": "Dreamslasher_Passive_LucidDream"
+      },
+      "description": {
+        "tr": "icon: {fileID: 21300000, guid: 3519de71a6a857cea17dfef4d0eabfb2, type: 3}",
+        "en": "icon: {fileID: 21300000, guid: 3519de71a6a857cea17dfef4d0eabfb2, type: 3}"
+      },
+      "icon": "img/icons/skills/dreamslasher_passive.png"
+    },
+    "skills": []
+  },
+  {
+    "id": "frostbreaker",
+    "name": {
+      "tr": "Frostbreaker",
+      "en": "Frostbreaker"
+    },
+    "description": {
+      "tr": "classIcon: {fileID: -6561127974559337839, guid: f3dfa0ccedfe1ca4db51a4d826c20b18, type: 3}",
+      "en": "classIcon: {fileID: -6561127974559337839, guid: f3dfa0ccedfe1ca4db51a4d826c20b18, type: 3}"
+    },
+    "icon": "",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 25,
+      "magicResist": 20,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Frostbreaker_P_GlacialFoundation",
+        "en": "Frostbreaker_P_GlacialFoundation"
+      },
+      "description": {
+        "tr": "icon: {fileID: -6561127974559337839, guid: f3dfa0ccedfe1ca4db51a4d826c20b18, type: 3}",
+        "en": "icon: {fileID: -6561127974559337839, guid: f3dfa0ccedfe1ca4db51a4d826c20b18, type: 3}"
+      },
+      "icon": ""
+    },
+    "skills": []
+  },
+  {
+    "id": "hexgunner",
+    "name": {
+      "tr": "Hexgunner",
+      "en": "Hexgunner"
+    },
+    "description": {
+      "tr": "classIcon: {fileID: -7940076996590975244, guid: 7a2b51c7efbd80c42b798e05dfcc87e4, type: 3}",
+      "en": "classIcon: {fileID: -7940076996590975244, guid: 7a2b51c7efbd80c42b798e05dfcc87e4, type: 3}"
+    },
+    "icon": "",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Hexgunner_P_SixthChamber",
+        "en": "Hexgunner_P_SixthChamber"
+      },
+      "description": {
+        "tr": "icon: {fileID: -7940076996590975244, guid: 7a2b51c7efbd80c42b798e05dfcc87e4, type: 3}",
+        "en": "icon: {fileID: -7940076996590975244, guid: 7a2b51c7efbd80c42b798e05dfcc87e4, type: 3}"
+      },
+      "icon": ""
+    },
+    "skills": []
+  },
+  {
+    "id": "soulwarden",
+    "name": {
+      "tr": "Soulwarden",
+      "en": "Soulwarden"
+    },
+    "description": {
+      "tr": "A swift spiritual combatant harnessing soul fragments to weave deadly spirit strikes and phantom shields.",
+      "en": "A swift spiritual combatant harnessing soul fragments to weave deadly spirit strikes and phantom shields."
+    },
+    "icon": "img/icons/classes/soulwarden.png",
+    "stats": {
+      "health": 50,
+      "mana": 0,
+      "damage": 20,
+      "armor": 10,
+      "magicResist": 10,
+      "abilityPower": 0,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Ruh S\\xF6m\\xFCr\\xFCc\\xFC",
+        "en": "Soul Harvester"
+      },
+      "description": {
+        "tr": "D\\xFC\\u015Fmanlara hasar verdi\\u011Finde hedeften Ruh S\\xF6m\\xFCrerek Maksimum Canl\\u0131l\\u0131k kayna\\u011F\\u0131n\\u0131n %{0}'ini yeniler ve +{1} Azim y\\xFCk\\xFC kazand\\u0131r\\u0131r. (Bekleme S\\xFCresi: {2}sn). Azim y\\xFCkleri Azimli Kalkan yetene\\u011Fini g\\xFC\\xE7lendirir.",
+        "en": "'When dealing damage to an enemy, drain souls to refill {0}% of your Max Vigor and grant +{1} Resolve stack. (Cooldown: {2}s)."
+      },
+      "icon": "img/icons/skills/soulwarden_passive.png"
+    },
+    "skills": []
+  },
+  {
+    "id": "starforger",
+    "name": {
+      "tr": "Starforger",
+      "en": "Starforger"
+    },
+    "description": {
+      "tr": "classIcon: {fileID: -5609683819521209479, guid: a711c750de18e0e46b2b0146d27f431d, type: 3}",
+      "en": "classIcon: {fileID: -5609683819521209479, guid: a711c750de18e0e46b2b0146d27f431d, type: 3}"
+    },
+    "icon": "",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Starforger_P_CelestialArmory",
+        "en": "Starforger_P_CelestialArmory"
+      },
+      "description": {
+        "tr": "icon: {fileID: -5609683819521209479, guid: a711c750de18e0e46b2b0146d27f431d, type: 3}",
+        "en": "icon: {fileID: -5609683819521209479, guid: a711c750de18e0e46b2b0146d27f431d, type: 3}"
+      },
+      "icon": ""
+    },
+    "skills": []
+  },
+  {
+    "id": "stormbinder",
+    "name": {
+      "tr": "Stormbinder",
+      "en": "Stormbinder"
+    },
+    "description": {
+      "tr": "classIcon: {fileID: 21300000, guid: 7571793f342f73e4aab67f92a0c060cc, type: 3}",
+      "en": "classIcon: {fileID: 21300000, guid: 7571793f342f73e4aab67f92a0c060cc, type: 3}"
+    },
+    "icon": "img/icons/classes/stormbinder.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Stormbinder_P_Conductivity",
+        "en": "Stormbinder_P_Conductivity"
+      },
+      "description": {
+        "tr": "icon: {fileID: 21300000, guid: 81c405a1b31d2b7408598e9b1968dd8b, type: 3}",
+        "en": "icon: {fileID: 21300000, guid: 81c405a1b31d2b7408598e9b1968dd8b, type: 3}"
+      },
+      "icon": "img/icons/skills/stormbinder_passive.png"
+    },
+    "skills": []
+  },
+  {
+    "id": "tempestblade",
+    "name": {
+      "tr": "Tempestblade",
+      "en": "Tempestblade"
+    },
+    "description": {
+      "tr": "classIcon: {fileID: -3278397209808298185, guid: 1618f882f5cba974ea8b959aebd94e65, type: 3}",
+      "en": "classIcon: {fileID: -3278397209808298185, guid: 1618f882f5cba974ea8b959aebd94e65, type: 3}"
+    },
+    "icon": "",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Tempestblade_P_EchoCut",
+        "en": "Tempestblade_P_EchoCut"
+      },
+      "description": {
+        "tr": "icon: {fileID: -3278397209808298185, guid: 1618f882f5cba974ea8b959aebd94e65, type: 3}",
+        "en": "icon: {fileID: -3278397209808298185, guid: 1618f882f5cba974ea8b959aebd94e65, type: 3}"
+      },
+      "icon": ""
+    },
+    "skills": []
+  },
+  {
+    "id": "tidecaller",
+    "name": {
+      "tr": "Tidecaller",
+      "en": "Tidecaller"
+    },
+    "description": {
+      "tr": "Channeler of the abyssal oceans, bending crushing tidal waves and vortex currents to drown foes.",
+      "en": "Channeler of the abyssal oceans, bending crushing tidal waves and vortex currents to drown foes."
+    },
+    "icon": "img/icons/classes/tidecaller.png",
+    "stats": {
+      "health": 100,
+      "mana": 50,
+      "damage": 15,
+      "armor": 15,
+      "magicResist": 15,
+      "abilityPower": 90,
+      "critChance": 10,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Sırılsıklam",
+        "en": "Drenched"
+      },
+      "description": {
+        "tr": "Yetenekler ve Temel Sald\\u0131r\\u0131lar hedeflere S\\u0131r\\u0131ls\\u0131klam y\\xFCk\\xFC biriktirir (en fazla 4). 4 y\\xFCke ula\\u015F\\u0131ld\\u0131\\u011F\\u0131nda su infilak eder: hedefe {flatDamage} (+%{maxHpPct} Azami Can) B\\xFCy\\xFC Hasar\\u0131 verir, {stunDuration}sn Sersemletir, Ak\\u0131nt\\u0131ya Kap\\u0131l (E) bekleme s\\xFCresini {cdRefund}sn azalt\\u0131r ve Tidecaller'a {msDuration}sn boyunca +%{msBuff} Hareket H\\u0131z\\u0131 kazand\\u0131r\\u0131r.",
+        "en": "'Skills and Basic Attacks apply Drenched stacks (up to 4). At 4 stacks, the water erupts: dealing {flatDamage} (+{maxHpPct}% Max HP) Magic Damage, Stunning for {stunDuration}s, reducing Riptide Surge (E) cooldown by {cdRefund}s, and granting Tidecaller +{msBuff}% Movement Speed for {msDuration}s.'"
+      },
+      "icon": "img/icons/skills/tidecaller_passive.png"
+    },
+    "skills": []
+  },
+  {
+    "id": "voidlord",
+    "name": {
+      "tr": "Voidlord",
+      "en": "Voidlord"
+    },
+    "description": {
+      "tr": "classIcon: {fileID: -3273033591457530592, guid: 88717791bc99c814680219c729f3ec4b, type: 3}",
+      "en": "classIcon: {fileID: -3273033591457530592, guid: 88717791bc99c814680219c729f3ec4b, type: 3}"
+    },
+    "icon": "",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Voidlord_P_EndlessDominion",
+        "en": "Voidlord_P_EndlessDominion"
+      },
+      "description": {
+        "tr": "icon: {fileID: -3273033591457530592, guid: 88717791bc99c814680219c729f3ec4b, type: 3}",
+        "en": "icon: {fileID: -3273033591457530592, guid: 88717791bc99c814680219c729f3ec4b, type: 3}"
+      },
+      "icon": ""
+    },
+    "skills": []
+  },
+  {
+    "id": "voidwyrm",
+    "name": {
+      "tr": "Voidwyrm",
+      "en": "Voidwyrm"
+    },
+    "description": {
+      "tr": "A cosmic sorcerer who summons three-headed Nether Hydras from void rifts, overcharges them with singularity beams, and shifts positions across the battlefield.",
+      "en": "A cosmic sorcerer who summons three-headed Nether Hydras from void rifts, overcharges them with singularity beams, and shifts positions across the battlefield."
+    },
+    "icon": "img/icons/classes/voidwyrm.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Hi\\xE7lik Ba\\u011F\\u0131",
+        "en": "Void Tether"
+      },
+      "description": {
+        "tr": "Sahada aktif olan her Hidra sana +%8 Hareket H\\u0131z\\u0131 ve +%5 Bekleme S\\xFCresi Azalmas\\u0131 kazand\\u0131r\\u0131r. Temel sald\\u0131r\\u0131lar\\u0131n hedefi i\\u015Faretler ve t\\xFCm Hidralar i\\u015Faretlenen d\\xFC\\u015Fmana odaklan\\u0131r. 3. Hidra \\xE7a\\u011Fr\\u0131ld\\u0131\\u011F\\u0131nda en eski Hidra patlayarak yak\\u0131ndaki d\\xFC\\u015Fmanlara alan hasar\\u0131 verir ve onlar\\u0131 geri savurur.",
+        "en": "Each active Hydra grants you +8% Movement Speed and +5% Cooldown Reduction. Basic attacks mark enemies, commanding all Hydras to focus fire on the marked target. Summoning a 3rd Hydra overloads the oldest, detonating it to deal area damage and knock back nearby foes."
+      },
+      "icon": "img/icons/skills/voidwyrm_passive.png"
+    },
+    "skills": []
+  },
+  {
+    "id": "wraithlord",
+    "name": {
+      "tr": "Wraithlord",
+      "en": "Wraithlord"
+    },
+    "description": {
+      "tr": "A dark harbinger who siphons the souls of the living to unleash spectral volleys and unholy apocalypses.",
+      "en": "A dark harbinger who siphons the souls of the living to unleash spectral volleys and unholy apocalypses."
+    },
+    "icon": "img/icons/classes/wraithlord.png",
+    "stats": {
+      "health": 40,
+      "mana": 70,
+      "damage": 10,
+      "armor": 10,
+      "magicResist": 10,
+      "abilityPower": 100,
+      "critChance": 5,
+      "cooldownReduction": 10
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Wraithlord_Passive_SoulSiphon",
+        "en": "Wraithlord_Passive_SoulSiphon"
+      },
+      "description": {
+        "tr": "icon: {fileID: 21300000, guid: 434607433cbc7094497a54c5d97b6dfb, type: 3}",
+        "en": "icon: {fileID: 21300000, guid: 434607433cbc7094497a54c5d97b6dfb, type: 3}"
+      },
+      "icon": "img/icons/skills/wraithlord_passive.png"
+    },
+    "skills": []
+  },
+  {
+    "id": "void-harvester",
+    "name": {
+      "tr": "Void Harvester",
+      "en": "Void Harvester"
+    },
+    "description": {
+      "tr": "Hiçliğin yıkıcı enerjisini hasat ederek düşmanların yaşam özünü tüketen kadim karanlık sınıf.",
+      "en": "An ancient dark class that harvests the destructive essence of the void to siphon enemy vitality."
+    },
+    "icon": "img/icons/classes/void-harvester.png",
+    "stats": {
+      "health": 65,
+      "mana": 80,
+      "damage": 25,
+      "armor": 15,
+      "magicResist": 20,
+      "abilityPower": 90,
+      "critChance": 10,
+      "cooldownReduction": 15
+    },
+    "passive": {
+      "slot": "Passive",
+      "name": {
+        "tr": "Ruh Parçalanması",
+        "en": "Soul Shard Harvest"
+      },
+      "description": {
+        "tr": "Katledilen düşmanlar ruh parçaları bırakır; toplanan her parça yetenek gücünü ve can çalmayı artırır.",
+        "en": "Slain foes drop soul fragments, increasing ability power and omnivamp."
+      },
+      "icon": "img/icons/skills/void-harvester_passive.png"
+    },
+    "skills": [
       {
-        "key": "stat_power",
-        "value": 95
+        "slot": "Q",
+        "name": {
+          "tr": "Hiçlik Tırpanı",
+          "en": "Void Scythe"
+        },
+        "description": {
+          "tr": "Önündeki konik alana hiçlik enerjisi savurarak ağır büyü hasarı verir.",
+          "en": "Sweeps void energy in a cone dealing heavy magic damage."
+        },
+        "icon": "img/icons/skills/void-harvester_q.png"
       },
       {
-        "key": "stat_defense",
-        "value": 45
+        "slot": "W",
+        "name": {
+          "tr": "Entropik Çürüme",
+          "en": "Entropic Decay"
+        },
+        "description": {
+          "tr": "Hedef alanı çürüterek zamanla hasar verir ve düşmanların zırhını eritir.",
+          "en": "Afflicts the target area with decay, melting armor over time."
+        },
+        "icon": "img/icons/skills/void-harvester_w.png"
       },
       {
-        "key": "stat_agility",
-        "value": 80
+        "slot": "E",
+        "name": {
+          "tr": "Ruh Çekimi",
+          "en": "Essence Siphon"
+        },
+        "description": {
+          "tr": "Yakındaki düşmanların hareket hızını yavaşlatır ve canlarını kendine çeker.",
+          "en": "Slows nearby enemies and siphons their life essence."
+        },
+        "icon": "img/icons/skills/void-harvester_e.png"
       },
       {
-        "key": "stat_void",
-        "value": 100
+        "slot": "R",
+        "name": {
+          "tr": "Hiçlik Sureti (Apex)",
+          "en": "Void Avatar"
+        },
+        "description": {
+          "tr": "Saf hiçlik formuna bürünerek tüm yeteneklerin bekleme süresini sıfırlar ve hasarı ikiye katlar.",
+          "en": "Transforms into pure void avatar, resetting cooldowns and doubling damage."
+        },
+        "icon": "img/icons/skills/void-harvester_r.png"
       }
     ]
   }

@@ -8,8 +8,8 @@
     "en": "Home"
   },
   "nav_characters": {
-    "tr": "Karakterler",
-    "en": "Characters"
+    "tr": "Sınıflar",
+    "en": "Classes"
   },
   "nav_patches": {
     "tr": "Yama Notları",
@@ -28,20 +28,28 @@
     "en": "An ancient malevolence stirs within the depths of nothingness. Forge your destiny in a dark fantasy realm, master devastating abilities, and cleanse the forgotten lands."
   },
   "hero_cta_characters": {
-    "tr": "Karakterleri Keşfet",
-    "en": "Explore Champions"
+    "tr": "Sınıfları Keşfet",
+    "en": "Explore Classes"
   },
   "hero_cta_patches": {
     "tr": "Son Güncellemeler",
     "en": "Latest Updates"
   },
   "characters_title": {
-    "tr": "Karakterler",
-    "en": "Champions"
+    "tr": "Oynanabilir Sınıflar",
+    "en": "Playable Classes"
   },
   "characters_subtitle": {
-    "tr": "Boşluğun gücünü dizginleyen ve karanlıkla savaşan savaşçılar.",
-    "en": "Warriors who harness the void and defy the encroaching darkness."
+    "tr": "Hiçliğin karanlığına meydan okuyan, her biri benzersiz yetenek setine ve dövüş tarzına sahip sınıflar.",
+    "en": "Classes defying the darkness of the void, each wielding a unique skillset and combat mastery."
+  },
+  "skills_title": {
+    "tr": "Yetenek Seti",
+    "en": "Ability Kit"
+  },
+  "passive_label": {
+    "tr": "Pasif",
+    "en": "Passive"
   },
   "patches_title": {
     "tr": "Yama Notları",
@@ -83,20 +91,36 @@
     "tr": "Denge",
     "en": "Balance"
   },
-  "stat_power": {
-    "tr": "Güç",
-    "en": "Power"
+  "stat_health": {
+    "tr": "Bonus Can",
+    "en": "Bonus Health"
   },
-  "stat_agility": {
-    "tr": "Çeviklik",
-    "en": "Agility"
+  "stat_mana": {
+    "tr": "Bonus Mana",
+    "en": "Bonus Mana"
   },
-  "stat_void": {
-    "tr": "Void Enerjisi",
-    "en": "Void Energy"
+  "stat_damage": {
+    "tr": "Saldırı Gücü",
+    "en": "Attack Damage"
   },
-  "stat_defense": {
-    "tr": "Dayanıklılık",
-    "en": "Defense"
+  "stat_armor": {
+    "tr": "Zırh",
+    "en": "Armor"
+  },
+  "stat_magic_resist": {
+    "tr": "Büyü Direnci",
+    "en": "Magic Resist"
+  },
+  "stat_ability_power": {
+    "tr": "Yetenek Gücü",
+    "en": "Ability Power"
+  },
+  "stat_crit": {
+    "tr": "Kritik İhtimali",
+    "en": "Crit Chance"
+  },
+  "stat_cooldown": {
+    "tr": "Bekleme Süresi",
+    "en": "Cooldown Red."
   }
 }

@@ -8,6 +8,8 @@
 // Uygulama Durumu (State)
 const AppState = {
     currentLang: 'tr',
+    selectedClassId: null,
+    selectedSkillSlot: 'Q',
     siteData: null,
     langData: null,
     patchesData: null,
@@ -29,25 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 async function initApp() {
     try {
-        // 1. Kullanıcının daha önceki dil tercihini yükle (yoksa varsayılan TR)
         loadSavedLanguage();
-
-        // 2. Tüm JSON veri dosyalarını eşzamanlı olarak çek (Fetch)
         await loadAllData();
+        
+        // İlk sınıfı varsayılan seç
+        if (AppState.charactersData && AppState.charactersData.length > 0) {
+            AppState.selectedClassId = AppState.charactersData[0].id;
+        }
 
-        // 3. Etkileşim dinleyicilerini kur (Dil butonu, mobil menü vb.)
         setupEventListeners();
-
-        // 4. Arayüzü verilerle doldur
         renderInterface();
     } catch (error) {
         console.error('Uygulama başlatılırken bir hata oluştu:', error);
     }
 }
 
-/**
- * localStorage üzerinden kaydedilmiş dili okur
- */
 function loadSavedLanguage() {
     const savedLang = localStorage.getItem(STORAGE_LANG_KEY);
     if (savedLang === 'tr' || savedLang === 'en') {
@@ -57,11 +55,7 @@ function loadSavedLanguage() {
     }
 }
 
-/**
- * data/ dizini altındaki tüm JSON dosyalarını asenkron olarak yükler
- */
 async function loadAllData() {
-    // Tüm istekleri paralel olarak başlatıyoruz (performans kazanımı)
     const [siteRes, langRes, patchesRes, charactersRes] = await Promise.all([
         fetch('data/site.json'),
         fetch('data/lang.json'),
@@ -69,7 +63,6 @@ async function loadAllData() {
         fetch('data/characters.json')
     ]);
 
-    // Yanıt durumlarını kontrol et
     if (!siteRes.ok || !langRes.ok || !patchesRes.ok || !charactersRes.ok) {
         throw new Error('JSON veri dosyalarından biri veya birkaçı yüklenemedi.');
     }
@@ -80,17 +73,12 @@ async function loadAllData() {
     AppState.charactersData = await charactersRes.json();
 }
 
-/**
- * Buton tıklamaları ve mobil menü etkileşimlerini ayarlar
- */
 function setupEventListeners() {
-    // Dil değiştirme butonu
     const langBtn = document.getElementById('lang-btn');
     if (langBtn) {
         langBtn.addEventListener('click', toggleLanguage);
     }
 
-    // Mobil menü açma/kapama butonu
     const menuToggle = document.getElementById('mobile-menu-toggle');
     const siteNav = document.getElementById('site-nav');
 
@@ -99,7 +87,6 @@ function setupEventListeners() {
             siteNav.classList.toggle('active');
         });
 
-        // Menüdeki bir bağlantıya tıklandığında mobil menüyü otomatik kapat
         const navLinks = siteNav.querySelectorAll('.nav-links a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -109,50 +96,35 @@ function setupEventListeners() {
     }
 }
 
-/**
- * Dil değişimini tetikler (TR <-> EN)
- */
 function toggleLanguage() {
     AppState.currentLang = AppState.currentLang === 'tr' ? 'en' : 'tr';
     localStorage.setItem(STORAGE_LANG_KEY, AppState.currentLang);
     renderInterface();
 }
 
-/**
- * Tüm sayfayı güncel veriler ve seçili dil doğrultusunda yeniden çizer
- */
 function renderInterface() {
     updateLanguageButton();
     renderStaticI18nTexts();
     renderSiteMetadata();
-    renderCharacters();
+    renderClasses();
     renderPatches();
     renderSocialLinks();
 }
 
-/**
- * Dil butonunun üzerinde bir sonraki dili gösterecek şekilde metni günceller
- */
 function updateLanguageButton() {
     const langBtn = document.getElementById('lang-btn');
     if (!langBtn) return;
-    // Kullanıcıya geçebileceği diğer dili gösteriyoruz (TR seçiliyse "EN", EN seçiliyse "TR")
     langBtn.textContent = AppState.currentLang === 'tr' ? 'EN' : 'TR';
 }
 
-/**
- * data-i18n niteliği taşıyan tüm statik arayüz metinlerini güvenli şekilde günceller
- */
 function renderStaticI18nTexts() {
     const { langData, currentLang } = AppState;
     if (!langData) return;
 
-    // Sayfa başlığını (Title) güncelle
     if (langData.site_title && langData.site_title[currentLang]) {
         document.title = langData.site_title[currentLang];
     }
 
-    // HTML içinde data-i18n etiketi olan her alanı textContent ile güncelle
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
@@ -162,28 +134,22 @@ function renderStaticI18nTexts() {
     });
 }
 
-/**
- * site.json dosyasından gelen genel oyun bilgilerini ekrana basar
- */
 function renderSiteMetadata() {
     const { siteData } = AppState;
     if (!siteData) return;
 
-    // Logo ve Hero başlığı
     const siteLogo = document.getElementById('site-logo');
     if (siteLogo) siteLogo.textContent = siteData.gameTitle;
 
     const heroGameTitle = document.getElementById('hero-game-title');
     if (heroGameTitle) heroGameTitle.textContent = siteData.gameTitle;
 
-    // İletişim e-posta adresi
     const contactEmail = document.getElementById('contact-email');
     if (contactEmail && siteData.contactEmail) {
         contactEmail.textContent = siteData.contactEmail;
         contactEmail.href = `mailto:${siteData.contactEmail}`;
     }
 
-    // Alt bilgi (Footer) telif metni
     const footerCopyright = document.getElementById('footer-copyright');
     if (footerCopyright) {
         const currentYear = new Date().getFullYear();
@@ -192,96 +158,246 @@ function renderSiteMetadata() {
 }
 
 /**
- * Karakterleri characters.json üzerinden tamamen güvenli DOM metodlarıyla oluşturur (innerHTML YOKTUR)
+ * Sınıfları ve Yetenek Vitrinini Güvenli DOM ile Çizer (innerHTML YOKTUR)
  */
-function renderCharacters() {
+function renderClasses() {
     const container = document.getElementById('characters-container');
-    if (!container || !AppState.charactersData) return;
+    if (!container || !AppState.charactersData || AppState.charactersData.length === 0) return;
 
-    // Konteyneri temizle
     clearElement(container);
 
-    const maxStat = (AppState.siteData && AppState.siteData.settings && AppState.siteData.settings.maxStatValue) || 100;
-    const { currentLang, langData } = AppState;
+    const { currentLang, langData, selectedClassId } = AppState;
+    const currentClass = AppState.charactersData.find(c => c.id === selectedClassId) || AppState.charactersData[0];
 
-    AppState.charactersData.forEach(character => {
-        // Karakter Ana Kartı
-        const card = document.createElement('article');
-        card.className = 'character-card';
+    // 1. Üst Sınıf Seçim Butonları (Grid / Bar)
+    const selectorBar = document.createElement('div');
+    selectorBar.className = 'class-selector-bar';
 
-        // Kart Başlığı (İsim ve Rol)
-        const header = document.createElement('div');
-        header.className = 'character-header';
+    AppState.charactersData.forEach(cls => {
+        const tabBtn = document.createElement('button');
+        tabBtn.className = `class-tab-btn ${cls.id === currentClass.id ? 'active' : ''}`;
+        tabBtn.type = 'button';
 
-        const nameEl = document.createElement('h3');
-        nameEl.className = 'character-name';
-        nameEl.textContent = character.name;
-
-        const roleEl = document.createElement('span');
-        roleEl.className = 'character-role';
-        roleEl.textContent = character.role[currentLang] || '';
-
-        header.appendChild(nameEl);
-        header.appendChild(roleEl);
-        card.appendChild(header);
-
-        // Karakter Biyografisi / Hikayesi
-        const bioEl = document.createElement('p');
-        bioEl.className = 'character-bio';
-        bioEl.textContent = character.bio[currentLang] || '';
-        card.appendChild(bioEl);
-
-        // Stat Çubukları Bölümü
-        if (Array.isArray(character.stats)) {
-            const statsContainer = document.createElement('div');
-            statsContainer.className = 'character-stats';
-
-            character.stats.forEach(stat => {
-                const statItem = document.createElement('div');
-                statItem.className = 'stat-item';
-
-                // Stat Başlığı (Etiket ve Sayısal Değer)
-                const statHeader = document.createElement('div');
-                statHeader.className = 'stat-header';
-
-                const labelEl = document.createElement('span');
-                labelEl.className = 'stat-label';
-                const labelText = (langData[stat.key] && langData[stat.key][currentLang]) || stat.key;
-                labelEl.textContent = labelText;
-
-                const valueEl = document.createElement('span');
-                valueEl.className = 'stat-value';
-                valueEl.textContent = String(stat.value);
-
-                statHeader.appendChild(labelEl);
-                statHeader.appendChild(valueEl);
-                statItem.appendChild(statHeader);
-
-                // Stat İlerleme Çubuğu (Bar Track & Fill)
-                const barTrack = document.createElement('div');
-                barTrack.className = 'stat-bar-track';
-
-                const barFill = document.createElement('div');
-                barFill.className = 'stat-bar-fill';
-                const percentage = Math.min(100, Math.max(0, (stat.value / maxStat) * 100));
-                barFill.style.width = `${percentage}%`;
-
-                barTrack.appendChild(barFill);
-                statItem.appendChild(barTrack);
-
-                statsContainer.appendChild(statItem);
-            });
-
-            card.appendChild(statsContainer);
+        if (cls.icon) {
+            const iconImg = document.createElement('img');
+            iconImg.className = 'class-tab-icon';
+            iconImg.src = cls.icon;
+            iconImg.alt = cls.name[currentLang] || cls.id;
+            tabBtn.appendChild(iconImg);
         }
 
-        container.appendChild(card);
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'class-tab-name';
+        nameSpan.textContent = cls.name[currentLang] || cls.id;
+        tabBtn.appendChild(nameSpan);
+
+        tabBtn.addEventListener('click', () => {
+            AppState.selectedClassId = cls.id;
+            AppState.selectedSkillSlot = 'Q';
+            renderClasses();
+        });
+
+        selectorBar.appendChild(tabBtn);
     });
+
+    container.appendChild(selectorBar);
+
+    // 2. Seçili Sınıfın Sinematik Vitrin Alanı
+    const showcase = document.createElement('div');
+    showcase.className = 'class-showcase';
+
+    // Sol Panel: Sınıf Genel Özeti & Statlar
+    const leftPanel = document.createElement('div');
+    leftPanel.className = 'class-info-panel';
+
+    const classHeader = document.createElement('div');
+    classHeader.className = 'class-detail-header';
+
+    if (currentClass.icon) {
+        const mainIcon = document.createElement('img');
+        mainIcon.className = 'class-main-avatar';
+        mainIcon.src = currentClass.icon;
+        mainIcon.alt = currentClass.name[currentLang];
+        classHeader.appendChild(mainIcon);
+    }
+
+    const titleWrap = document.createElement('div');
+    titleWrap.className = 'class-title-wrap';
+
+    const classNameEl = document.createElement('h3');
+    classNameEl.className = 'class-title-text';
+    classNameEl.textContent = currentClass.name[currentLang];
+
+    const classBadge = document.createElement('span');
+    classBadge.className = 'class-role-badge';
+    classBadge.textContent = 'ARPG HERO CLASS';
+
+    titleWrap.appendChild(classNameEl);
+    titleWrap.appendChild(classBadge);
+    classHeader.appendChild(titleWrap);
+    leftPanel.appendChild(classHeader);
+
+    // Açıklama
+    const descEl = document.createElement('p');
+    descEl.className = 'class-detail-desc';
+    descEl.textContent = currentClass.description[currentLang] || '';
+    leftPanel.appendChild(descEl);
+
+    // Stat Göstergeleri
+    const statsContainer = document.createElement('div');
+    statsContainer.className = 'class-stat-list';
+
+    const statConfig = [
+        { key: 'stat_health', val: currentClass.stats.health, max: 100, unit: '' },
+        { key: 'stat_mana', val: currentClass.stats.mana, max: 100, unit: '' },
+        { key: 'stat_damage', val: currentClass.stats.damage, max: 50, unit: '' },
+        { key: 'stat_ability_power', val: currentClass.stats.abilityPower, max: 120, unit: '' },
+        { key: 'stat_armor', val: currentClass.stats.armor, max: 50, unit: '' },
+        { key: 'stat_magic_resist', val: currentClass.stats.magicResist, max: 50, unit: '' },
+        { key: 'stat_crit', val: currentClass.stats.critChance, max: 50, unit: '%' },
+        { key: 'stat_cooldown', val: currentClass.stats.cooldownReduction, max: 40, unit: '%' }
+    ];
+
+    statConfig.forEach(st => {
+        const statItem = document.createElement('div');
+        statItem.className = 'stat-item';
+
+        const sHeader = document.createElement('div');
+        sHeader.className = 'stat-header';
+
+        const label = document.createElement('span');
+        label.className = 'stat-label';
+        label.textContent = (langData[st.key] && langData[st.key][currentLang]) || st.key;
+
+        const val = document.createElement('span');
+        val.className = 'stat-value';
+        val.textContent = `${st.val}${st.unit}`;
+
+        sHeader.appendChild(label);
+        sHeader.appendChild(val);
+        statItem.appendChild(sHeader);
+
+        const track = document.createElement('div');
+        track.className = 'stat-bar-track';
+
+        const fill = document.createElement('div');
+        fill.className = 'stat-bar-fill';
+        const percent = Math.min(100, Math.max(5, (st.val / st.max) * 100));
+        fill.style.width = `${percent}%`;
+
+        track.appendChild(fill);
+        statItem.appendChild(track);
+        statsContainer.appendChild(statItem);
+    });
+
+    leftPanel.appendChild(statsContainer);
+    showcase.appendChild(leftPanel);
+
+    // Sağ Panel: Yetenek Seti (Q, W, E, R & Pasif)
+    const rightPanel = document.createElement('div');
+    rightPanel.className = 'class-skills-panel';
+
+    const skillsTitle = document.createElement('h4');
+    skillsTitle.className = 'skills-section-heading';
+    skillsTitle.textContent = (langData.skills_title && langData.skills_title[currentLang]) || 'Yetenek Seti';
+    rightPanel.appendChild(skillsTitle);
+
+    // Tüm yetenekleri topla (Pasif + Aktifler)
+    const allSkills = [];
+    if (currentClass.passive) {
+        allSkills.push({
+            ...currentClass.passive,
+            slot: 'P',
+            slotLabel: (langData.passive_label && langData.passive_label[currentLang]) || 'Pasif'
+        });
+    }
+    if (Array.isArray(currentClass.skills)) {
+        currentClass.skills.forEach(s => {
+            allSkills.push({
+                ...s,
+                slotLabel: s.slot
+            });
+        });
+    }
+
+    // Yetenek Butonları Şeridi
+    const skillButtonsBar = document.createElement('div');
+    skillButtonsBar.className = 'skills-button-bar';
+
+    let activeSkill = allSkills.find(s => s.slot === AppState.selectedSkillSlot) || allSkills[0];
+
+    allSkills.forEach(skill => {
+        const sBtn = document.createElement('button');
+        sBtn.className = `skill-select-btn ${skill.slot === activeSkill.slot ? 'active' : ''}`;
+        sBtn.type = 'button';
+
+        if (skill.icon) {
+            const sImg = document.createElement('img');
+            sImg.className = 'skill-btn-icon';
+            sImg.src = skill.icon;
+            sImg.alt = skill.name[currentLang] || skill.slot;
+            sBtn.appendChild(sImg);
+        }
+
+        const sKeyBadge = document.createElement('span');
+        sKeyBadge.className = 'skill-slot-badge';
+        sKeyBadge.textContent = skill.slot;
+        sBtn.appendChild(sKeyBadge);
+
+        sBtn.addEventListener('click', () => {
+            AppState.selectedSkillSlot = skill.slot;
+            renderClasses();
+        });
+
+        skillButtonsBar.appendChild(sBtn);
+    });
+
+    rightPanel.appendChild(skillButtonsBar);
+
+    // Seçili Yetenek Detay Kutusu
+    if (activeSkill) {
+        const skillDetailBox = document.createElement('div');
+        skillDetailBox.className = 'skill-detail-box';
+
+        const sHeader = document.createElement('div');
+        sHeader.className = 'skill-box-header';
+
+        if (activeSkill.icon) {
+            const bigSkillImg = document.createElement('img');
+            bigSkillImg.className = 'skill-big-avatar';
+            bigSkillImg.src = activeSkill.icon;
+            bigSkillImg.alt = activeSkill.name[currentLang];
+            sHeader.appendChild(bigSkillImg);
+        }
+
+        const sTextWrap = document.createElement('div');
+        sTextWrap.className = 'skill-name-wrap';
+
+        const sName = document.createElement('h5');
+        sName.className = 'skill-name-text';
+        sName.textContent = activeSkill.name[currentLang] || activeSkill.slot;
+
+        const sSlotName = document.createElement('span');
+        sSlotName.className = 'skill-type-pill';
+        sSlotName.textContent = `${activeSkill.slot} - ${activeSkill.slotLabel || ''}`;
+
+        sTextWrap.appendChild(sName);
+        sTextWrap.appendChild(sSlotName);
+        sHeader.appendChild(sTextWrap);
+        skillDetailBox.appendChild(sHeader);
+
+        const sDesc = document.createElement('p');
+        sDesc.className = 'skill-box-desc';
+        sDesc.textContent = activeSkill.description[currentLang] || 'Yetenek açıklaması yükleniyor...';
+        skillDetailBox.appendChild(sDesc);
+
+        rightPanel.appendChild(skillDetailBox);
+    }
+
+    showcase.appendChild(rightPanel);
+    container.appendChild(showcase);
 }
 
-/**
- * Yama notlarını patches.json üzerinden textContent ve güvenli DOM ile ekrana basar
- */
 function renderPatches() {
     const container = document.getElementById('patches-container');
     if (!container || !AppState.patchesData) return;
@@ -294,7 +410,6 @@ function renderPatches() {
         const patchCard = document.createElement('article');
         patchCard.className = 'patch-card';
 
-        // Yama Başlık Alanı (Sürüm, Ad ve Tarih)
         const patchHeader = document.createElement('div');
         patchHeader.className = 'patch-header';
 
@@ -320,7 +435,6 @@ function renderPatches() {
 
         patchCard.appendChild(patchHeader);
 
-        // Değişiklik Maddeleri Listesi
         if (Array.isArray(patch.changes)) {
             const listEl = document.createElement('ul');
             listEl.className = 'patch-notes-list';
@@ -329,13 +443,11 @@ function renderPatches() {
                 const itemEl = document.createElement('li');
                 itemEl.className = 'patch-note-item';
 
-                // Değişiklik Türü Etiketi (Yeni, Düzeltme, Denge)
                 const tagEl = document.createElement('span');
                 tagEl.className = `patch-tag patch-tag-${change.type}`;
                 const tagKey = `tag_${change.type}`;
                 tagEl.textContent = (langData[tagKey] && langData[tagKey][currentLang]) || change.type;
 
-                // Değişiklik Açıklaması
                 const textEl = document.createElement('span');
                 textEl.className = 'patch-note-text';
                 textEl.textContent = change.text[currentLang] || '';
@@ -352,9 +464,6 @@ function renderPatches() {
     });
 }
 
-/**
- * site.json içindeki sosyal bağlantıları ekrana basar
- */
 function renderSocialLinks() {
     const container = document.getElementById('social-links-container');
     if (!container || !AppState.siteData || !Array.isArray(AppState.siteData.socialLinks)) return;
@@ -373,10 +482,6 @@ function renderSocialLinks() {
     });
 }
 
-/**
- * Bir elementin içindeki tüm alt düğümleri güvenli bir şekilde siler
- * @param {HTMLElement} element 
- */
 function clearElement(element) {
     while (element.firstChild) {
         element.removeChild(element.firstChild);
