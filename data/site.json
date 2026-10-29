@@ -161,5 +161,14 @@
         }
       }
     ]
+  },
+  "analytics": {
+    "enabled": true,
+    "scriptUrl": "https://static.cloudflareinsights.com/beacon.min.js",
+    "siteToken": "cada52de9aec4d94b1492fea48d33912",
+    "hostnames": [
+      "fallofthevoid.com",
+      "www.fallofthevoid.com"
+    ]
   }
 }

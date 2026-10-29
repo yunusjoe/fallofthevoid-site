@@ -42,9 +42,25 @@ async function initApp() {
         setupEventListeners();
         setupMediaEvents();
         renderInterface();
+        setupAnalytics();
     } catch (error) {
         console.error('Uygulama başlatılırken bir hata oluştu:', error);
     }
+}
+
+// Yalnızca canlı alan adında çalışır; yerel önizlemeler istatistiğe karışmaz.
+// siteToken, Cloudflare'ın herkese açık ölçüm kimliğidir; hesap erişim anahtarı değildir.
+function setupAnalytics() {
+    const analytics = AppState.siteData.analytics;
+    if (!analytics?.enabled || !analytics.hostnames?.includes(window.location.hostname)) return;
+    if (document.getElementById('cloudflare-web-analytics')) return;
+
+    const beacon = document.createElement('script');
+    beacon.id = 'cloudflare-web-analytics';
+    beacon.type = 'module';
+    beacon.src = analytics.scriptUrl;
+    beacon.dataset.cfBeacon = JSON.stringify({ token: analytics.siteToken });
+    document.body.appendChild(beacon);
 }
 
 function loadSavedLanguage() {
@@ -58,7 +74,7 @@ function loadSavedLanguage() {
 
 async function loadAllData() {
     const [siteRes, langRes, patchesRes, charactersRes] = await Promise.all([
-        fetch('data/site.json?v=20261030-media', { cache: 'no-cache' }),
+        fetch('data/site.json?v=20261030-analytics', { cache: 'no-cache' }),
         fetch('data/lang.json?v=20261030-media', { cache: 'no-cache' }),
         fetch('data/patches.json', { cache: 'no-cache' }),
         fetch('data/characters.json', { cache: 'no-cache' })
