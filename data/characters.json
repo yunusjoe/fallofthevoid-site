@@ -1,0 +1,62 @@
+[
+  {
+    "id": "shadow-warden",
+    "name": "Kaelen",
+    "role": {
+      "tr": "Karanlık Muhafız",
+      "en": "Shadow Warden"
+    },
+    "bio": {
+      "tr": "Hiçliğin karanlığında dövülmüş zırhıyla Kaelen, düşmanlarının ruhlarını emerek hayatta kalan kadim bir öncü savaşçıdır.",
+      "en": "Forged in the darkness of the abyss, Kaelen is an ancient vanguard who siphons the souls of his foes to endure relentless battles."
+    },
+    "stats": [
+      {
+        "key": "stat_power",
+        "value": 85
+      },
+      {
+        "key": "stat_defense",
+        "value": 90
+      },
+      {
+        "key": "stat_agility",
+        "value": 55
+      },
+      {
+        "key": "stat_void",
+        "value": 75
+      }
+    ]
+  },
+  {
+    "id": "void-weaver",
+    "name": "Lyra",
+    "role": {
+      "tr": "Void Dokuyucusu",
+      "en": "Void Weaver"
+    },
+    "bio": {
+      "tr": "Gerçekliğin dokusunu bükebilen Lyra, uzak mesafeden boyutsal yarıklar açarak düşman saflarını yerle bir eden yıkıcı bir büyücüdür.",
+      "en": "Bending the fabric of reality itself, Lyra is a devastating sorceress who tears open dimensional rifts from afar to obliterate enemy lines."
+    },
+    "stats": [
+      {
+        "key": "stat_power",
+        "value": 95
+      },
+      {
+        "key": "stat_defense",
+        "value": 45
+      },
+      {
+        "key": "stat_agility",
+        "value": 80
+      },
+      {
+        "key": "stat_void",
+        "value": 100
+      }
+    ]
+  }
+]

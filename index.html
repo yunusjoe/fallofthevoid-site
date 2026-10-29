@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sayfa başlığı site.json / lang.json yüklendiğinde JavaScript tarafından atanır -->
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Sinematik karanlık fantezi atmosferi için Google Fonts bağlantıları -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Üst Gezinme Çubuğu (Navigation Bar) -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#hero" class="site-logo" id="site-logo">
+                <!-- Oyun adı site.json üzerinden JavaScript ile yazdırılır -->
+            </a>
+
+            <!-- Mobil Ekranlar İçin Menü Butonu -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç veya Kapat">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Gezinme Menüsü -->
+            <nav class="site-nav" id="site-nav">
+                <ul class="nav-links">
+                    <li><a href="#hero" data-i18n="nav_home"></a></li>
+                    <li><a href="#characters" data-i18n="nav_characters"></a></li>
+                    <li><a href="#patches" data-i18n="nav_patches"></a></li>
+                    <li><a href="#contact" data-i18n="nav_contact"></a></li>
+                </ul>
+
+                <!-- Dil Değiştirici Buton (TR / EN) -->
+                <div class="language-switcher">
+                    <button id="lang-btn" class="lang-toggle-btn" type="button" aria-label="Dili Değiştir">
+                        <!-- Dil göstergesi JavaScript ile doldurulur -->
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Bölüm: Hero (Giriş / Karşılama Alanı) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-backdrop"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-tagline" data-i18n="hero_tagline"></span>
+                <h1 class="hero-title" id="hero-game-title"></h1>
+                <p class="hero-description" data-i18n="hero_description"></p>
+                
+                <div class="hero-actions">
+                    <a href="#characters" class="btn btn-primary" data-i18n="hero_cta_characters"></a>
+                    <a href="#patches" class="btn btn-secondary" data-i18n="hero_cta_patches"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Bölüm: Karakterler -->
+        <section id="characters" class="section characters-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="characters_title"></h2>
+                    <p class="section-subtitle" data-i18n="characters_subtitle"></p>
+                </div>
+
+                <!-- Karakter Kartları (characters.json üzerinden dinamik render edilir) -->
+                <div class="characters-grid" id="characters-container"></div>
+            </div>
+        </section>
+
+        <!-- 3. Bölüm: Yama Notları -->
+        <section id="patches" class="section patches-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="patches_title"></h2>
+                    <p class="section-subtitle" data-i18n="patches_subtitle"></p>
+                </div>
+
+                <!-- Yama Notları Listesi (patches.json üzerinden dinamik render edilir) -->
+                <div class="patches-container" id="patches-container"></div>
+            </div>
+        </section>
+
+        <!-- 4. Bölüm: İletişim & Sosyal Medya -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="contact_title"></h2>
+                    <p class="section-subtitle" data-i18n="contact_subtitle"></p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-email-wrapper">
+                        <span class="contact-label" data-i18n="contact_email_label"></span>
+                        <a href="#" id="contact-email" class="contact-link"></a>
+                    </div>
+
+                    <div class="social-wrapper">
+                        <span class="contact-label" data-i18n="contact_social_label"></span>
+                        <div class="social-links" id="social-links-container"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Alt Bilgi (Footer) -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p id="footer-copyright"></p>
+            <p class="footer-note" data-i18n="footer_rights"></p>
+        </div>
+    </footer>
+
+    <!-- Ana JavaScript Mantığı -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>

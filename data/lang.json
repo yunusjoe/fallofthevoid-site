@@ -1,0 +1,102 @@
+{
+  "site_title": {
+    "tr": "Fall of the Void | Karanlık Fantezi ARPG",
+    "en": "Fall of the Void | Dark Fantasy ARPG"
+  },
+  "nav_home": {
+    "tr": "Ana Sayfa",
+    "en": "Home"
+  },
+  "nav_characters": {
+    "tr": "Karakterler",
+    "en": "Characters"
+  },
+  "nav_patches": {
+    "tr": "Yama Notları",
+    "en": "Patch Notes"
+  },
+  "nav_contact": {
+    "tr": "İletişim",
+    "en": "Contact"
+  },
+  "hero_tagline": {
+    "tr": "Karanlık Çöküyor, Boşluk Yükseliyor",
+    "en": "Darkness Falls, The Void Arises"
+  },
+  "hero_description": {
+    "tr": "Hiçliğin derinliklerinde kadim bir kötülük uyanıyor. Karanlık fantezi evreninde kendi kaderini çiz, yıkıcı yeteneklerde ustalaş ve unutulmuş diyarları arındır.",
+    "en": "An ancient malevolence stirs within the depths of nothingness. Forge your destiny in a dark fantasy realm, master devastating abilities, and cleanse the forgotten lands."
+  },
+  "hero_cta_characters": {
+    "tr": "Karakterleri Keşfet",
+    "en": "Explore Champions"
+  },
+  "hero_cta_patches": {
+    "tr": "Son Güncellemeler",
+    "en": "Latest Updates"
+  },
+  "characters_title": {
+    "tr": "Karakterler",
+    "en": "Champions"
+  },
+  "characters_subtitle": {
+    "tr": "Boşluğun gücünü dizginleyen ve karanlıkla savaşan savaşçılar.",
+    "en": "Warriors who harness the void and defy the encroaching darkness."
+  },
+  "patches_title": {
+    "tr": "Yama Notları",
+    "en": "Patch Notes"
+  },
+  "patches_subtitle": {
+    "tr": "Oyun mekanikleri, denge değişiklikleri ve en son geliştirmeler.",
+    "en": "Game mechanics, balance adjustments, and latest improvements."
+  },
+  "contact_title": {
+    "tr": "İletişim & Topluluk",
+    "en": "Contact & Community"
+  },
+  "contact_subtitle": {
+    "tr": "Bizimle iletişime geçin ve topluluğumuzun bir parçası olun.",
+    "en": "Reach out to us and become part of our growing community."
+  },
+  "contact_email_label": {
+    "tr": "Resmi İletişim E-Postası",
+    "en": "Official Contact Email"
+  },
+  "contact_social_label": {
+    "tr": "Sosyal Medya & Topluluk Bağlantıları",
+    "en": "Social Media & Community Links"
+  },
+  "footer_rights": {
+    "tr": "Tüm Hakları Saklıdır. Fall of the Void bağımsız bir ARPG projesidir.",
+    "en": "All Rights Reserved. Fall of the Void is an indie ARPG project."
+  },
+  "tag_new": {
+    "tr": "Yeni",
+    "en": "New"
+  },
+  "tag_fix": {
+    "tr": "Düzeltme",
+    "en": "Fix"
+  },
+  "tag_balance": {
+    "tr": "Denge",
+    "en": "Balance"
+  },
+  "stat_power": {
+    "tr": "Güç",
+    "en": "Power"
+  },
+  "stat_agility": {
+    "tr": "Çeviklik",
+    "en": "Agility"
+  },
+  "stat_void": {
+    "tr": "Void Enerjisi",
+    "en": "Void Energy"
+  },
+  "stat_defense": {
+    "tr": "Dayanıklılık",
+    "en": "Defense"
+  }
+}

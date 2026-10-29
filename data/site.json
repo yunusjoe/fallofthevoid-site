@@ -1,0 +1,26 @@
+{
+  "gameTitle": "Fall of the Void",
+  "domain": "fallofthevoid.com",
+  "contactEmail": "contact@fallofthevoid.com",
+  "settings": {
+    "maxStatValue": 100
+  },
+  "socialLinks": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com"
+    },
+    {
+      "name": "Discord",
+      "url": "https://discord.gg"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtube.com"
+    },
+    {
+      "name": "X (Twitter)",
+      "url": "https://x.com"
+    }
+  ]
+}

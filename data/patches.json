@@ -1,0 +1,71 @@
+[
+  {
+    "version": "v0.2.0",
+    "name": {
+      "tr": "Hiçliğin Uyanışı",
+      "en": "Awakening of the Void"
+    },
+    "date": "2026-10-24",
+    "changes": [
+      {
+        "type": "new",
+        "text": {
+          "tr": "Yeni oynanabilir karakter sınıfı 'Karanlık Muhafız' eklendi.",
+          "en": "Added new playable class 'Shadow Warden'."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Void Yarığı zindanı ve dinamik ganimet düşürme sistemi devreye alındı.",
+          "en": "Introduced the Void Rift dungeon with dynamic loot drop mechanics."
+        }
+      },
+      {
+        "type": "balance",
+        "text": {
+          "tr": "Gölge Adımı yeteneğinin bekleme süresi 12 saniyeden 9 saniyeye düşürüldü.",
+          "en": "Shadow Step ability cooldown reduced from 12s to 9s."
+        }
+      },
+      {
+        "type": "fix",
+        "text": {
+          "tr": "Zindan boss karşılaşmalarında nadir görülen takılma ve çarpışma hataları giderildi.",
+          "en": "Resolved rare collision and freeze issues during dungeon boss encounters."
+        }
+      }
+    ]
+  },
+  {
+    "version": "v0.1.5",
+    "name": {
+      "tr": "Karanlık Temeller",
+      "en": "Dark Foundations"
+    },
+    "date": "2026-10-10",
+    "changes": [
+      {
+        "type": "new",
+        "text": {
+          "tr": "ARPG envanter ve rün soketleme sistemi oyuna entegre edildi.",
+          "en": "Integrated ARPG inventory and rune socketing system."
+        }
+      },
+      {
+        "type": "balance",
+        "text": {
+          "tr": "Void büyülerinin mana tüketim eğrisi erken aşama için dengelendi.",
+          "en": "Balanced mana consumption curve for void spells in early game."
+        }
+      },
+      {
+        "type": "fix",
+        "text": {
+          "tr": "Klavye ve kontrolcü tuş atamalarının sıfırlanma sorunu çözüldü.",
+          "en": "Fixed an issue where custom keybindings and controller layouts were resetting."
+        }
+      }
+    ]
+  }
+]
