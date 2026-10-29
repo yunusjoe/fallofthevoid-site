@@ -2,16 +2,44 @@
   {
     "version": "v0.3.0",
     "name": {
-      "tr": "Hortlak Lordunun Yükselişi",
-      "en": "Rise of the Wraithlord"
+      "tr": "Obsidian Kanatları ve Diyar Gezginleri",
+      "en": "Wings of Obsidian & Realm Travelers"
     },
     "date": "2026-10-29",
     "changes": [
       {
         "type": "new",
         "text": {
-          "tr": "Yeni karanlık varlık 'Wraithlord' (Hortlak Lordu) oyuna eklendi.",
-          "en": "Added new dark entity 'Wraithlord' to the realm."
+          "tr": "Yeni 'Obsidian Valkyrie' kozmetik kanat aksesuarı ve özel animasyonlu LOD modelleri oyuna eklendi.",
+          "en": "Added new 'Obsidian Valkyrie' cosmetic wings with custom animated LOD models."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Karakter donanımlarının gerçek zamanlı incelenebildiği tam ekran Kozmetik Önizleme Vitrini entegre edildi.",
+          "en": "Integrated full-screen Cosmetic Preview and Showcase panel for real-time equipment inspection."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Zindan portalları ve harita waypoint'leri arasında akıllı Görev Otomatik Yönlendirme (Quest Navigation) sistemi devreye alındı.",
+          "en": "Implemented smart Quest Auto-Navigation routing across dungeon portals and waypoints."
+        }
+      },
+      {
+        "type": "balance",
+        "text": {
+          "tr": "NPC etkileşim ve yakınlık sınırları (8m/11m) optimize edildi; selamlama ve veda zamanlayıcıları dengelendi.",
+          "en": "Optimized NPC proximity interaction thresholds (8m/11m) with balanced greeting and farewell cooldowns."
+        }
+      },
+      {
+        "type": "fix",
+        "text": {
+          "tr": "Dreadfang Embers yeteneğinde görülen parçacık yörünge hızı eğrileri (Particle Orbital Velocity) kararlı hale getirildi.",
+          "en": "Fixed Particle Orbital Velocity curve stability issues in the Dreadfang Embers ability."
         }
       }
     ]
