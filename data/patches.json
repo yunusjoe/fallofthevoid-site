@@ -1,5 +1,22 @@
 [
   {
+    "version": "v0.3.0",
+    "name": {
+      "tr": "Hortlak Lordunun Yükselişi",
+      "en": "Rise of the Wraithlord"
+    },
+    "date": "2026-10-29",
+    "changes": [
+      {
+        "type": "new",
+        "text": {
+          "tr": "Yeni karanlık varlık 'Wraithlord' (Hortlak Lordu) oyuna eklendi.",
+          "en": "Added new dark entity 'Wraithlord' to the realm."
+        }
+      }
+    ]
+  },
+  {
     "version": "v0.2.0",
     "name": {
       "tr": "Hiçliğin Uyanışı",
