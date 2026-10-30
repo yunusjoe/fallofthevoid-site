@@ -536,6 +536,10 @@ function renderMedia() {
     document.getElementById('trailer-duration').textContent = media.duration;
     document.getElementById('steam-wishlist').href = siteData.store.wishlist;
     document.getElementById('steam-demo').href = siteData.store.demo;
+    const ctaWishlist = document.getElementById('cta-wishlist');
+    if (ctaWishlist) ctaWishlist.href = siteData.store.wishlist;
+    const ctaDemo = document.getElementById('cta-demo');
+    if (ctaDemo) ctaDemo.href = siteData.store.demo;
     document.getElementById('trailer-trigger').setAttribute('aria-label', mediaLabel('trailer_watch'));
     document.getElementById('media-close').textContent = mediaLabel('media_close');
     document.getElementById('gallery-previous').textContent = mediaLabel('media_previous');
