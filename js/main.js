@@ -74,8 +74,8 @@ function loadSavedLanguage() {
 
 async function loadAllData() {
     const [siteRes, langRes, patchesRes, charactersRes] = await Promise.all([
-        fetch('data/site.json?v=20261030-layout', { cache: 'no-cache' }),
-        fetch('data/lang.json?v=20261030-media', { cache: 'no-cache' }),
+        fetch('data/site.json?v=20261030-steam', { cache: 'no-cache' }),
+        fetch('data/lang.json?v=20261030-steam', { cache: 'no-cache' }),
         fetch('data/patches.json', { cache: 'no-cache' }),
         fetch('data/characters.json', { cache: 'no-cache' })
     ]);
@@ -124,8 +124,10 @@ function renderInterface() {
     updateLanguageButton();
     renderStaticI18nTexts();
     renderSiteMetadata();
+    renderFeatures();
     renderMedia();
     renderClasses();
+    renderRequirements();
     renderPatches();
     renderSocialLinks();
 }
@@ -598,5 +600,140 @@ function setupMediaEvents() {
         if (document.getElementById('gallery-controls').hidden) return;
         if (event.key === 'ArrowLeft') { event.preventDefault(); openGallery(galleryIndex - 1); }
         if (event.key === 'ArrowRight') { event.preventDefault(); openGallery(galleryIndex + 1); }
+    });
+}
+
+
+/**
+ * Steam Temel Özelliklerini (Core Features) Güvenli DOM ile Çizer (innerHTML YOKTUR)
+ */
+function renderFeatures() {
+    const container = document.getElementById('features-container');
+    if (!container || !AppState.siteData?.features) return;
+
+    clearElement(container);
+    const { currentLang, langData } = AppState;
+
+    AppState.siteData.features.forEach(feat => {
+        const card = document.createElement('article');
+        card.className = 'feature-card';
+
+        // Video / Poster Alanı
+        const mediaWrap = document.createElement('div');
+        mediaWrap.className = 'feature-media';
+
+        const video = document.createElement('video');
+        video.className = 'feature-video';
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.preload = 'none';
+        video.poster = feat.poster;
+
+        const source = document.createElement('source');
+        source.src = feat.video;
+        source.type = 'video/mp4';
+        video.appendChild(source);
+
+        mediaWrap.appendChild(video);
+
+        // İçerik Alanı
+        const content = document.createElement('div');
+        content.className = 'feature-content';
+
+        const header = document.createElement('div');
+        header.className = 'feature-card-header';
+
+        const iconSpan = document.createElement('span');
+        iconSpan.className = 'feature-icon';
+        iconSpan.textContent = feat.icon;
+
+        const title = document.createElement('h3');
+        title.className = 'feature-title';
+        title.textContent = langData[feat.titleKey]?.[currentLang] || '';
+
+        header.append(iconSpan, title);
+
+        const desc = document.createElement('p');
+        desc.className = 'feature-desc';
+        desc.textContent = langData[feat.descKey]?.[currentLang] || '';
+
+        content.append(header, desc);
+        card.append(mediaWrap, content);
+        container.appendChild(card);
+    });
+}
+
+/**
+ * Steam Sistem Gereksinimlerini Güvenli DOM ile Çizer (innerHTML YOKTUR)
+ */
+function renderRequirements() {
+    const container = document.getElementById('requirements-container');
+    if (!container || !AppState.siteData?.systemRequirements) return;
+
+    clearElement(container);
+    const { currentLang, langData } = AppState;
+    const reqs = AppState.siteData.systemRequirements;
+
+    const tiers = [
+        { key: 'minimum', titleKey: 'req_tab_min', data: reqs.minimum },
+        { key: 'recommended', titleKey: 'req_tab_rec', data: reqs.recommended }
+    ];
+
+    const fields = [
+        { labelKey: 'req_label_os', prop: 'os' },
+        { labelKey: 'req_label_processor', prop: 'processor' },
+        { labelKey: 'req_label_memory', prop: 'memory' },
+        { labelKey: 'req_label_graphics', prop: 'graphics' },
+        { labelKey: 'req_label_directx', prop: 'directx' },
+        { labelKey: 'req_label_storage', prop: 'storage' },
+        { labelKey: 'req_label_notes', prop: 'notesKey', isI18n: true }
+    ];
+
+    tiers.forEach(tier => {
+        const card = document.createElement('div');
+        card.className = `requirements-card req-card-${tier.key}`;
+
+        const cardHeader = document.createElement('div');
+        cardHeader.className = 'req-card-header';
+
+        const cardTitle = document.createElement('h3');
+        cardTitle.className = 'req-card-title';
+        cardTitle.textContent = langData[tier.titleKey]?.[currentLang] || tier.key;
+
+        const badge = document.createElement('span');
+        badge.className = `req-badge req-badge-${tier.key}`;
+        badge.textContent = tier.key === 'minimum' ? '1080p @ 30 FPS' : '1080p @ 60 FPS+';
+
+        cardHeader.append(cardTitle, badge);
+        card.appendChild(cardHeader);
+
+        const list = document.createElement('ul');
+        list.className = 'req-list';
+
+        fields.forEach(field => {
+            const item = document.createElement('li');
+            item.className = 'req-item';
+
+            const label = document.createElement('span');
+            label.className = 'req-label';
+            label.textContent = langData[field.labelKey]?.[currentLang] || field.labelKey;
+
+            const val = document.createElement('span');
+            val.className = 'req-value';
+            if (field.isI18n) {
+                const noteKey = tier.data[field.prop];
+                val.textContent = langData[noteKey]?.[currentLang] || noteKey;
+            } else {
+                val.textContent = tier.data[field.prop];
+            }
+
+            item.append(label, val);
+            list.appendChild(item);
+        });
+
+        card.appendChild(list);
+        container.appendChild(card);
     });
 }

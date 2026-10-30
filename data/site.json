@@ -54,7 +54,7 @@
         "unit": "%"
       }
     ],
-    "defaultLanguage": "en"
+    "defaultLanguage": "tr"
   },
   "socialLinks": [
     {
@@ -171,5 +171,64 @@
       "fallofthevoid.com",
       "www.fallofthevoid.com"
     ]
+  },
+  "gameInfo": {
+    "developer": "JoeCat",
+    "publisher": "JoeCat",
+    "supportEmail": "fallofthevoid@gmail.com"
+  },
+  "features": [
+    {
+      "id": "combat",
+      "icon": "⚔️",
+      "titleKey": "feat_combat_title",
+      "descKey": "feat_combat_desc",
+      "video": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/5ebedac0e9ac0381efb4fcbf54302eca.mp4?t=1792939747",
+      "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/5ebedac0e9ac0381efb4fcbf54302eca.poster.avif?t=1792939747"
+    },
+    {
+      "id": "synergies",
+      "icon": "💎",
+      "titleKey": "feat_synergies_title",
+      "descKey": "feat_synergies_desc",
+      "video": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/51fcf2861289681360ce31f348346f0f.mp4?t=1792939747",
+      "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/51fcf2861289681360ce31f348346f0f.poster.avif?t=1792939747"
+    },
+    {
+      "id": "bosses",
+      "icon": "👑",
+      "titleKey": "feat_bosses_title",
+      "descKey": "feat_bosses_desc",
+      "video": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/6fa9080327a3ac74109bf4b10962aaee.mp4?t=1792939747",
+      "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/6fa9080327a3ac74109bf4b10962aaee.poster.avif?t=1792939747"
+    },
+    {
+      "id": "rifts",
+      "icon": "🌀",
+      "titleKey": "feat_rifts_title",
+      "descKey": "feat_rifts_desc",
+      "video": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/427db8b85b53785388318fe0fed285fe.mp4?t=1792939747",
+      "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/427db8b85b53785388318fe0fed285fe.poster.avif?t=1792939747"
+    }
+  ],
+  "systemRequirements": {
+    "minimum": {
+      "os": "Windows 10 (64-bit)",
+      "processor": "Intel Core i5-4460 / AMD Ryzen 3 1200",
+      "memory": "8 GB RAM",
+      "graphics": "NVIDIA GeForce GTX 960 / AMD Radeon RX 560 (4 GB VRAM)",
+      "directx": "Version 11",
+      "storage": "10 GB",
+      "notesKey": "req_notes_val"
+    },
+    "recommended": {
+      "os": "Windows 10 / 11 (64-bit)",
+      "processor": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "memory": "16 GB RAM",
+      "graphics": "NVIDIA GeForce GTX 1060 / RTX 2060 / AMD RX 5600 XT",
+      "directx": "Version 12",
+      "storage": "10 GB",
+      "notesKey": "req_notes_val"
+    }
   }
 }

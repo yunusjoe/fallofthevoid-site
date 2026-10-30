@@ -1,0 +1,4 @@
+# Local preview images and debug files
+site_*preview.png
+site_*screenshot*.png
+preview*.png

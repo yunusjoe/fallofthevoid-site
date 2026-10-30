@@ -1,6 +1,6 @@
 {
   "site_title": {
-    "tr": "Fall of the Void | Karanlık Fantezi ARPG",
+    "tr": "Fall of the Void | Karanlık Fantezi Aksiyon Rol Yapma",
     "en": "Fall of the Void | Dark Fantasy ARPG"
   },
   "nav_home": {
@@ -20,12 +20,12 @@
     "en": "Contact"
   },
   "hero_tagline": {
-    "tr": "Karanlık Çöküyor, Boşluk Yükseliyor",
+    "tr": "Karanlık Çöküyor, Hiçlik Yükseliyor",
     "en": "Darkness Falls, The Void Arises"
   },
   "hero_description": {
-    "tr": "Hiçliğin derinliklerinde kadim bir kötülük uyanıyor. Karanlık fantezi evreninde kendi kaderini çiz, yıkıcı yeteneklerde ustalaş ve unutulmuş diyarları arındır.",
-    "en": "An ancient malevolence stirs within the depths of nothingness. Forge your destiny in a dark fantasy realm, master devastating abilities, and cleanse the forgotten lands."
+    "tr": "Fall of the Void, yüksek tempolu kılıç ve büyü savaşını derinlemesine karakter geliştirmeyle birleştiren karanlık izometrik bir aksiyon rol yapma oyunudur. Parçalanmış diyarlardaki tehlikeli zindanlara inin, gelişen yeteneklerinizde ustalaşın ve kaderinizi şekillendirmek için yıkıcı güç sinerjileri oluşturun.",
+    "en": "Fall of the Void is a dark fantasy isometric ARPG merging high-octane hack-and-slash combat with deep build crafting. Descend into perilous dungeons across fractured realms, master evolving abilities, and forge devastating power synergies to shape your destiny."
   },
   "hero_cta_characters": {
     "tr": "Sınıfları Keşfet",
@@ -76,7 +76,7 @@
     "en": "Social Media & Community Links"
   },
   "footer_rights": {
-    "tr": "Tüm Hakları Saklıdır. Fall of the Void bağımsız bir ARPG projesidir.",
+    "tr": "Tüm Hakları Saklıdır. Fall of the Void bağımsız bir aksiyon rol yapma oyunudur.",
     "en": "All Rights Reserved. Fall of the Void is an indie ARPG project."
   },
   "tag_new": {
@@ -120,7 +120,7 @@
     "en": "Bonus Crit Chance"
   },
   "stat_cooldown": {
-    "tr": "Bonus Bekleme Süresi",
+    "tr": "Bonus Bekleme Süresi Azaltma",
     "en": "Bonus Cooldown Red."
   },
   "class_badge": {
@@ -136,7 +136,7 @@
     "en": "Class-specific bonuses are shown. Total character stats vary with level, equipment and other powers."
   },
   "skill_scaling_note": {
-    "tr": "Hasar; karakter seviyesi, yetenek rütbesi ve ekipmana göre ölçeklenir. Burada yeteneklerin işleyişi ve sabit etkileri gösterilir.",
+    "tr": "Hasar; karakter seviyesi, yetenek derecesi ve ekipmana göre artar. Burada yeteneklerin işleyişi ve sabit etkileri gösterilir.",
     "en": "Damage scales with character level, ability rank and equipment. Ability mechanics and fixed effects are shown here."
   },
   "nav_media": {
@@ -144,7 +144,7 @@
     "en": "Gameplay"
   },
   "hero_kicker": {
-    "tr": "TEK OYUNCULU · KARANLIK FANTEZİ ARPG",
+    "tr": "TEK OYUNCULU · KARANLIK FANTEZİ AKSİYON ROL YAPMA",
     "en": "SINGLE PLAYER · DARK FANTASY ARPG"
   },
   "steam_wishlist": {
@@ -200,8 +200,8 @@
     "en": "Enlarge image"
   },
   "media_video_title": {
-    "tr": "Fall of the Void — Oynanış Montajı",
-    "en": "Fall of the Void — Gameplay Montage"
+    "tr": "Fall of the Void — Oynanış Tanıtımı",
+    "en": "Fall of the Void — Gameplay Showcase"
   },
   "media_error": {
     "tr": "Video yüklenemedi. Bağlantını kontrol edip yeniden dene.",
@@ -214,5 +214,149 @@
   "language_toggle": {
     "tr": "İngilizceye geç",
     "en": "Switch to Turkish"
+  },
+  "nav_features": {
+    "tr": "Özellikler",
+    "en": "Features"
+  },
+  "nav_lore": {
+    "tr": "Hikâye",
+    "en": "Lore"
+  },
+  "nav_requirements": {
+    "tr": "Gereksinimler",
+    "en": "Requirements"
+  },
+  "features_eyebrow": {
+    "tr": "TEMEL DİREKLER",
+    "en": "CORE GAMEPLAY"
+  },
+  "features_title": {
+    "tr": "Oyunun Temel Özellikleri",
+    "en": "Key Features"
+  },
+  "features_subtitle": {
+    "tr": "Hiçliğin derinliklerinde hayatta kalmak için savaşın, güçlerinizi birleştirin ve sınırları zorlayın.",
+    "en": "Fight to survive in the depths of the Void, combine your powers, and push the limits."
+  },
+  "feat_combat_title": {
+    "tr": "Yüksek Tempolu Savaş",
+    "en": "High-Octane Hack & Slash Combat"
+  },
+  "feat_combat_desc": {
+    "tr": "Duyarlı kontrolleri, akıcı hareket kabiliyetini ve kesintisiz aksiyon için tasarlanmış ekranı temizleyen büyü bileşimlerini tecrübe edin.",
+    "en": "Experience responsive controls, fluid mobility, and screen-clearing spell combos engineered for visceral, non-stop ARPG action."
+  },
+  "feat_synergies_title": {
+    "tr": "Sınırsız Karakter Dizilimleri ve Güç Uyumları",
+    "en": "Boundless Build Synergies"
+  },
+  "feat_synergies_desc": {
+    "tr": "Çeşitli pasif yetenekler, tetikleyici güçler (Zamansal Kırılma, Göksel Yargı, Felaket) ve Yükseliş ağacı ile savaş tarzınızı şekillendirin. Savaşın gidişatını değiştiren durdurulamaz uyumlar yaratın.",
+    "en": "Tailor your combat style with diverse passive perks, triggering powers (Temporal Fracture, Celestial Judgment, Cataclysm), and the Ascension tree. Create unstoppable synergies that turn the tides of battle."
+  },
+  "feat_bosses_title": {
+    "tr": "Acımasız Elebaşı Karşılaşmaları ve Sunaklar",
+    "en": "Brutal Boss Encounters & Altars"
+  },
+  "feat_bosses_desc": {
+    "tr": "Kadim koruyucuları uyandırın; reflekslerinizi, konumlanmanızı ve karakter gücünüzü sınayan çok aşamalı Hiçlik canavarlarıyla yüzleşin.",
+    "en": "Awaken ancient guardians and face multi-phase Void monstrosities that test your reflexes, positioning, and build strength."
+  },
+  "feat_rifts_title": {
+    "tr": "Zorlu Yarıklar ve Tehlikeli Zindanlar",
+    "en": "Challenge Rifts & Perilous Dungeons"
+  },
+  "feat_rifts_desc": {
+    "tr": "Gittikçe zorlaşan aşamalara meydan okuyun, ölümcül arena mücadelelerinde ustalaşın ve parçalanmış dünyanın en karanlık derinliklerinde unutulmuş hazineleri ele geçirin.",
+    "en": "Brave escalating difficulty tiers, master deadly arena challenges, and claim forgotten treasures in the darkest depths of the fractured world."
+  },
+  "lore_eyebrow": {
+    "tr": "KADİM GEÇMİŞ",
+    "en": "THE LORE"
+  },
+  "lore_title": {
+    "tr": "Hiçliğin Doğuşu",
+    "en": "When Reality Shattered"
+  },
+  "lore_p1": {
+    "tr": "Boşluk gerçekliği paramparça ettiğinde, kadim kötülükler yeryüzünün altında uyandı.",
+    "en": "When the Void shattered reality, ancient abominations stirred beneath the surface."
+  },
+  "lore_p2": {
+    "tr": "Göksel ve gizemli enerjilerle donatılmış uyanmış bir şampiyon olarak, mutlak yok oluşa karşı duran son savunma hattısınız.",
+    "en": "As an awakened champion bound to celestial and arcane energies, you stand as the final barrier against total annihilation."
+  },
+  "lore_quote": {
+    "tr": "«Yozlaşmayı temizleyecek misiniz, yoksa hiçliğin ezici gücünü kendi lehinize mi kullanacaksınız?»",
+    "en": "\"Will you cleanse the corruption, or wield the void's overwhelming might?\""
+  },
+  "cta_banner_title": {
+    "tr": "Hiçliğe Adım Atmaya Hazır mısınız?",
+    "en": "Ready to Defy the Void?"
+  },
+  "cta_banner_subtitle": {
+    "tr": "Karanlık çöküyor, kadim güçler uyanıyor. Steam üzerinden istek listenize ekleyin veya ücretsiz demoyu hemen deneyin.",
+    "en": "Darkness falls, ancient powers awaken. Add to your Steam wishlist or play the free demo today."
+  },
+  "cta_banner_wishlist": {
+    "tr": "Steam’de İstek Listesine Ekle",
+    "en": "Wishlist on Steam"
+  },
+  "cta_banner_demo": {
+    "tr": "Ücretsiz Demoyu Oyna",
+    "en": "Play Free Demo"
+  },
+  "req_eyebrow": {
+    "tr": "DONANIM UYUMLULUĞU",
+    "en": "SPECIFICATIONS"
+  },
+  "req_title": {
+    "tr": "Sistem Gereksinimleri",
+    "en": "System Requirements"
+  },
+  "req_subtitle": {
+    "tr": "Fall of the Void dünyasına adım atmadan önce bilgisayarınızın donanım özelliklerini kontrol edin.",
+    "en": "Check your hardware specifications before stepping into the world of Fall of the Void."
+  },
+  "req_tab_min": {
+    "tr": "Minimum Gereksinimler",
+    "en": "Minimum"
+  },
+  "req_tab_rec": {
+    "tr": "Önerilen Gereksinimler",
+    "en": "Recommended"
+  },
+  "req_label_os": {
+    "tr": "İşletim Sistemi",
+    "en": "OS"
+  },
+  "req_label_processor": {
+    "tr": "İşlemci",
+    "en": "Processor"
+  },
+  "req_label_memory": {
+    "tr": "Bellek",
+    "en": "Memory"
+  },
+  "req_label_graphics": {
+    "tr": "Ekran Kartı",
+    "en": "Graphics"
+  },
+  "req_label_directx": {
+    "tr": "DirectX",
+    "en": "DirectX"
+  },
+  "req_label_storage": {
+    "tr": "Depolama",
+    "en": "Storage"
+  },
+  "req_label_notes": {
+    "tr": "İlave Notlar",
+    "en": "Additional Notes"
+  },
+  "req_notes_val": {
+    "tr": "Katı hal sürücüsü (SSD) önerilir",
+    "en": "SSD recommended"
   }
 }

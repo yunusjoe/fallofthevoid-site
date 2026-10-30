@@ -7,7 +7,7 @@
     <title></title>
     <link rel="icon" id="site-favicon">
     <link rel="apple-touch-icon" id="site-touch-icon">
-    <link rel="stylesheet" href="css/style.css?v=20261030-layout">
+    <link rel="stylesheet" href="css/style.css?v=20261030-steam">
     <!-- Sinematik karanlık fantezi atmosferi için Google Fonts bağlantıları -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,8 +33,11 @@
             <nav class="site-nav" id="site-nav">
                 <ul class="nav-links">
                     <li><a href="#hero" data-i18n="nav_home"></a></li>
+                    <li><a href="#features" data-i18n="nav_features"></a></li>
                     <li><a href="#media" data-i18n="nav_media"></a></li>
                     <li><a href="#characters" data-i18n="nav_characters"></a></li>
+                    <li><a href="#lore" data-i18n="nav_lore"></a></li>
+                    <li><a href="#requirements" data-i18n="nav_requirements"></a></li>
                     <li><a href="#patches" data-i18n="nav_patches"></a></li>
                     <li><a href="#contact" data-i18n="nav_contact"></a></li>
                 </ul>
@@ -63,7 +66,7 @@
                         <a id="steam-wishlist" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="steam_wishlist"></a>
                         <a id="steam-demo" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="steam_demo"></a>
                     </div>
-                    <a href="#characters" class="hero-explore" data-i18n="hero_explore"></a>
+                    <a href="#features" class="hero-explore" data-i18n="hero_explore"></a>
                 </div>
                 <div class="trailer-card">
                     <div class="trailer-card-top"><span data-i18n="trailer_eyebrow"></span><span id="trailer-duration"></span></div>
@@ -77,40 +80,98 @@
             </div>
         </section>
 
+        <!-- 2. Bölüm: Temel Özellikler (Steam Core Features) -->
+        <section id="features" class="section features-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker" data-i18n="features_eyebrow"></span>
+                    <h2 class="section-title" data-i18n="features_title"></h2>
+                    <p class="section-subtitle" data-i18n="features_subtitle"></p>
+                </div>
+                <div class="features-grid" id="features-container"></div>
+            </div>
+        </section>
+
+        <!-- 3. Bölüm: Oynanış Galerisi -->
         <section id="media" class="section media-section">
             <div class="container">
-                <div class="media-heading"><div><span class="section-kicker" data-i18n="gallery_eyebrow"></span><h2 class="section-title" data-i18n="gallery_title"></h2></div><p data-i18n="gallery_subtitle"></p></div>
+                <div class="media-heading">
+                    <div>
+                        <span class="section-kicker" data-i18n="gallery_eyebrow"></span>
+                        <h2 class="section-title" data-i18n="gallery_title"></h2>
+                    </div>
+                    <p data-i18n="gallery_subtitle"></p>
+                </div>
                 <div id="gameplay-gallery" class="gameplay-gallery"></div>
             </div>
         </section>
 
-        <!-- 2. Bölüm: Karakterler -->
+        <!-- 4. Bölüm: Karakterler -->
         <section id="characters" class="section characters-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title" data-i18n="characters_title"></h2>
                     <p class="section-subtitle" data-i18n="characters_subtitle"></p>
                 </div>
-
-                <!-- Karakter Kartları (characters.json üzerinden dinamik render edilir) -->
                 <div class="characters-grid" id="characters-container"></div>
             </div>
         </section>
 
-        <!-- 3. Bölüm: Yama Notları -->
+        <!-- 5. Bölüm: Hikâye (The Lore) -->
+        <section id="lore" class="section lore-section">
+            <div class="container">
+                <div class="lore-card">
+                    <div class="lore-header">
+                        <span class="section-kicker" data-i18n="lore_eyebrow"></span>
+                        <h2 class="section-title" data-i18n="lore_title"></h2>
+                    </div>
+                    <div class="lore-content">
+                        <p class="lore-paragraph" data-i18n="lore_p1"></p>
+                        <p class="lore-paragraph" data-i18n="lore_p2"></p>
+                        <blockquote class="lore-quote" data-i18n="lore_quote"></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Bölüm: Steam Eyleme Çağrı Şeridi (CTA Banner) -->
+        <section class="steam-cta-banner">
+            <div class="container cta-banner-inner">
+                <div class="cta-banner-text">
+                    <h3 class="cta-banner-title" data-i18n="cta_banner_title"></h3>
+                    <p class="cta-banner-subtitle" data-i18n="cta_banner_subtitle"></p>
+                </div>
+                <div class="cta-banner-actions">
+                    <a id="cta-wishlist" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="cta_banner_wishlist"></a>
+                    <a id="cta-demo" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="cta_banner_demo"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Bölüm: Sistem Gereksinimleri -->
+        <section id="requirements" class="section requirements-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker" data-i18n="req_eyebrow"></span>
+                    <h2 class="section-title" data-i18n="req_title"></h2>
+                    <p class="section-subtitle" data-i18n="req_subtitle"></p>
+                </div>
+                <div class="requirements-container" id="requirements-container"></div>
+            </div>
+        </section>
+
+        <!-- 8. Bölüm: Yama Notları -->
         <section id="patches" class="section patches-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title" data-i18n="patches_title"></h2>
                     <p class="section-subtitle" data-i18n="patches_subtitle"></p>
                 </div>
-
-                <!-- Yama Notları Listesi (patches.json üzerinden dinamik render edilir) -->
                 <div class="patches-container" id="patches-container"></div>
             </div>
         </section>
 
-        <!-- 4. Bölüm: İletişim & Sosyal Medya -->
+        <!-- 9. Bölüm: İletişim & Sosyal Medya -->
         <section id="contact" class="section contact-section">
             <div class="container">
                 <div class="section-header">
@@ -149,7 +210,6 @@
         <p id="media-error" hidden></p>
     </dialog>
 
-    <!-- Ana JavaScript Mantığı -->
-    <script src="js/main.js?v=20261030-layout" defer></script>
+    <script src="js/main.js?v=20261030-steam"></script>
 </body>
 </html>
