@@ -1,5 +1,95 @@
 [
   {
+    "version": "DEV",
+    "name": {
+      "tr": "Geliştirme Güncellemesi: Gölge, Prizma ve Plazma",
+      "en": "Development Update: Shadow, Prism & Plasma"
+    },
+    "date": "2026-10-31",
+    "changes": [
+      {
+        "type": "new",
+        "text": {
+          "tr": "Tam sürüm geliştirmesine Shadowblade eklendi: geri dönen kunailer, Q ve E yeteneklerini kopyalayan gölge klonu, patlayan Gölge Damgaları ve yörünge bıçakları.",
+          "en": "Added Shadowblade to full-game development: returning kunai, a shadow clone that mimics Q and E, detonating Shadow Marks and orbiting blades."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Tam sürüm geliştirmesine Chakram Weaver eklendi. Dönen çakramları yakalayarak mana yenile, bekleme sürelerini kısalt ve prizmatik testerelerle düşman sürülerini topla.",
+          "en": "Added Chakram Weaver to full-game development. Catch returning chakrams to restore mana, reduce cooldowns and gather hordes with prismatic saws."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Plasmancer geliştirme önizlemesi: Yıldırım Küresi, Manyetik Çekirdek, Ark Işınlanması ve Kararsız Akımlar. Sınıf uygulanmış durumda; gerçek oynanış doğrulaması ve denge değerlendirmesi henüz tamamlanmadı.",
+          "en": "Plasmancer development preview: Ball Lightning, Magnetic Core, Arc Teleport and Unstable Currents. The class is implemented; live gameplay verification and balance review are still pending."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Starforged Voidblade özel etkisi: yetenek hasarı, bekleme süresiyle sınırlı delici bir Kozmik Kuyruklu Yıldız Işını tetikler. Kılıca yıldız aurası, kristaller ve savrulma izi eklendi.",
+          "en": "Starforged Voidblade unique effect: skill damage triggers a piercing Cosmic Comet Beam with an internal cooldown. Added a star aura, crystals and a sweeping blade trail."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Voidspine Blade özel etkisi: güdümlü kemik dikenleri, öldürmede alan patlamaları, Omurga Kapanı ve altın/ek ganimet odaklı Omurga Akını güçlendirmesi.",
+          "en": "Voidspine Blade unique effect: homing bone spikes, on-kill area eruptions, a Spine Snare and a Spine Rush buff focused on gold and extra loot."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Bu notlar devam eden tam sürüm geliştirmesini kapsar; yeni sınıflar ve kılıçlar mevcut demoya eklenmiş içerik olarak sunulmaz.",
+          "en": "These notes cover ongoing full-game development; the new classes and swords are not presented as additions to the current demo."
+        }
+      }
+    ]
+  },
+  {
+    "version": "DEV",
+    "name": {
+      "tr": "Geliştirme Güncellemesi: Ruh Hasadı ve Yaşayan Kanatlar",
+      "en": "Development Update: Soul Harvest & Living Wings"
+    },
+    "date": "2026-10-30",
+    "changes": [
+      {
+        "type": "new",
+        "text": {
+          "tr": "Necrotic Talon Blade, öldürülen düşmanlardan ruh toplar. Ruh yükleri hasar ve can çalma sağlar; 5 yükte sonraki normal saldırı güçlendirilmiş bir pençe darbesi yapar.",
+          "en": "Necrotic Talon Blade gathers souls from defeated enemies. Soul charges grant damage and lifesteal; at 5 charges, the next basic attack unleashes an empowered claw strike."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Obsidian Valkyrie kanatları yeni yüzey efektleri, kanat ucu izleri ve kristal tüylerle yenilendi. Görsel efektler koşu ve atılma hareketlerine tepki verir; kozmetikler savaş statı kazandırmaz.",
+          "en": "Refreshed Obsidian Valkyrie wings with new surface effects, wingtip trails and crystal feathers. Effects react to running and dashing; cosmetics grant no combat stats."
+        }
+      },
+      {
+        "type": "fix",
+        "text": {
+          "tr": "Forest görevleri için Ent ve tohum erişimi iyileştirildi; tohum toplama yönlendirmesi Forest bölgesine, Hiçlik Dokuyucusu hedefi doğru ana dünya sahnesine bağlandı.",
+          "en": "Improved access to Ents and seeds for Forest quests. Seed-collection navigation now points to the Forest, and the Void Weaver objective targets the correct main-world scene."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "29 Ekim geliştirmesine eklenen 14 kılıçlık 2910 serisi: yeni silah modelleri, envanter ikonları ve tam sürüm eşya kayıtları. Serideki bazı kılıçlar sonraki günlerde özel etkilerle geliştirildi.",
+          "en": "The 14-sword 2910 collection was added in development on October 29, with new weapon models, inventory icons and full-game item entries. Selected swords received unique effects in subsequent updates."
+        }
+      }
+    ]
+  },
+  {
     "version": "v0.3.0",
     "name": {
       "tr": "Obsidian Kanatları ve Diyar Gezginleri",

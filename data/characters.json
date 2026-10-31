@@ -1273,5 +1273,260 @@
       },
       "icon": "img/icons/skills/void-harvester_p.png"
     }
+  },
+  {
+    "id": "shadowblade",
+    "sourceClassId": "class_shadowblade",
+    "name": {
+      "tr": "Shadowblade",
+      "en": "Shadowblade"
+    },
+    "description": {
+      "tr": "Gölge klonları ve geri dönen kunailerle düşman sürülerini biçen çevik bir suikastçı. Gölge Damgalarını patlatarak mana yeniler ve bekleme sürelerini kısaltır. Tam sürüm için geliştiriliyor.",
+      "en": "An agile assassin who cuts through hordes with shadow clones and returning kunai. Detonating Shadow Marks restores mana and reduces cooldowns. In development for the full game."
+    },
+    "icon": "img/icons/classes/shadowblade.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Hayalet Yelpazesi",
+          "en": "Phantom Fan"
+        },
+        "description": {
+          "tr": "Yelpaze biçiminde 7 delici gölge kunaisi fırlatır. Kunailer uç noktada kısa süre asılı kalıp geri dönerken yeniden fiziksel hasar verir. Yaşayan Gölge Klonu bu yeteneği kendi konumundan kopyalar.",
+          "en": "Throws a fan of 7 piercing shadow kunai. They briefly hover at the apex, then deal physical damage again on the return flight. An active Living Shadow Clone repeats the cast from its own position."
+        },
+        "icon": "img/icons/skills/shadowblade_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Yaşayan Gölge Çemberi",
+          "en": "Living Shadow Ring"
+        },
+        "description": {
+          "tr": "6 saniyeliğine bir gölge klonu ve 5,5 metre yarıçaplı bıçak girdabı çağırır. Düşmanları merkeze çeker, %35 yavaşlatır ve fiziksel hasar verir. Klon, Q ve E kullanımlarını kopyalar.",
+          "en": "Summons a shadow clone and a blade vortex with a 5.5-metre radius for 6 seconds. Pulls enemies inward, slows them by 35% and deals physical damage. The clone mimics Q and E casts."
+        },
+        "icon": "img/icons/skills/shadowblade_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Gölge Atılımı",
+          "en": "Shadow Surge"
+        },
+        "description": {
+          "tr": "İmleç yönünde 8 metre atılır. Kalkışta, varışta ve aktif klonun çevresinde gölge patlamaları oluşturur. Ardından 3,5 saniye boyunca %35 hareket hızı kazandırır.",
+          "en": "Dashes 8 metres toward the cursor, releasing shadow novas at departure, arrival and around an active clone. Grants 35% movement speed for 3.5 seconds."
+        },
+        "icon": "img/icons/skills/shadowblade_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Bin Gölge Bıçağı",
+          "en": "Thousand Umbral Blades"
+        },
+        "description": {
+          "tr": "Anında 4 yörünge bıçağı ve 5 saniye boyunca %25 hasar azaltma kazandırır. Çevrende dönen 7,5 metre yarıçaplı gölge tırpanları düşmanları içeri çeker ve fiziksel hasar verir; fırtına bir infaz patlamasıyla sona erer.",
+          "en": "Instantly grants 4 orbiting blades and 25% damage reduction for 5 seconds. A storm of shadow scythes with a 7.5-metre radius follows you, pulling enemies inward and dealing physical damage before a final execution nova."
+        },
+        "icon": "img/icons/skills/shadowblade_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Gölge Yankısı & Yörünge Bıçakları",
+        "en": "Shadow Echo & Umbral Shroud"
+      },
+      "description": {
+        "tr": "Yetenek isabetleri ve her üçüncü normal saldırı Gölge Damgası bırakır. Farklı bir yetenekle vurmak veya hedefi öldürmek damgayı patlatır: alan hasarı verir, tüm aktif bekleme sürelerini 1 saniye kısaltır, 8 mana yeniler ve en fazla 4 yörünge bıçağından birini kazandırır.",
+        "en": "Skill hits and every third basic attack apply a Shadow Mark. Hitting with a different skill or killing the target detonates it for area damage, reduces all active cooldowns by 1 second, restores 8 mana and grants an orbiting blade, up to 4."
+      },
+      "icon": "img/icons/skills/shadowblade_p.png"
+    }
+  },
+  {
+    "id": "chakram-weaver",
+    "sourceClassId": "class_chakram_weaver",
+    "name": {
+      "tr": "Chakram Weaver",
+      "en": "Chakram Weaver"
+    },
+    "description": {
+      "tr": "Geri dönen prizmatik çakramları yakalayarak savaş temposunu sürdüren hibrit bir sürü avcısı. Çekim alanlarını, yörünge testerelerini ve hareketli saldırıları birleştirir. Tam sürüm için geliştiriliyor.",
+      "en": "A hybrid horde hunter who keeps combat flowing by catching returning prismatic chakrams. Combines pulling fields, orbiting saw-blades and mobile attacks. In development for the full game."
+    },
+    "icon": "img/icons/classes/chakram-weaver.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Çapraz İkiz Bumerang",
+          "en": "Twin Eclipse Boomerangs"
+        },
+        "description": {
+          "tr": "Sağ ve sol yaylardan 2 prizmatik bumerang fırlatır. Uç noktada kesişen çakramlar dönüş yolunda %125 hasar verir. İkisini de yakalamak 2 yörünge çakramı kazandırır.",
+          "en": "Launches 2 prismatic boomerangs along left and right arcs. They cross at the apex and deal 125% damage on the return flight. Catching both grants 2 orbiting chakrams."
+        },
+        "icon": "img/icons/skills/chakram-weaver_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Prizmatik Vakum Testeresi",
+          "en": "Prismatic Vacuum Saw"
+        },
+        "description": {
+          "tr": "Hedefte 3,5 saniye boyunca 5,5 metre yarıçaplı bir testere girdabı oluşturur. Düşmanları merkeze çeker, %35 yavaşlatır ve düzenli fiziksel hasar verir.",
+          "en": "Creates a saw vortex with a 5.5-metre radius at the target location for 3.5 seconds. Pulls enemies inward, slows them by 35% and repeatedly deals physical damage."
+        },
+        "icon": "img/icons/skills/chakram-weaver_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Prizma Kayışı & 6'lı Çakram Novası",
+          "en": "Prism Glide & 6-Chakram Nova"
+        },
+        "description": {
+          "tr": "6 metre kayarak çevrene geri dönen 6 çakram saçar. Prizma Akını, 6 saniye boyunca %35 hareket hızı, %25 saldırı hızı ve %40 altın bonusu kazandırır; yakındaki öldürmelerde ek ganimet şansı sağlar.",
+          "en": "Glides 6 metres and releases 6 returning chakrams around you. Prism Rush grants 35% movement speed, 25% attack speed and 40% bonus gold for 6 seconds, with a chance for extra loot on nearby kills."
+        },
+        "icon": "img/icons/skills/chakram-weaver_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Güneş Prizması Fırtınası",
+          "en": "Solar Prism Storm"
+        },
+        "description": {
+          "tr": "Anında 4 yörünge çakramı ve 5 saniyeliğine %25 hasar azaltma kazandırır. 7,5 metre yarıçaplı dev bir prizmatik testere düşmanları takip ederek içine çeker, fiziksel hasar verir ve son bir alan patlamasıyla dağılır.",
+          "en": "Instantly grants 4 orbiting chakrams and 25% damage reduction for 5 seconds. A colossal prismatic saw with a 7.5-metre radius seeks enemies, pulls them inward and deals physical damage before a final area explosion."
+        },
+        "icon": "img/icons/skills/chakram-weaver_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Prizmatik Yörünge & Mıknatıs Dönüşü",
+        "en": "Prismatic Orbit & Magnetic Return"
+      },
+      "description": {
+        "tr": "Geri dönen her çakramı yakalamak tüm aktif bekleme sürelerini 1 saniye kısaltır, 8 mana yeniler ve 10 saniyelik bir yörünge çakramı kazandırır. En fazla 4 çakram yakındaki düşmanları biçer. Normal saldırı çakramları düşmanlar arasında seker ve sana döner.",
+        "en": "Catching each returning chakram reduces all active cooldowns by 1 second, restores 8 mana and grants an orbiting chakram for 10 seconds. Up to 4 orbiting blades slice nearby enemies. Basic-attack chakrams ricochet between enemies and return to you."
+      },
+      "icon": "img/icons/skills/chakram-weaver_p.png"
+    }
+  },
+  {
+    "id": "plasmancer",
+    "sourceClassId": "class_plasmancer",
+    "name": {
+      "tr": "Plazma Büyücüsü",
+      "en": "Plasmancer"
+    },
+    "description": {
+      "tr": "Zikzak çizen plazma kürelerini manyetik alanlarda toplayan bir büyücü. Çatırdayan Enerji ile mana ve kritik şansı kazanır. Tam sürüm için geliştirme aşamasında; oynanış testleri ve denge değerlendirmesi henüz tamamlanmadı.",
+      "en": "A caster who gathers erratic plasma orbs into magnetic fields and gains mana and critical chance through Crackling Energy. In development for the full game; gameplay verification and balance review are still pending."
+    },
+    "icon": "img/icons/classes/plasmancer.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Yıldırım Küresi",
+          "en": "Ball Lightning"
+        },
+        "description": {
+          "tr": "Yavaşça zikzak çizerek ilerleyen ve duvarlardan seken bir plazma küresi fırlatır. Küre yakındaki düşmanlara tekrar tekrar büyü hasarı verir. Aynı anda en fazla 12 küre bulunabilir.",
+          "en": "Launches a slow, erratic plasma orb that bounces off walls and repeatedly deals magical damage to nearby enemies. Up to 12 orbs can exist at once."
+        },
+        "icon": "img/icons/skills/plasmancer_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Manyetik Çekirdek",
+          "en": "Magnetic Core"
+        },
+        "description": {
+          "tr": "4 saniyeliğine büyü hasarı veren manyetik bir çekirdek kurar. Yakındaki düşmanları yavaşça çeker; bossları çekmez. Yakından geçen Yıldırım Kürelerini yörüngesine alır ve çekirdek sönene kadar saldırmalarını sağlar.",
+          "en": "Places a magnetic core for 4 seconds, dealing magical damage and slowly pulling nearby enemies, excluding bosses. Captures passing Ball Lightning into orbit, where the orbs keep attacking until the core expires."
+        },
+        "icon": "img/icons/skills/plasmancer_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Ark Işınlanması",
+          "en": "Arc Teleport"
+        },
+        "description": {
+          "tr": "Duvarlardan geçmeden imleç yönünde en fazla 7 metre ışınlanır. Varışta alan büyü hasarı verir ve ayrıldığın noktada 2 Çatırdayan Enerji bırakır.",
+          "en": "Teleports up to 7 metres toward the cursor without passing through walls. Deals area magical damage on arrival and leaves 2 Crackling Energy pickups at the departure point."
+        },
+        "icon": "img/icons/skills/plasmancer_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Kararsız Akımlar",
+          "en": "Unstable Currents"
+        },
+        "description": {
+          "tr": "Çevrene bir plazma dalgası yayar. 8 saniye boyunca Yıldırım Küresi mana harcamaz ve küreler büyür. Her Q kullanımı ve toplanan Çatırdayan Enerji ek bir mini küre oluşturur.",
+          "en": "Releases a plasma wave around you. For 8 seconds, Ball Lightning costs no mana and its orbs grow larger. Each Q cast and each Crackling Energy pickup creates an additional mini orb."
+        },
+        "icon": "img/icons/skills/plasmancer_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Çatırdayan Enerji",
+        "en": "Crackling Energy"
+      },
+      "description": {
+        "tr": "Kritik vuruşlar %35 ihtimalle, öldürmeler ise daima Çatırdayan Enerji bırakır. Toplanan enerji 3 düşmana şimşek gönderir, 4 mana yeniler ve 8 saniyelik Statik Yük kazandırır. Her yük %3 kritik şansı verir; en fazla 10 yük birikir. Enerji şimşekleri yeni enerji üretmez.",
+        "en": "Critical strikes have a 35% chance to drop Crackling Energy; kills always drop it. Collected energy zaps 3 enemies, restores 4 mana and grants Static Charge for 8 seconds. Each stack adds 3% critical chance, up to 10 stacks. Energy bolts cannot generate more energy."
+      },
+      "icon": "img/icons/skills/plasmancer_p.png"
+    }
   }
 ]
