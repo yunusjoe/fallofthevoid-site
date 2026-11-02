@@ -54,7 +54,27 @@
         "unit": "%"
       }
     ],
-    "defaultLanguage": "tr"
+    "defaultLanguage": "tr",
+    "effects": {
+      "particleCount": 48,
+      "particleMinSize": 2,
+      "particleMaxSize": 7,
+      "particleMinDuration": 8,
+      "particleMaxDuration": 20,
+      "particleMaxDrift": 110,
+      "revealThreshold": 0.12,
+      "revealStaggerMs": 120,
+      "revealStaggerMax": 6,
+      "headerScrolledOffset": 40,
+      "tiltMaxDeg": 8,
+      "heroParallaxFactor": 0.4,
+      "classHueStart": 265,
+      "classHueStep": 38,
+      "cursorTrailLength": 22,
+      "cursorSparkPool": 28,
+      "statFillDurationMs": 950,
+      "statStaggerMs": 70
+    }
   },
   "socialLinks": [
     {
@@ -71,7 +91,7 @@
     },
     {
       "name": "X (Twitter)",
-      "url": "https://x.com"
+      "url": "https://x.com/FallofTheVoid"
     }
   ],
   "branding": {

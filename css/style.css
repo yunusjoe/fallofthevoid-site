@@ -1497,3 +1497,568 @@ ul {
         padding: 16px;
     }
 }
+
+
+/* ==========================================================================
+   Görsel Cila: parçacıklar, parallax, scroll animasyonları, eğilme, ornament
+   Renk ve süre değerleri :root değişkenlerinden yönetilir.
+   ========================================================================== */
+:root {
+    --fx-particle: rgba(192, 132, 252, 0.9);
+    --fx-particle-glow: rgba(168, 85, 247, 0.8);
+    --fx-ornament: rgba(168, 85, 247, 0.55);
+    --fx-header-scrolled-bg: rgba(7, 4, 13, 0.92);
+    --fx-scroll-track: #0b0614;
+    --fx-selection-bg: rgba(168, 85, 247, 0.45);
+    --fx-reveal-distance: 28px;
+    --fx-reveal-duration: 0.7s;
+    --fx-header-height-scrolled: 62px;
+    --fx-class-sat: 85%;
+    --fx-class-light: 65%;
+    --tag-icon-new: '✦';
+    --tag-icon-fix: '✚';
+    --tag-icon-balance: '⚖';
+}
+
+/* Seçim rengi ve özel kaydırma çubuğu */
+::selection { background: var(--fx-selection-bg); color: var(--text-primary); }
+html { scrollbar-color: var(--accent-purple-dark) var(--fx-scroll-track); scrollbar-width: thin; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--fx-scroll-track); }
+::-webkit-scrollbar-thumb { background: var(--accent-purple-dark); border-radius: 999px; border: 2px solid var(--fx-scroll-track); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-purple); }
+
+/* Header: kaydırınca küçülür, aktif bölüm vurgulanır */
+.site-header { transition: height var(--transition-normal), background var(--transition-normal), box-shadow var(--transition-normal); }
+.site-header.is-scrolled { height: var(--fx-header-height-scrolled); background: var(--fx-header-scrolled-bg); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55); }
+.nav-links a.is-current { color: var(--text-primary); }
+.nav-links a.is-current::after { width: 100%; }
+
+/* Hero: Ken Burns yavaş zoom + parallax kayma */
+.hero-backdrop { transform: translate3d(0, var(--hero-shift, 0px), 0); will-change: transform; }
+.hero-backdrop img { animation: heroKenBurns 24s ease-in-out infinite alternate; transform-origin: center; }
+@keyframes heroKenBurns {
+    from { transform: scale(1); }
+    to { transform: scale(1.12); }
+}
+
+/* Hero başlığı: hafif parıltı nabzı */
+.hero-title { animation: titleGlow 5s ease-in-out infinite alternate; }
+@keyframes titleGlow {
+    from { text-shadow: 0 0 24px rgba(168, 85, 247, 0.35); }
+    to { text-shadow: 0 0 44px rgba(168, 85, 247, 0.8), 0 0 80px rgba(139, 92, 246, 0.35); }
+}
+
+/* Void parçacıkları: yalnız transform/opacity animasyonu (GPU dostu) */
+.void-particles { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+.void-particle {
+    position: absolute;
+    bottom: -10px;
+    left: var(--p-left);
+    width: var(--p-size);
+    height: var(--p-size);
+    border-radius: 50%;
+    background: var(--fx-particle);
+    box-shadow: 0 0 10px var(--fx-particle-glow);
+    opacity: 0;
+    animation: voidFloat var(--p-duration) linear var(--p-delay) infinite;
+    will-change: transform, opacity;
+}
+@keyframes voidFloat {
+    0% { transform: translate3d(0, 0, 0); opacity: 0; }
+    10% { opacity: 1; }
+    85% { opacity: 0.7; }
+    100% { transform: translate3d(var(--p-drift), -100vh, 0); opacity: 0; }
+}
+
+/* Scroll ile belirme: yalnız JS efektleri aktifse gizler (JS çalışmazsa içerik görünür kalır) */
+.js-effects .reveal {
+    opacity: 0;
+    transform: translateY(var(--fx-reveal-distance));
+    transition: opacity var(--fx-reveal-duration) ease, transform var(--fx-reveal-duration) cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+.js-effects .reveal.is-visible { opacity: 1; transform: none; }
+
+/* Kartlarda 3D eğilme (fare konumu JS ile --tilt-x / --tilt-y olarak gelir) */
+.feature-card, .gallery-card, .requirements-card, .patch-card { will-change: transform; }
+.js-effects .reveal.is-visible.feature-card,
+.js-effects .reveal.is-visible.gallery-card,
+.js-effects .reveal.is-visible.requirements-card,
+.js-effects .reveal.is-visible.patch-card {
+    transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transition: transform 0.15s ease-out, opacity var(--fx-reveal-duration) ease, border-color var(--transition-normal), box-shadow var(--transition-normal);
+    transition-delay: 0ms;
+}
+
+/* Galeri: hover'da hafif parlama ve görsel zoom */
+.gallery-card { transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
+.gallery-card:hover { box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); }
+.gallery-card img { transition: transform 0.5s ease, filter 0.5s ease; filter: brightness(0.85); }
+.gallery-card:hover img { filter: brightness(1.05); }
+
+/* Bölüm başlığı ornamenti: çizgi + merkezde elmas */
+.section-title::before {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-purple-glow);
+    box-shadow: 0 0 10px var(--accent-purple-glow);
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 1;
+}
+.section-title::after { width: 140px; bottom: -11px; }
+.media-heading .section-title::before { left: 4px; transform: rotate(45deg); }
+.media-heading .section-title::after { left: 0; transform: none; width: 140px; background: linear-gradient(90deg, var(--accent-purple-glow), transparent); }
+
+/* Bölümler arası ornamental ayırıcı: gradyan çizgi + elmas */
+.section + .section::before, .steam-cta-banner + .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--fx-ornament), transparent);
+}
+.section + .section::after, .steam-cta-banner + .section::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: var(--bg-primary);
+    border: 1px solid var(--fx-ornament);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Karakterler: sınıfa özel vurgu tonu (--class-hue JS'ten gelir) */
+.class-showcase { --class-accent: hsl(var(--class-hue, 265) var(--fx-class-sat) var(--fx-class-light)); }
+.class-showcase::before { background: linear-gradient(90deg, transparent, var(--class-accent), transparent); }
+.class-showcase .class-main-avatar, .class-showcase .skill-big-avatar { border-color: var(--class-accent); box-shadow: 0 0 22px var(--class-accent); }
+.class-showcase .class-role-badge, .class-showcase .skill-type-pill, .class-showcase .stat-value { color: var(--class-accent); }
+.class-showcase .stat-bar-fill { background: linear-gradient(90deg, var(--accent-purple-dark), var(--class-accent)); }
+.class-showcase .skill-select-btn.active { border-color: var(--class-accent); box-shadow: 0 0 16px var(--class-accent); }
+
+/* Yama notu etiketleri: ikon eklemesi */
+.patch-tag::before { margin-right: 6px; }
+.patch-tag-new::before { content: var(--tag-icon-new); }
+.patch-tag-fix::before { content: var(--tag-icon-fix); }
+.patch-tag-balance::before { content: var(--tag-icon-balance); }
+
+/* Mobil: tam ekran menü paneli + hamburger -> X dönüşümü */
+@media (max-width: 1080px) {
+    .site-nav {
+        height: calc(100svh - var(--header-height));
+        justify-content: center;
+        overflow-y: auto;
+        border-bottom: none;
+    }
+    .nav-links a { font-size: 1.15rem; letter-spacing: 1.5px; }
+    .nav-links li { opacity: 0; transform: translateY(12px); transition: opacity 0.4s ease, transform 0.4s ease; }
+    .site-nav.active .nav-links li { opacity: 1; transform: none; }
+    .site-nav.active .nav-links li:nth-child(2) { transition-delay: 0.04s; }
+    .site-nav.active .nav-links li:nth-child(3) { transition-delay: 0.08s; }
+    .site-nav.active .nav-links li:nth-child(4) { transition-delay: 0.12s; }
+    .site-nav.active .nav-links li:nth-child(5) { transition-delay: 0.16s; }
+    .site-nav.active .nav-links li:nth-child(6) { transition-delay: 0.20s; }
+    .site-nav.active .nav-links li:nth-child(7) { transition-delay: 0.24s; }
+    .site-nav.active .nav-links li:nth-child(8) { transition-delay: 0.28s; }
+    .site-header:has(.site-nav.active) .mobile-menu-toggle .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .site-header:has(.site-nav.active) .mobile-menu-toggle .bar:nth-child(2) { opacity: 0; }
+    .site-header:has(.site-nav.active) .mobile-menu-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* Hareketi azaltma tercihi: tüm yeni animasyonlar kapanır */
+@media (prefers-reduced-motion: reduce) {
+    .hero-backdrop img, .hero-title, .void-particle { animation: none; }
+    .void-particles { display: none; }
+    .hero-backdrop { transform: none; will-change: auto; }
+    .js-effects .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+
+/* ==========================================================================
+   Düzeltme turu: patch köşe ışıması, sabit sayfa arka planı, güçlendirilmiş efektler
+   ========================================================================== */
+:root {
+    --fx-corner: #a855f7;
+    --fx-corner-glow: rgba(168, 85, 247, 0.9);
+    --fx-corner-size: 26px;
+    --fx-corner-thick: 2px;
+    --fx-page-bg-opacity: 0.32;
+    --fx-page-bg-blur: 2px;
+    --fx-section-veil: rgba(10, 6, 20, 0.72);
+    --fx-section-veil-strong: rgba(15, 9, 28, 0.82);
+    --fx-reveal-distance: 44px;
+    --fx-sheen: rgba(255, 255, 255, 0.35);
+}
+
+/* 1. Patch kartları: eğilme yok; dört köşe mor ışıma */
+.js-effects .reveal.is-visible.patch-card {
+    transform: none;
+    transition: opacity var(--fx-reveal-duration) ease, border-color var(--transition-normal), box-shadow var(--transition-normal);
+    will-change: auto;
+}
+.patch-card {
+    position: relative;
+    box-shadow: 0 0 22px rgba(139, 92, 246, 0.12);
+}
+.patch-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+        linear-gradient(var(--fx-corner), var(--fx-corner)) 0 0 / var(--fx-corner-size) var(--fx-corner-thick) no-repeat,
+        linear-gradient(var(--fx-corner), var(--fx-corner)) 0 0 / var(--fx-corner-thick) var(--fx-corner-size) no-repeat,
+        linear-gradient(var(--fx-corner), var(--fx-corner)) 100% 0 / var(--fx-corner-size) var(--fx-corner-thick) no-repeat,
+        linear-gradient(var(--fx-corner), var(--fx-corner)) 100% 0 / var(--fx-corner-thick) var(--fx-corner-size) no-repeat,
+        linear-gradient(var(--fx-corner), var(--fx-corner)) 0 100% / var(--fx-corner-size) var(--fx-corner-thick) no-repeat,
+        linear-gradient(var(--fx-corner), var(--fx-corner)) 0 100% / var(--fx-corner-thick) var(--fx-corner-size) no-repeat,
+        linear-gradient(var(--fx-corner), var(--fx-corner)) 100% 100% / var(--fx-corner-size) var(--fx-corner-thick) no-repeat,
+        linear-gradient(var(--fx-corner), var(--fx-corner)) 100% 100% / var(--fx-corner-thick) var(--fx-corner-size) no-repeat;
+    filter: drop-shadow(0 0 6px var(--fx-corner-glow));
+    animation: cornerPulse 3.2s ease-in-out infinite alternate;
+}
+.patch-card:hover { box-shadow: 0 0 34px rgba(168, 85, 247, 0.35); }
+.patch-card:hover::before { animation-duration: 1.4s; }
+@keyframes cornerPulse {
+    from { opacity: 0.65; filter: drop-shadow(0 0 3px var(--fx-corner-glow)); }
+    to { opacity: 1; filter: drop-shadow(0 0 10px var(--fx-corner-glow)); }
+}
+
+/* 2. Oyun görseli sayfa boyunca sabit kalır; bölümler yarı saydam örtüye geçer */
+html, body { background-color: var(--bg-primary); }
+body { background-color: transparent; }
+body::before {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(76, 29, 149, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.16) 0%, transparent 50%);
+    z-index: -1;
+}
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background: var(--page-bg-image, none) center / cover no-repeat;
+    opacity: var(--fx-page-bg-opacity);
+    filter: blur(var(--fx-page-bg-blur)) saturate(0.9);
+}
+.hero-backdrop { background: transparent; -webkit-mask-image: linear-gradient(#000 70%, transparent 100%); mask-image: linear-gradient(#000 70%, transparent 100%); }
+.hero-overlay { background: linear-gradient(90deg, var(--media-shade), var(--media-wash)); }
+.characters-section, .contact-section { background-color: var(--fx-section-veil-strong); }
+.patches-section, .features-section, .requirements-section, .lore-section, .media-section { background-color: var(--fx-section-veil); }
+.site-footer { background-color: var(--fx-section-veil-strong); }
+
+/* 4. Efektler biraz daha yoğun */
+@keyframes heroKenBurns {
+    from { transform: scale(1) translate3d(0, 0, 0); }
+    to { transform: scale(1.22) translate3d(-1.5%, -1%, 0); }
+}
+@keyframes titleGlow {
+    from { text-shadow: 0 0 26px rgba(168, 85, 247, 0.45); }
+    to { text-shadow: 0 0 56px rgba(168, 85, 247, 0.95), 0 0 110px rgba(139, 92, 246, 0.5); }
+}
+.feature-card:hover, .requirements-card:hover { box-shadow: 0 16px 44px rgba(139, 92, 246, 0.4); }
+.gallery-card:hover { box-shadow: 0 14px 40px rgba(168, 85, 247, 0.45); }
+.section-title { text-shadow: 0 0 30px var(--text-glow), 0 0 60px rgba(139, 92, 246, 0.2); }
+
+/* Butonlarda ışık süpürme efekti */
+.btn { position: relative; overflow: hidden; }
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, var(--fx-sheen), transparent);
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+.btn:hover::after { left: 130%; transition: left 0.7s ease; }
+.btn-primary { animation: btnGlow 2.8s ease-in-out infinite alternate; }
+@keyframes btnGlow {
+    from { box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4); }
+    to { box-shadow: 0 4px 34px rgba(168, 85, 247, 0.8); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .patch-card::before, .btn-primary, .hero-backdrop img { animation: none; }
+}
+
+
+/* ==========================================================================
+   Düzeltme turu 2: dönme yok, köşe işaretleri yok, rastgele çapraz geçişli arka plan
+   ========================================================================== */
+:root {
+    --fx-bg-fade: 1.4s;
+}
+
+/* Kartlar artık dönmez; yalnız hover'da yukarı kalkma ve parlama kalır */
+.js-effects .reveal.is-visible.feature-card,
+.js-effects .reveal.is-visible.gallery-card,
+.js-effects .reveal.is-visible.requirements-card,
+.js-effects .reveal.is-visible.patch-card {
+    transform: none;
+    transition: opacity var(--fx-reveal-duration) ease, transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+    will-change: auto;
+}
+.js-effects .reveal.is-visible.feature-card:hover { transform: translateY(-4px); }
+.js-effects .reveal.is-visible.requirements-card:hover { transform: translateY(-3px); }
+
+/* Patch kartı köşe işaretleri ([ ]) kaldırıldı; yumuşak mor kenar parıltısı kalır */
+.patch-card::before { content: none; animation: none; background: none; }
+
+/* Statik body::after yerine JS'in kurduğu çift katmanlı rastgele arka plan */
+body::after { content: none; }
+.page-bg { position: fixed; inset: 0; z-index: -2; pointer-events: none; overflow: hidden; }
+.page-bg-layer {
+    position: absolute;
+    inset: 0;
+    background: center / cover no-repeat;
+    opacity: 0;
+    filter: blur(var(--fx-page-bg-blur)) saturate(0.9);
+    transition: opacity var(--fx-bg-fade) ease;
+}
+.page-bg-layer.is-active { opacity: var(--fx-page-bg-opacity); }
+
+@media (prefers-reduced-motion: reduce) {
+    .page-bg-layer { transition: none; }
+}
+
+
+/* ==========================================================================
+   Void Kuyruklu Yıldız İmleç İzi, Canlı Stat Dolumu ve Sinematik Q-W-E-R Vitrini
+   ========================================================================== */
+:root {
+    --fx-trail-core: #f5d0fe;
+    --fx-trail-mid: #c084fc;
+    --fx-trail-outer: #7e22ce;
+    --fx-spark-alt: #38bdf8;
+    --stat-fill-duration: 0.95s;
+}
+
+/* 1. Void İmleç Kuyruğu ve Kıvılcım Canvas'ı (Masaüstü) */
+.void-cursor-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: screen;
+}
+
+@media (pointer: coarse), (hover: none) {
+    .void-cursor-canvas { display: none !important; }
+}
+
+/* 2. Canlı Stat Çubukları: Parlayan Uç ve Kademeli Dolum */
+.stat-bar-track {
+    position: relative;
+    height: 8px;
+    background: rgba(7, 4, 13, 0.85);
+    border: 1px solid rgba(192, 132, 252, 0.18);
+    border-radius: 999px;
+    overflow: visible;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.stat-bar-fill {
+    position: relative;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent-purple-dark) 0%, var(--class-accent, var(--accent-purple-glow)) 85%, #ffffff 100%);
+    box-shadow: 0 0 12px var(--class-accent, var(--accent-purple-glow));
+    transition: width var(--stat-fill-duration) cubic-bezier(0.22, 1, 0.36, 1) !important;
+    transition-delay: var(--stat-delay, 0ms) !important;
+}
+
+/* Dolan çubuğun ucundaki parlak enerji kıvılcımı */
+.stat-bar-fill::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 50%;
+    width: 8px;
+    height: 14px;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow: 0 0 10px 2px var(--class-accent, var(--accent-purple-glow)), 0 0 20px 4px var(--accent-purple-light);
+    transform: translateY(-50%) scale(var(--stat-tip-scale, 1));
+    opacity: var(--stat-tip-opacity, 1);
+    transition: opacity 0.3s ease;
+}
+
+.stat-value {
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.45);
+}
+
+/* 3. Sinematik Q-W-E-R Yetenek Butonları ve Detay Kutusu */
+.skills-button-bar {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 6px 2px;
+}
+
+.skill-select-btn {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+    border: 1px solid rgba(192, 132, 252, 0.25);
+    background: var(--bg-primary);
+    filter: saturate(0.75) brightness(0.78);
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), filter 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-select-btn:hover {
+    filter: saturate(1.1) brightness(1.05);
+    transform: translateY(-4px) scale(1.04);
+    border-color: var(--class-accent, var(--accent-purple-light));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 0 16px var(--class-accent, var(--accent-purple-glow));
+}
+
+.skill-select-btn.active {
+    filter: saturate(1.2) brightness(1.12);
+    transform: translateY(-5px) scale(1.07);
+    border: 2px solid #ffffff;
+    box-shadow:
+        0 0 0 2px var(--class-accent, var(--accent-purple-glow)),
+        0 10px 26px rgba(0, 0, 0, 0.75),
+        0 0 28px var(--class-accent, var(--accent-purple-glow));
+    z-index: 2;
+}
+
+/* Aktif yetenek butonunun altındaki elmas gösterge */
+.skill-select-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: var(--class-accent, var(--accent-purple-glow));
+    box-shadow: 0 0 10px var(--class-accent, var(--accent-purple-glow));
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.skill-slot-badge {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    min-width: 22px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    border-radius: 5px;
+    background: rgba(7, 4, 13, 0.92);
+    border: 1px solid rgba(192, 132, 252, 0.45);
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-select-btn.active .skill-slot-badge {
+    background: var(--class-accent, var(--accent-purple-glow));
+    color: #07040d;
+    border-color: #ffffff;
+    box-shadow: 0 0 12px var(--class-accent, var(--accent-purple-glow));
+}
+
+/* Seçili Yetenek Detay Kutusu */
+.skill-detail-box {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(168, 85, 247, 0.16) 0%, transparent 65%),
+        rgba(7, 4, 13, 0.78);
+    border: 1px solid rgba(192, 132, 252, 0.22);
+    border-left: 3px solid var(--class-accent, var(--accent-purple-glow));
+    border-radius: var(--border-radius-md);
+    padding: 22px 24px;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55), inset 0 0 28px rgba(139, 92, 246, 0.06);
+}
+
+/* Yetenek değiştiğinde kutu üzerinden geçen büyü ışık süpürmesi */
+.skill-detail-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(105deg, transparent 0%, rgba(192, 132, 252, 0.28) 50%, transparent 100%);
+    transform: skewX(-22deg);
+    pointer-events: none;
+}
+
+.skill-detail-box.skill-cast-active::after {
+    animation: skillBoxSheen 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skill-detail-box.skill-cast-active .skill-box-header,
+.skill-detail-box.skill-cast-active .skill-box-desc {
+    animation: skillContentSlide 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skill-detail-box.skill-cast-active .skill-big-avatar {
+    animation: skillAvatarFlash 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skill-big-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+    border: 2px solid var(--class-accent, var(--accent-purple-glow));
+    box-shadow: 0 0 18px var(--class-accent, var(--accent-purple-glow));
+}
+
+@keyframes skillBoxSheen {
+    from { left: -120%; }
+    to { left: 160%; }
+}
+
+@keyframes skillContentSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.985);
+        filter: brightness(1.5);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: brightness(1);
+    }
+}
+
+@keyframes skillAvatarFlash {
+    0% {
+        transform: scale(0.82) rotate(-4deg);
+        filter: brightness(2) saturate(1.5);
+    }
+    60% {
+        transform: scale(1.08) rotate(1deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1) saturate(1);
+    }
+}
