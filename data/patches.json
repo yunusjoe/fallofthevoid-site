@@ -2,6 +2,93 @@
   {
     "version": "DEV",
     "name": {
+      "tr": "Geliştirme Güncellemesi: Şafak Seraphı, Hiçlik Rünleri ve Yeni Karakter Akışı",
+      "en": "Development Update: Dawn Seraph, Void Runes & New Character Flow"
+    },
+    "date": "2026-11-04",
+    "changes": [
+      {
+        "type": "new",
+        "text": {
+          "tr": "Tam sürüm geliştirmesine Dawn Seraph eklendi: plazma alev dalgaları üzerinde sürtünmesiz süzülme, Güneş Mızrağı ile Işık Prizmaları, Prizmatik Kırılma ile Altın Seraph çağırma ve gökten inen Kıyamet Şafağı. Denge ayarları sonraki güncellemelerde değişebilir.",
+          "en": "Added Dawn Seraph to full-game development: frictionless drifting over plasma flame waves, Solar Lances and Light Prisms, Prismatic Refraction with a summoned Golden Seraph, and the sky-splitting Daybreak Reckoning. Balance may change in later updates."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Ana menüye yeni karakter oluşturma akışı eklendi: kadın (Lyra) ve erkek (Kael) karakter modelleri, yeniden tasarlanan kıyafetler ve Void Warden gövde kozmetiği. Karakter seçimi kayıt dosyasına işlenir ve devam ederken korunur.",
+          "en": "Added a new character creation flow to the main menu: female (Lyra) and male (Kael) character models, redesigned outfits and the Void Warden body cosmetic. The chosen character is stored in the save file and kept when you continue."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Hiçlik Rün Sunağı ve soket sistemi eklendi. Silahlara rün yerleştir; rünler silahın etrafında canlı bir aura oluşturur. Envanterde ve zulada soket desteği bulunur.",
+          "en": "Added the Void Rune Altar and a socket system. Slot runes into weapons to give them a living aura. Sockets are supported in the inventory and the stash."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Donmuş Doruk Kripti zindanı eklendi: çevresel donma tehdidi, güvenli sıcak bölgeler (kadeh ve meşaleler), yeni düşmanlar ve zindan sonunda bir boss. Zindana özel mühür eşyası ile girilir.",
+          "en": "Added the Glacial Crypt dungeon: an environmental freezing threat, safe warm zones (braziers and torches), new enemies and a boss at the end. The dungeon is entered with its own seal item."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Safe Hub ve Kanalizasyon görev zinciri yenilendi. Okültist Morvan, eşyalardan güç çıkarıp Codex'te saklamana ve yeniden kullanmana izin verir. Demirci paneli ve görev etkileşimleri yenilendi.",
+          "en": "Reworked the Safe Hub and Sewer quest chain. Occultist Morvan lets you extract power from items, store it in the Codex and reuse it. The blacksmith panel and quest interactions were refreshed."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Arayüz yenilendi: karakter önizlemeli envanter, yeni görev günlüğü ve kompakt görev takipçisi, duraklatma menüsü, FPS göstergesi, atılma ve iksir göstergeleri, eşya ipucu kaydırması.",
+          "en": "Refreshed the interface: an inventory with a character preview, a new quest journal and compact quest tracker, pause menu, FPS counter, dash and potion indicators and scrollable item tooltips."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Harita ve HUD yenilendi: NPC silüetleri ve vurguları, bölge haritası işaretleri, mini haritada savaş sisi ve görüş alanı. Meydan Okuma Zindanı seçimi ve liderlik tablosu geliştirildi.",
+          "en": "Refreshed the map and HUD: NPC silhouettes and highlights, region map pins, and fog of war with a field of view on the minimap. Challenge Dungeon selection and the leaderboard were improved."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Yeni yazı tipi atlası ve tipografi düzeni uygulandı. Arapça, Japonca, Korece ve Çince için SDF yazı tipleri iyileştirildi; oyun 11 dilde yerelleştirmeyi korur.",
+          "en": "Applied a new font atlas and typography layout. SDF fonts for Arabic, Japanese, Korean and Chinese were improved, and the game keeps its 11-language localization."
+        }
+      },
+      {
+        "type": "fix",
+        "text": {
+          "tr": "Oyundan ana menüye dönüş ve sahne akışı onarıldı; dünya ve menü arasında tekrarlanan geçişlerde oturum durumu temiz kalır.",
+          "en": "Repaired the return from the game to the main menu and the scene flow; repeated trips between the world and the menu keep a clean session state."
+        }
+      },
+      {
+        "type": "fix",
+        "text": {
+          "tr": "Kayan yazılar, mini harita ve ekran çizim mesafesi için performans iyileştirmeleri yapıldı.",
+          "en": "Improved performance for floating text, the minimap and the render distance."
+        }
+      },
+      {
+        "type": "new",
+        "text": {
+          "tr": "Bu notlar devam eden tam sürüm geliştirmesini kapsar; yeni sınıf ve içerikler mevcut demoya eklenmiş olarak sunulmaz.",
+          "en": "These notes cover ongoing full-game development; the new class and content are not presented as additions to the current demo."
+        }
+      }
+    ]
+  },
+  {
+    "version": "DEV",
+    "name": {
       "tr": "Geliştirme Güncellemesi: Gölge, Prizma ve Plazma",
       "en": "Development Update: Shadow, Prism & Plasma"
     },

@@ -1528,5 +1528,90 @@
       },
       "icon": "img/icons/skills/plasmancer_p.png"
     }
+  },
+  {
+    "id": "dawn-seraph",
+    "sourceClassId": "class_dawnseraph",
+    "name": {
+      "tr": "Dawn Seraph",
+      "en": "Dawn Seraph"
+    },
+    "description": {
+      "tr": "Saf güneş ışığı, plazma dalgası, prizmatik kırılma ve göksel Altın Seraph'lar ile savaş alanını arındıran güneş ilahı. Plazma sörfü sırasında hasar almazlık kazanır. Tam sürüm için geliştirme aşamasında; denge ayarları değişebilir.",
+      "en": "A solar deity who purges the battlefield with pure sunlight, plasma waves, prismatic refraction and celestial Golden Seraphs, gaining invulnerability while surfing on plasma. In development for the full game; balance may change."
+    },
+    "icon": "img/icons/classes/dawn-seraph.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Güneş Mızrağı",
+          "en": "Solar Lance"
+        },
+        "description": {
+          "tr": "İleriye doğru 14 metre boyunca önüne çıkan tüm düşmanları delip geçen bir mızrak fırlatarak ölçeklenen Büyü Hasarı verir. Menzil sonunda yere saplanarak 8 saniye kalan bir Işık Prizması oluşturur. Prizmanın üzerinden geçip mızrağı geri aldığında 5,5 metre alanda ölçeklenen Büyü Hasarı veren Süpernova Şoku patlar ve Q bekleme süresi anında sıfırlanır.",
+          "en": "Hurls a lance up to 14 metres forward, piercing every enemy in its path for scaling Magic Damage. At the end of its range it lodges in the ground and creates a Light Prism that lasts 8 seconds. Walking over the prism to retrieve the lance triggers a Supernova Shock in a 5.5 metre area for scaling Magic Damage and instantly resets Q's cooldown."
+        },
+        "icon": "img/icons/skills/dawn-seraph_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Plazma Dalgası",
+          "en": "Plasma Surge"
+        },
+        "description": {
+          "tr": "Hedef yöne 9 metre hızla atılır ve yerde 4 saniye boyunca kalan kor alev hattı bırakır. Bu hat üzerinde süzülürken Korona Süzülüşü aktif kalır, hareket hızın +%35 artar ve hattın üzerindeki düşmanlar her 0,4 saniyede ölçeklenen Büyü Hasarı alır.",
+          "en": "Dashes 9 metres toward the target and leaves an ember line on the ground for 4 seconds. While gliding along it, Corona Drift stays active, movement speed increases by 35%, and enemies on the line take scaling Magic Damage every 0.4 seconds."
+        },
+        "icon": "img/icons/skills/dawn-seraph_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Prizmatik Kırılma ve Altın Seraph",
+          "en": "Prismatic Refraction & Golden Seraph"
+        },
+        "description": {
+          "tr": "Sahadaki Işık Prizmalarına odaklanarak 4 ana yöne 8,5 metre menzilli lazer ışınları kırar ve her ışın ölçeklenen Büyü Hasarı verir. Prizmanın merkezinden 7 saniye boyunca savaşan bir Altın Seraph yükselir. Seraph, 8 metre çevresindeki canavarları merkeze çeker ve gökten vurduğu güneş lazeriyle her 0,5 saniyede ölçeklenen Büyü Hasarı verir.",
+          "en": "Focuses on the Light Prisms in the field and splits laser rays with an 8.5 metre range in 4 cardinal directions, each ray dealing scaling Magic Damage. A Golden Seraph rises from the prism's centre and fights for 7 seconds. The Seraph pulls monsters within 8 metres toward the centre and strikes with a solar laser from the sky, dealing scaling Magic Damage every 0.5 seconds."
+        },
+        "icon": "img/icons/skills/dawn-seraph_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Kıyamet Şafağı",
+          "en": "Daybreak Reckoning"
+        },
+        "description": {
+          "tr": "Hedeflenen 9 metre alana gökyüzünden 3 adet Güneş Mızrağı iner ve 2 adet Altın Seraph çağrılır. Prizmalar birbirine lazer ağlarıyla kenetlenerek bölgeyi 6 saniye boyunca güneş fırınına çevirir ve içerideki düşmanlara her 0,35 saniyede ölçeklenen Büyü Hasarı verir.",
+          "en": "Rains 3 Solar Lances from the sky onto a 9 metre target area and summons 2 Golden Seraphs. The prisms lock together with laser webs and turn the area into a solar furnace for 6 seconds, dealing scaling Magic Damage to enemies inside every 0.35 seconds."
+        },
+        "icon": "img/icons/skills/dawn-seraph_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Korona Süzülüşü",
+        "en": "Corona Drift"
+      },
+      "description": {
+        "tr": "Plazma alev dalgaları üzerinde süzülürken sürtünmesiz kaymaya başlarsın. Süzülme esnasında hareket hızın +%35 artar ve hareket ettiğin sürece düşman hasarlarından korunursun (I-frame). Durduğun anda bu koruma sona erer.",
+        "en": "While gliding over plasma flame waves you slide without friction. Movement speed increases by 35% while gliding, and you are protected from enemy damage (I-frames) for as long as you keep moving. The protection ends the moment you stop."
+      },
+      "icon": "img/icons/skills/dawn-seraph_p.png"
+    }
   }
 ]
