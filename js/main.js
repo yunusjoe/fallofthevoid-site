@@ -76,10 +76,10 @@ function loadSavedLanguage() {
 
 async function loadAllData() {
     const [siteRes, langRes, patchesRes, charactersRes] = await Promise.all([
-        fetch('data/site.json?v=20261109-crimson2', { cache: 'no-cache' }),
-        fetch('data/lang.json?v=20261109-crimson2', { cache: 'no-cache' }),
-        fetch('data/patches.json?v=20261109-crimson2', { cache: 'no-cache' }),
-        fetch('data/characters.json?v=20261109-crimson2', { cache: 'no-cache' })
+        fetch('data/site.json?v=20261109-crimson3', { cache: 'no-cache' }),
+        fetch('data/lang.json?v=20261109-crimson3', { cache: 'no-cache' }),
+        fetch('data/patches.json?v=20261109-crimson3', { cache: 'no-cache' }),
+        fetch('data/characters.json?v=20261109-crimson3', { cache: 'no-cache' })
     ]);
 
     if (!siteRes.ok || !langRes.ok || !patchesRes.ok || !charactersRes.ok) {

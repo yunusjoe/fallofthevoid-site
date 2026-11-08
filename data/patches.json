@@ -1,293 +1,345 @@
 [
-  {
-    "version": "DEV",
-    "name": {
-      "tr": "Geliştirme Güncellemesi: Şafak Seraphı, Hiçlik Rünleri ve Yeni Karakter Akışı",
-      "en": "Development Update: Dawn Seraph, Void Runes & New Character Flow"
+    {
+        "version":  "DEV",
+        "name":  {
+                     "tr":  "Geliştirme Güncellemesi: Efsanevi Sınıf Silahları, Başdüşman Vharok ve Eşya İşlemeciliği",
+                     "en":  "Development Update: Mythic Class Weapons, Boss Vharok \u0026 Item Crafting"
+                 },
+        "date":  "2026-11-08",
+        "changes":  [
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Her sınıfa özel 6 yeni Efsanevi silah eklendi. Özgün 3B modelleri ve silah auralarıyla gelen bu kılıçlar; gölge klonuyla yer değiştirme, takip eden güneş testereleri, hayalet tırpan halkası ve ikinci kez tetiklenebilen nihai yetenekler gibi sınıf oynanışını doğrudan dönüştüren güçler sunar.",
+                                         "en":  "Added 6 class-specific Mythic weapons. Featuring custom 3D models and weapon auras, these blades directly transform class gameplay with shadow clone swaps, following solar saws, spectral scythe rings, and recastable ultimate abilities."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Dizilim çeşitliliğini artıran 8 yeni Eşsiz ekipman ve özel görsel efektleri eklendi. Tüm eşsiz eşya açıklamaları 11 dilde daha sade ve anlaşılır hale getirildi.",
+                                         "en":  "Added 8 new Unique equipment pieces with custom visual effects to expand build variety. All unique item descriptions were streamlined across 11 languages for clearer readability."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Üç aşamalı yeni başdüşman Vharok ve özel savaş arenası eklendi. Yıkıcı yarık saldırıları, son aşama hücum mekanikleri ve yenilenen başdüşman yapay zekâsı ile karşılaşma temposu güçlendirildi.",
+                                         "en":  "Added the new three-phase boss Vharok and a dedicated arena. Encounter pacing was enhanced with devastating fissure attacks, final-phase charge mechanics, and improved boss AI."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Okültist paneline eşya özelliklerini yeniden zarlarken seçilen tek bir özelliği kilitleme seçeneği eklendi. Ayrıca yeni silah modelleri ve kademeli silah auraları oyuna dahil edildi.",
+                                         "en":  "Added single-affix locking to the Occultist panel when rerolling item stats, alongside new weapon models and tiered weapon auras."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Karakter özelleştirme sistemine saç stili yuvası ve yeni Kızıl Ahit kıyafet görünümleri eklendi. Seçilen görünümler kayıt dosyasında korunur.",
+                                         "en":  "Added a hairstyle slot and new Crimson Covenant outfit cosmetics to character customization. Selected appearances are preserved in your save file."
+                                     }
+                        },
+                        {
+                            "type":  "fix",
+                            "text":  {
+                                         "tr":  "Efsanevi ve Eşsiz eşya ikonlarının envanterdeki çerçeve hizalamaları yenilendi; yoğun çatışmalardaki silah ve eşya efektleri için performans iyileştirmeleri yapıldı.",
+                                         "en":  "Refined inventory icon framing for Mythic and Unique items, and optimized weapon and item visual effects for smoother performance during heavy combat."
+                                     }
+                        }
+                    ]
     },
-    "date": "2026-11-04",
-    "changes": [
-      {
-        "type": "new",
-        "text": {
-          "tr": "Tam sürüm geliştirmesine Dawn Seraph eklendi: plazma alev dalgaları üzerinde sürtünmesiz süzülme, Güneş Mızrağı ile Işık Prizmaları, Prizmatik Kırılma ile Altın Seraph çağırma ve gökten inen Kıyamet Şafağı. Denge ayarları sonraki güncellemelerde değişebilir.",
-          "en": "Added Dawn Seraph to full-game development: frictionless drifting over plasma flame waves, Solar Lances and Light Prisms, Prismatic Refraction with a summoned Golden Seraph, and the sky-splitting Daybreak Reckoning. Balance may change in later updates."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Ana menüye yeni karakter oluşturma akışı eklendi: kadın (Lyra) ve erkek (Kael) karakter modelleri, yeniden tasarlanan kıyafetler ve Void Warden gövde kozmetiği. Karakter seçimi kayıt dosyasına işlenir ve devam ederken korunur.",
-          "en": "Added a new character creation flow to the main menu: female (Lyra) and male (Kael) character models, redesigned outfits and the Void Warden body cosmetic. The chosen character is stored in the save file and kept when you continue."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Hiçlik Rün Sunağı ve soket sistemi eklendi. Silahlara rün yerleştir; rünler silahın etrafında canlı bir aura oluşturur. Envanterde ve zulada soket desteği bulunur.",
-          "en": "Added the Void Rune Altar and a socket system. Slot runes into weapons to give them a living aura. Sockets are supported in the inventory and the stash."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Donmuş Doruk Kripti zindanı eklendi: çevresel donma tehdidi, güvenli sıcak bölgeler (kadeh ve meşaleler), yeni düşmanlar ve zindan sonunda bir boss. Zindana özel mühür eşyası ile girilir.",
-          "en": "Added the Glacial Crypt dungeon: an environmental freezing threat, safe warm zones (braziers and torches), new enemies and a boss at the end. The dungeon is entered with its own seal item."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Safe Hub ve Kanalizasyon görev zinciri yenilendi. Okültist Morvan, eşyalardan güç çıkarıp Codex'te saklamana ve yeniden kullanmana izin verir. Demirci paneli ve görev etkileşimleri yenilendi.",
-          "en": "Reworked the Safe Hub and Sewer quest chain. Occultist Morvan lets you extract power from items, store it in the Codex and reuse it. The blacksmith panel and quest interactions were refreshed."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Arayüz yenilendi: karakter önizlemeli envanter, yeni görev günlüğü ve kompakt görev takipçisi, duraklatma menüsü, FPS göstergesi, atılma ve iksir göstergeleri, eşya ipucu kaydırması.",
-          "en": "Refreshed the interface: an inventory with a character preview, a new quest journal and compact quest tracker, pause menu, FPS counter, dash and potion indicators and scrollable item tooltips."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Harita ve HUD yenilendi: NPC silüetleri ve vurguları, bölge haritası işaretleri, mini haritada savaş sisi ve görüş alanı. Meydan Okuma Zindanı seçimi ve liderlik tablosu geliştirildi.",
-          "en": "Refreshed the map and HUD: NPC silhouettes and highlights, region map pins, and fog of war with a field of view on the minimap. Challenge Dungeon selection and the leaderboard were improved."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Yeni yazı tipi atlası ve tipografi düzeni uygulandı. Arapça, Japonca, Korece ve Çince için SDF yazı tipleri iyileştirildi; oyun 11 dilde yerelleştirmeyi korur.",
-          "en": "Applied a new font atlas and typography layout. SDF fonts for Arabic, Japanese, Korean and Chinese were improved, and the game keeps its 11-language localization."
-        }
-      },
-      {
-        "type": "fix",
-        "text": {
-          "tr": "Oyundan ana menüye dönüş ve sahne akışı onarıldı; dünya ve menü arasında tekrarlanan geçişlerde oturum durumu temiz kalır.",
-          "en": "Repaired the return from the game to the main menu and the scene flow; repeated trips between the world and the menu keep a clean session state."
-        }
-      },
-      {
-        "type": "fix",
-        "text": {
-          "tr": "Kayan yazılar, mini harita ve ekran çizim mesafesi için performans iyileştirmeleri yapıldı.",
-          "en": "Improved performance for floating text, the minimap and the render distance."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Bu notlar devam eden tam sürüm geliştirmesini kapsar; yeni sınıf ve içerikler mevcut demoya eklenmiş olarak sunulmaz.",
-          "en": "These notes cover ongoing full-game development; the new class and content are not presented as additions to the current demo."
-        }
-      }
-    ]
-  },
-  {
-    "version": "DEV",
-    "name": {
-      "tr": "Geliştirme Güncellemesi: Gölge, Prizma ve Plazma",
-      "en": "Development Update: Shadow, Prism & Plasma"
+    {
+        "version":  "DEV",
+        "name":  {
+                     "tr":  "Geliştirme Güncellemesi: Şafak Seraphı, Hiçlik Rünleri ve Yeni Karakter Akışı",
+                     "en":  "Development Update: Dawn Seraph, Void Runes \u0026 New Character Flow"
+                 },
+        "date":  "2026-11-04",
+        "changes":  [
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Tam sürüm geliştirmesine Dawn Seraph eklendi: plazma alev dalgaları üzerinde sürtünmesiz süzülme, Güneş Mızrağı ile Işık Prizmaları, Prizmatik Kırılma ile Altın Seraph çağırma ve gökten inen Kıyamet Şafağı. Denge ayarları sonraki güncellemelerde değişebilir.",
+                                         "en":  "Added Dawn Seraph to full-game development: frictionless drifting over plasma flame waves, Solar Lances and Light Prisms, Prismatic Refraction with a summoned Golden Seraph, and the sky-splitting Daybreak Reckoning. Balance may change in later updates."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Ana menüye yeni karakter oluşturma akışı eklendi: kadın (Lyra) ve erkek (Kael) karakter modelleri, yeniden tasarlanan kıyafetler ve Void Warden gövde kozmetiği. Karakter seçimi kayıt dosyasına işlenir ve devam ederken korunur.",
+                                         "en":  "Added a new character creation flow to the main menu: female (Lyra) and male (Kael) character models, redesigned outfits and the Void Warden body cosmetic. The chosen character is stored in the save file and kept when you continue."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Hiçlik Rün Sunağı ve soket sistemi eklendi. Silahlara rün yerleştir; rünler silahın etrafında canlı bir aura oluşturur. Envanterde ve zulada soket desteği bulunur.",
+                                         "en":  "Added the Void Rune Altar and a socket system. Slot runes into weapons to give them a living aura. Sockets are supported in the inventory and the stash."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Donmuş Doruk Kripti zindanı eklendi: çevresel donma tehdidi, güvenli sıcak bölgeler (kadeh ve meşaleler), yeni düşmanlar ve zindan sonunda bir boss. Zindana özel mühür eşyası ile girilir.",
+                                         "en":  "Added the Glacial Crypt dungeon: an environmental freezing threat, safe warm zones (braziers and torches), new enemies and a boss at the end. The dungeon is entered with its own seal item."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Safe Hub ve Kanalizasyon görev zinciri yenilendi. Okültist Morvan, eşyalardan güç çıkarıp Codex\u0027te saklamana ve yeniden kullanmana izin verir. Demirci paneli ve görev etkileşimleri yenilendi.",
+                                         "en":  "Reworked the Safe Hub and Sewer quest chain. Occultist Morvan lets you extract power from items, store it in the Codex and reuse it. The blacksmith panel and quest interactions were refreshed."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Arayüz yenilendi: karakter önizlemeli envanter, yeni görev günlüğü ve kompakt görev takipçisi, duraklatma menüsü, FPS göstergesi, atılma ve iksir göstergeleri, eşya ipucu kaydırması.",
+                                         "en":  "Refreshed the interface: an inventory with a character preview, a new quest journal and compact quest tracker, pause menu, FPS counter, dash and potion indicators and scrollable item tooltips."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Harita ve HUD yenilendi: NPC silüetleri ve vurguları, bölge haritası işaretleri, mini haritada savaş sisi ve görüş alanı. Meydan Okuma Zindanı seçimi ve liderlik tablosu geliştirildi.",
+                                         "en":  "Refreshed the map and HUD: NPC silhouettes and highlights, region map pins, and fog of war with a field of view on the minimap. Challenge Dungeon selection and the leaderboard were improved."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Yeni yazı tipi atlası ve tipografi düzeni uygulandı. Arapça, Japonca, Korece ve Çince için SDF yazı tipleri iyileştirildi; oyun 11 dilde yerelleştirmeyi korur.",
+                                         "en":  "Applied a new font atlas and typography layout. SDF fonts for Arabic, Japanese, Korean and Chinese were improved, and the game keeps its 11-language localization."
+                                     }
+                        },
+                        {
+                            "type":  "fix",
+                            "text":  {
+                                         "tr":  "Oyundan ana menüye dönüş ve sahne akışı onarıldı; dünya ve menü arasında tekrarlanan geçişlerde oturum durumu temiz kalır.",
+                                         "en":  "Repaired the return from the game to the main menu and the scene flow; repeated trips between the world and the menu keep a clean session state."
+                                     }
+                        },
+                        {
+                            "type":  "fix",
+                            "text":  {
+                                         "tr":  "Kayan yazılar, mini harita ve ekran çizim mesafesi için performans iyileştirmeleri yapıldı.",
+                                         "en":  "Improved performance for floating text, the minimap and the render distance."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Bu notlar devam eden tam sürüm geliştirmesini kapsar; yeni sınıf ve içerikler mevcut demoya eklenmiş olarak sunulmaz.",
+                                         "en":  "These notes cover ongoing full-game development; the new class and content are not presented as additions to the current demo."
+                                     }
+                        }
+                    ]
     },
-    "date": "2026-10-31",
-    "changes": [
-      {
-        "type": "new",
-        "text": {
-          "tr": "Tam sürüm geliştirmesine Shadowblade eklendi: geri dönen kunailer, Q ve E yeteneklerini kopyalayan gölge klonu, patlayan Gölge Damgaları ve yörünge bıçakları.",
-          "en": "Added Shadowblade to full-game development: returning kunai, a shadow clone that mimics Q and E, detonating Shadow Marks and orbiting blades."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Tam sürüm geliştirmesine Chakram Weaver eklendi. Dönen çakramları yakalayarak mana yenile, bekleme sürelerini kısalt ve prizmatik testerelerle düşman sürülerini topla.",
-          "en": "Added Chakram Weaver to full-game development. Catch returning chakrams to restore mana, reduce cooldowns and gather hordes with prismatic saws."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Plasmancer geliştirme önizlemesi: Yıldırım Küresi, Manyetik Çekirdek, Ark Işınlanması ve Kararsız Akımlar. Sınıf uygulanmış durumda; gerçek oynanış doğrulaması ve denge değerlendirmesi henüz tamamlanmadı.",
-          "en": "Plasmancer development preview: Ball Lightning, Magnetic Core, Arc Teleport and Unstable Currents. The class is implemented; live gameplay verification and balance review are still pending."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Starforged Voidblade özel etkisi: yetenek hasarı, bekleme süresiyle sınırlı delici bir Kozmik Kuyruklu Yıldız Işını tetikler. Kılıca yıldız aurası, kristaller ve savrulma izi eklendi.",
-          "en": "Starforged Voidblade unique effect: skill damage triggers a piercing Cosmic Comet Beam with an internal cooldown. Added a star aura, crystals and a sweeping blade trail."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Voidspine Blade özel etkisi: güdümlü kemik dikenleri, öldürmede alan patlamaları, Omurga Kapanı ve altın/ek ganimet odaklı Omurga Akını güçlendirmesi.",
-          "en": "Voidspine Blade unique effect: homing bone spikes, on-kill area eruptions, a Spine Snare and a Spine Rush buff focused on gold and extra loot."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Bu notlar devam eden tam sürüm geliştirmesini kapsar; yeni sınıflar ve kılıçlar mevcut demoya eklenmiş içerik olarak sunulmaz.",
-          "en": "These notes cover ongoing full-game development; the new classes and swords are not presented as additions to the current demo."
-        }
-      }
-    ]
-  },
-  {
-    "version": "DEV",
-    "name": {
-      "tr": "Geliştirme Güncellemesi: Ruh Hasadı ve Yaşayan Kanatlar",
-      "en": "Development Update: Soul Harvest & Living Wings"
+    {
+        "version":  "DEV",
+        "name":  {
+                     "tr":  "Geliştirme Güncellemesi: Gölge, Prizma ve Plazma",
+                     "en":  "Development Update: Shadow, Prism \u0026 Plasma"
+                 },
+        "date":  "2026-10-31",
+        "changes":  [
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Tam sürüm geliştirmesine Shadowblade eklendi: geri dönen kunailer, Q ve E yeteneklerini kopyalayan gölge klonu, patlayan Gölge Damgaları ve yörünge bıçakları.",
+                                         "en":  "Added Shadowblade to full-game development: returning kunai, a shadow clone that mimics Q and E, detonating Shadow Marks and orbiting blades."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Tam sürüm geliştirmesine Chakram Weaver eklendi. Dönen çakramları yakalayarak mana yenile, bekleme sürelerini kısalt ve prizmatik testerelerle düşman sürülerini topla.",
+                                         "en":  "Added Chakram Weaver to full-game development. Catch returning chakrams to restore mana, reduce cooldowns and gather hordes with prismatic saws."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Plasmancer geliştirme önizlemesi: Yıldırım Küresi, Manyetik Çekirdek, Ark Işınlanması ve Kararsız Akımlar. Sınıf uygulanmış durumda; gerçek oynanış doğrulaması ve denge değerlendirmesi henüz tamamlanmadı.",
+                                         "en":  "Plasmancer development preview: Ball Lightning, Magnetic Core, Arc Teleport and Unstable Currents. The class is implemented; live gameplay verification and balance review are still pending."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Starforged Voidblade özel etkisi: yetenek hasarı, bekleme süresiyle sınırlı delici bir Kozmik Kuyruklu Yıldız Işını tetikler. Kılıca yıldız aurası, kristaller ve savrulma izi eklendi.",
+                                         "en":  "Starforged Voidblade unique effect: skill damage triggers a piercing Cosmic Comet Beam with an internal cooldown. Added a star aura, crystals and a sweeping blade trail."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Voidspine Blade özel etkisi: güdümlü kemik dikenleri, öldürmede alan patlamaları, Omurga Kapanı ve altın/ek ganimet odaklı Omurga Akını güçlendirmesi.",
+                                         "en":  "Voidspine Blade unique effect: homing bone spikes, on-kill area eruptions, a Spine Snare and a Spine Rush buff focused on gold and extra loot."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Bu notlar devam eden tam sürüm geliştirmesini kapsar; yeni sınıflar ve kılıçlar mevcut demoya eklenmiş içerik olarak sunulmaz.",
+                                         "en":  "These notes cover ongoing full-game development; the new classes and swords are not presented as additions to the current demo."
+                                     }
+                        }
+                    ]
     },
-    "date": "2026-10-30",
-    "changes": [
-      {
-        "type": "new",
-        "text": {
-          "tr": "Necrotic Talon Blade, öldürülen düşmanlardan ruh toplar. Ruh yükleri hasar ve can çalma sağlar; 5 yükte sonraki normal saldırı güçlendirilmiş bir pençe darbesi yapar.",
-          "en": "Necrotic Talon Blade gathers souls from defeated enemies. Soul charges grant damage and lifesteal; at 5 charges, the next basic attack unleashes an empowered claw strike."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Obsidian Valkyrie kanatları yeni yüzey efektleri, kanat ucu izleri ve kristal tüylerle yenilendi. Görsel efektler koşu ve atılma hareketlerine tepki verir; kozmetikler savaş statı kazandırmaz.",
-          "en": "Refreshed Obsidian Valkyrie wings with new surface effects, wingtip trails and crystal feathers. Effects react to running and dashing; cosmetics grant no combat stats."
-        }
-      },
-      {
-        "type": "fix",
-        "text": {
-          "tr": "Forest görevleri için Ent ve tohum erişimi iyileştirildi; tohum toplama yönlendirmesi Forest bölgesine, Hiçlik Dokuyucusu hedefi doğru ana dünya sahnesine bağlandı.",
-          "en": "Improved access to Ents and seeds for Forest quests. Seed-collection navigation now points to the Forest, and the Void Weaver objective targets the correct main-world scene."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "29 Ekim geliştirmesine eklenen 14 kılıçlık 2910 serisi: yeni silah modelleri, envanter ikonları ve tam sürüm eşya kayıtları. Serideki bazı kılıçlar sonraki günlerde özel etkilerle geliştirildi.",
-          "en": "The 14-sword 2910 collection was added in development on October 29, with new weapon models, inventory icons and full-game item entries. Selected swords received unique effects in subsequent updates."
-        }
-      }
-    ]
-  },
-  {
-    "version": "v0.3.0",
-    "name": {
-      "tr": "Obsidian Kanatları ve Diyar Gezginleri",
-      "en": "Wings of Obsidian & Realm Travelers"
+    {
+        "version":  "DEV",
+        "name":  {
+                     "tr":  "Geliştirme Güncellemesi: Ruh Hasadı ve Yaşayan Kanatlar",
+                     "en":  "Development Update: Soul Harvest \u0026 Living Wings"
+                 },
+        "date":  "2026-10-30",
+        "changes":  [
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Necrotic Talon Blade, öldürülen düşmanlardan ruh toplar. Ruh yükleri hasar ve can çalma sağlar; 5 yükte sonraki normal saldırı güçlendirilmiş bir pençe darbesi yapar.",
+                                         "en":  "Necrotic Talon Blade gathers souls from defeated enemies. Soul charges grant damage and lifesteal; at 5 charges, the next basic attack unleashes an empowered claw strike."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Obsidian Valkyrie kanatları yeni yüzey efektleri, kanat ucu izleri ve kristal tüylerle yenilendi. Görsel efektler koşu ve atılma hareketlerine tepki verir; kozmetikler savaş statı kazandırmaz.",
+                                         "en":  "Refreshed Obsidian Valkyrie wings with new surface effects, wingtip trails and crystal feathers. Effects react to running and dashing; cosmetics grant no combat stats."
+                                     }
+                        },
+                        {
+                            "type":  "fix",
+                            "text":  {
+                                         "tr":  "Forest görevleri için Ent ve tohum erişimi iyileştirildi; tohum toplama yönlendirmesi Forest bölgesine, Hiçlik Dokuyucusu hedefi doğru ana dünya sahnesine bağlandı.",
+                                         "en":  "Improved access to Ents and seeds for Forest quests. Seed-collection navigation now points to the Forest, and the Void Weaver objective targets the correct main-world scene."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "29 Ekim geliştirmesine eklenen 14 kılıçlık 2910 serisi: yeni silah modelleri, envanter ikonları ve tam sürüm eşya kayıtları. Serideki bazı kılıçlar sonraki günlerde özel etkilerle geliştirildi.",
+                                         "en":  "The 14-sword 2910 collection was added in development on October 29, with new weapon models, inventory icons and full-game item entries. Selected swords received unique effects in subsequent updates."
+                                     }
+                        }
+                    ]
     },
-    "date": "2026-10-29",
-    "changes": [
-      {
-        "type": "new",
-        "text": {
-          "tr": "Yeni 'Obsidian Valkyrie' kozmetik kanat aksesuarı ve özel animasyonlu LOD modelleri oyuna eklendi.",
-          "en": "Added new 'Obsidian Valkyrie' cosmetic wings with custom animated LOD models."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Karakter donanımlarının gerçek zamanlı incelenebildiği tam ekran Kozmetik Önizleme Vitrini entegre edildi.",
-          "en": "Integrated full-screen Cosmetic Preview and Showcase panel for real-time equipment inspection."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Zindan portalları ve harita waypoint'leri arasında akıllı Görev Otomatik Yönlendirme (Quest Navigation) sistemi devreye alındı.",
-          "en": "Implemented smart Quest Auto-Navigation routing across dungeon portals and waypoints."
-        }
-      },
-      {
-        "type": "balance",
-        "text": {
-          "tr": "NPC etkileşim ve yakınlık sınırları (8m/11m) optimize edildi; selamlama ve veda zamanlayıcıları dengelendi.",
-          "en": "Optimized NPC proximity interaction thresholds (8m/11m) with balanced greeting and farewell cooldowns."
-        }
-      },
-      {
-        "type": "fix",
-        "text": {
-          "tr": "Dreadfang Embers yeteneğinde görülen parçacık yörünge hızı eğrileri (Particle Orbital Velocity) kararlı hale getirildi.",
-          "en": "Fixed Particle Orbital Velocity curve stability issues in the Dreadfang Embers ability."
-        }
-      }
-    ]
-  },
-  {
-    "version": "v0.2.0",
-    "name": {
-      "tr": "Hiçliğin Uyanışı",
-      "en": "Awakening of the Void"
+    {
+        "version":  "v0.3.0",
+        "name":  {
+                     "tr":  "Obsidian Kanatları ve Diyar Gezginleri",
+                     "en":  "Wings of Obsidian \u0026 Realm Travelers"
+                 },
+        "date":  "2026-10-29",
+        "changes":  [
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Yeni \u0027Obsidian Valkyrie\u0027 kozmetik kanat aksesuarı ve özel animasyonlu LOD modelleri oyuna eklendi.",
+                                         "en":  "Added new \u0027Obsidian Valkyrie\u0027 cosmetic wings with custom animated LOD models."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Karakter donanımlarının gerçek zamanlı incelenebildiği tam ekran Kozmetik Önizleme Vitrini entegre edildi.",
+                                         "en":  "Integrated full-screen Cosmetic Preview and Showcase panel for real-time equipment inspection."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Zindan portalları ve harita waypoint\u0027leri arasında akıllı Görev Otomatik Yönlendirme (Quest Navigation) sistemi devreye alındı.",
+                                         "en":  "Implemented smart Quest Auto-Navigation routing across dungeon portals and waypoints."
+                                     }
+                        },
+                        {
+                            "type":  "balance",
+                            "text":  {
+                                         "tr":  "NPC etkileşim ve yakınlık sınırları (8m/11m) optimize edildi; selamlama ve veda zamanlayıcıları dengelendi.",
+                                         "en":  "Optimized NPC proximity interaction thresholds (8m/11m) with balanced greeting and farewell cooldowns."
+                                     }
+                        },
+                        {
+                            "type":  "fix",
+                            "text":  {
+                                         "tr":  "Dreadfang Embers yeteneğinde görülen parçacık yörünge hızı eğrileri (Particle Orbital Velocity) kararlı hale getirildi.",
+                                         "en":  "Fixed Particle Orbital Velocity curve stability issues in the Dreadfang Embers ability."
+                                     }
+                        }
+                    ]
     },
-    "date": "2026-10-24",
-    "changes": [
-      {
-        "type": "new",
-        "text": {
-          "tr": "Yeni oynanabilir karakter sınıfı 'Karanlık Muhafız' eklendi.",
-          "en": "Added new playable class 'Shadow Warden'."
-        }
-      },
-      {
-        "type": "new",
-        "text": {
-          "tr": "Void Yarığı zindanı ve dinamik ganimet düşürme sistemi devreye alındı.",
-          "en": "Introduced the Void Rift dungeon with dynamic loot drop mechanics."
-        }
-      },
-      {
-        "type": "balance",
-        "text": {
-          "tr": "Gölge Adımı yeteneğinin bekleme süresi 12 saniyeden 9 saniyeye düşürüldü.",
-          "en": "Shadow Step ability cooldown reduced from 12s to 9s."
-        }
-      },
-      {
-        "type": "fix",
-        "text": {
-          "tr": "Zindan boss karşılaşmalarında nadir görülen takılma ve çarpışma hataları giderildi.",
-          "en": "Resolved rare collision and freeze issues during dungeon boss encounters."
-        }
-      }
-    ]
-  },
-  {
-    "version": "v0.1.5",
-    "name": {
-      "tr": "Karanlık Temeller",
-      "en": "Dark Foundations"
+    {
+        "version":  "v0.2.0",
+        "name":  {
+                     "tr":  "Hiçliğin Uyanışı",
+                     "en":  "Awakening of the Void"
+                 },
+        "date":  "2026-10-24",
+        "changes":  [
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Yeni oynanabilir karakter sınıfı \u0027Karanlık Muhafız\u0027 eklendi.",
+                                         "en":  "Added new playable class \u0027Shadow Warden\u0027."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Void Yarığı zindanı ve dinamik ganimet düşürme sistemi devreye alındı.",
+                                         "en":  "Introduced the Void Rift dungeon with dynamic loot drop mechanics."
+                                     }
+                        },
+                        {
+                            "type":  "balance",
+                            "text":  {
+                                         "tr":  "Gölge Adımı yeteneğinin bekleme süresi 12 saniyeden 9 saniyeye düşürüldü.",
+                                         "en":  "Shadow Step ability cooldown reduced from 12s to 9s."
+                                     }
+                        },
+                        {
+                            "type":  "fix",
+                            "text":  {
+                                         "tr":  "Zindan boss karşılaşmalarında nadir görülen takılma ve çarpışma hataları giderildi.",
+                                         "en":  "Resolved rare collision and freeze issues during dungeon boss encounters."
+                                     }
+                        }
+                    ]
     },
-    "date": "2026-10-10",
-    "changes": [
-      {
-        "type": "new",
-        "text": {
-          "tr": "ARPG envanter ve rün soketleme sistemi oyuna entegre edildi.",
-          "en": "Integrated ARPG inventory and rune socketing system."
-        }
-      },
-      {
-        "type": "balance",
-        "text": {
-          "tr": "Void büyülerinin mana tüketim eğrisi erken aşama için dengelendi.",
-          "en": "Balanced mana consumption curve for void spells in early game."
-        }
-      },
-      {
-        "type": "fix",
-        "text": {
-          "tr": "Klavye ve kontrolcü tuş atamalarının sıfırlanma sorunu çözüldü.",
-          "en": "Fixed an issue where custom keybindings and controller layouts were resetting."
-        }
-      }
-    ]
-  }
+    {
+        "version":  "v0.1.5",
+        "name":  {
+                     "tr":  "Karanlık Temeller",
+                     "en":  "Dark Foundations"
+                 },
+        "date":  "2026-10-10",
+        "changes":  [
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "ARPG envanter ve rün soketleme sistemi oyuna entegre edildi.",
+                                         "en":  "Integrated ARPG inventory and rune socketing system."
+                                     }
+                        },
+                        {
+                            "type":  "balance",
+                            "text":  {
+                                         "tr":  "Void büyülerinin mana tüketim eğrisi erken aşama için dengelendi.",
+                                         "en":  "Balanced mana consumption curve for void spells in early game."
+                                     }
+                        },
+                        {
+                            "type":  "fix",
+                            "text":  {
+                                         "tr":  "Klavye ve kontrolcü tuş atamalarının sıfırlanma sorunu çözüldü.",
+                                         "en":  "Fixed an issue where custom keybindings and controller layouts were resetting."
+                                     }
+                        }
+                    ]
+    }
 ]
