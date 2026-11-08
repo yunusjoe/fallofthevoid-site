@@ -9,18 +9,18 @@
    -------------------------------------------------------------------------- */
 :root {
     /* Renk Paleti - Void & Gece Teması */
-    --bg-primary: #07040d;          /* En derin arka plan */
-    --bg-secondary: #0f091c;        /* Bölüm arka planı */
-    --bg-card: #160d29;             /* Kart ve panel arka planı */
-    --bg-card-hover: #1e1238;       /* Hover durumundaki kart rengi */
-    --bg-glass: rgba(15, 9, 28, 0.75); /* Yarı saydam gezinme çubuğu */
+    --bg-primary: #080304;          /* En derin arka plan */
+    --bg-secondary: #110507;        /* Bölüm arka planı */
+    --bg-card: #18070a;             /* Kart ve panel arka planı */
+    --bg-card-hover: #240a0f;       /* Hover durumundaki kart rengi */
+    --bg-glass: rgba(18, 5, 8, 0.82); /* Yarı saydam gezinme çubuğu */
 
     /* Vurgu ve Işıma Renkleri (Void Moru) */
-    --accent-purple: #8b5cf6;       /* Standart mor vurgu */
-    --accent-purple-glow: #a855f7;  /* Parlak neon mor */
-    --accent-purple-light: #c084fc; /* Açık lila vurgusu */
-    --accent-purple-dark: #4c1d95;  /* Koyu mor gölge */
-    --accent-cyan: #38bdf8;         /* Soğuk kontrast mavisi */
+    --accent-purple: #dc2626;       /* Standart mor vurgu */
+    --accent-purple-glow: #ef4444;  /* Parlak neon mor */
+    --accent-purple-light: #fca5a5; /* Açık lila vurgusu */
+    --accent-purple-dark: #7f1d1d;  /* Koyu mor gölge */
+    --accent-cyan: #f59e0b;         /* Soğuk kontrast mavisi */
     --accent-gold: #f59e0b;         /* ARPG efsanevi altın vurgusu */
 
     /* Etiket Renkleri (Yama Notları için) */
@@ -28,18 +28,18 @@
     --tag-new-text: #34d399;
     --tag-fix-bg: rgba(245, 158, 11, 0.15);
     --tag-fix-text: #fbbf24;
-    --tag-balance-bg: rgba(139, 92, 246, 0.15);
+    --tag-balance-bg: rgba(220, 38, 38, 0.15);
     --tag-balance-text: #c084fc;
 
     /* Metin Renkleri */
     --text-primary: #f3f4f6;        /* Ana gövde ve başlık metni */
     --text-secondary: #9ca3af;      /* Açıklama ve ikincil metin */
     --text-muted: #6b7280;          /* Küçük dipnot ve pasif metin */
-    --text-glow: rgba(192, 132, 252, 0.35);
+    --text-glow: rgba(252, 165, 165, 0.35);
 
     /* Kenarlıklar ve Ayrıcılar */
-    --border-subtle: rgba(139, 92, 246, 0.2);
-    --border-glow: rgba(168, 85, 247, 0.5);
+    --border-subtle: rgba(220, 38, 38, 0.2);
+    --border-glow: rgba(239, 68, 68, 0.5);
     --border-radius-sm: 4px;
     --border-radius-md: 8px;
     --border-radius-lg: 16px;
@@ -90,9 +90,9 @@ body::before {
     width: 100vw;
     height: 100vh;
     background: 
-        radial-gradient(circle at 20% 20%, rgba(76, 29, 149, 0.18) 0%, transparent 45%),
-        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(15, 9, 28, 0.95) 0%, var(--bg-primary) 100%);
+        radial-gradient(circle at 20% 20%, rgba(127, 29, 29, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(220, 38, 38, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(18, 5, 8, 0.95) 0%, var(--bg-primary) 100%);
     pointer-events: none;
     z-index: -1;
 }
@@ -253,7 +253,7 @@ ul {
 
 /* Dil Değiştirme Butonu */
 .lang-toggle-btn {
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(220, 38, 38, 0.1);
     border: 1px solid var(--border-subtle);
     color: var(--accent-purple-light);
     font-family: var(--font-heading);
@@ -267,9 +267,9 @@ ul {
 }
 
 .lang-toggle-btn:hover {
-    background: rgba(139, 92, 246, 0.25);
+    background: rgba(220, 38, 38, 0.25);
     border-color: var(--accent-purple-glow);
-    box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
     color: #fff;
 }
 
@@ -309,7 +309,7 @@ ul {
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(circle at center, rgba(109, 40, 217, 0.25) 0%, rgba(15, 9, 28, 0.8) 60%, var(--bg-primary) 100%);
+        radial-gradient(circle at center, rgba(185, 28, 28, 0.25) 0%, rgba(18, 5, 8, 0.8) 60%, var(--bg-primary) 100%);
     z-index: 1;
 }
 
@@ -337,7 +337,7 @@ ul {
     text-transform: uppercase;
     margin-bottom: 16px;
     padding: 6px 16px;
-    background: rgba(139, 92, 246, 0.12);
+    background: rgba(220, 38, 38, 0.12);
     border: 1px solid var(--border-subtle);
     border-radius: 999px;
 }
@@ -351,7 +351,7 @@ ul {
     color: var(--text-primary);
     margin-bottom: 20px;
     line-height: 1.1;
-    text-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+    text-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
 }
 
 .hero-description {
@@ -392,17 +392,17 @@ ul {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-dark));
     color: #ffffff;
     border: 1px solid var(--accent-purple-glow);
-    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
 }
 
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--accent-purple-glow), var(--accent-purple));
-    box-shadow: 0 6px 28px rgba(168, 85, 247, 0.6);
+    box-shadow: 0 6px 28px rgba(239, 68, 68, 0.6);
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background: rgba(22, 13, 41, 0.8);
+    background: rgba(26, 7, 11, 0.82);
     color: var(--text-primary);
     border: 1px solid var(--border-subtle);
     backdrop-filter: blur(8px);
@@ -467,10 +467,10 @@ ul {
 }
 
 .class-tab-btn.active {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(76, 29, 149, 0.4));
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.25), rgba(127, 29, 29, 0.4));
     border-color: var(--accent-purple-glow);
     color: #ffffff;
-    box-shadow: 0 0 16px rgba(168, 85, 247, 0.35);
+    box-shadow: 0 0 16px rgba(239, 68, 68, 0.35);
 }
 
 .class-tab-icon {
@@ -531,7 +531,7 @@ ul {
     border-radius: var(--border-radius-md);
     object-fit: cover;
     border: 2px solid var(--accent-purple-glow);
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.35);
 }
 
 .class-title-wrap {
@@ -555,7 +555,7 @@ ul {
     font-weight: 700;
     letter-spacing: 1.5px;
     padding: 3px 10px;
-    background: rgba(139, 92, 246, 0.15);
+    background: rgba(220, 38, 38, 0.15);
     border: 1px solid var(--border-subtle);
     border-radius: 999px;
     color: var(--accent-purple-light);
@@ -660,12 +660,12 @@ ul {
 .skill-select-btn:hover {
     border-color: var(--accent-purple-light);
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(168, 85, 247, 0.3);
+    box-shadow: 0 6px 15px rgba(239, 68, 68, 0.3);
 }
 
 .skill-select-btn.active {
     border-color: var(--accent-purple-glow);
-    box-shadow: 0 0 16px rgba(168, 85, 247, 0.6);
+    box-shadow: 0 0 16px rgba(239, 68, 68, 0.6);
     transform: translateY(-2px);
 }
 
@@ -715,7 +715,7 @@ ul {
     border-radius: var(--border-radius-sm);
     object-fit: cover;
     border: 1px solid var(--accent-purple-glow);
-    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
 }
 
 .skill-name-wrap {
@@ -859,7 +859,7 @@ ul {
 .patch-tag-balance {
     background: var(--tag-balance-bg);
     color: var(--tag-balance-text);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    border: 1px solid rgba(220, 38, 38, 0.3);
 }
 
 .patch-note-text {
@@ -924,7 +924,7 @@ ul {
 
 .social-btn {
     padding: 10px 20px;
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(220, 38, 38, 0.1);
     border: 1px solid var(--border-subtle);
     border-radius: var(--border-radius-sm);
     color: var(--text-primary);
@@ -936,10 +936,10 @@ ul {
 }
 
 .social-btn:hover {
-    background: rgba(139, 92, 246, 0.25);
+    background: rgba(220, 38, 38, 0.25);
     border-color: var(--accent-purple-glow);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
 }
 
 /* --------------------------------------------------------------------------
@@ -1071,17 +1071,17 @@ ul {
 /* Gerçek oyun görselleriyle sinematik giriş ve hafif medya galerisi. */
 :root {
     --media-white: #fff;
-    --media-ink: #050309;
-    --media-border: rgba(192, 132, 252, 0.22);
-    --media-shade: rgba(5, 3, 9, 0.78);
-    --media-wash: rgba(5, 3, 9, 0.44);
+    --media-ink: #070203;
+    --media-border: rgba(252, 165, 165, 0.22);
+    --media-shade: rgba(8, 2, 4, 0.76);
+    --media-wash: rgba(14, 3, 5, 0.28);
     --media-backdrop: rgba(0, 0, 0, 0.9);
-    --media-focus: rgba(192, 132, 252, 0.4);
+    --media-focus: rgba(252, 165, 165, 0.4);
 }
 .site-logo { display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; }
-#brand-logo { width: 40px; height: 40px; border-radius: 9px; }
+#brand-logo { width: 40px; height: 40px; border-radius: 9px; filter: hue-rotate(88deg) saturate(1.35); }
 .hero-section { min-height: 810px; min-height: min(900px, 100svh); padding-top: calc(var(--header-height) + 110px); padding-bottom: 110px; text-align: left; }
-.hero-backdrop img { width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .55; filter: saturate(.8); }
+.hero-backdrop img { width: 100%; height: 100%; object-fit: cover; object-position: center right; opacity: .95; filter: saturate(1.1) contrast(1.05); }
 .hero-backdrop { background: var(--media-ink); }
 .hero-overlay { background: linear-gradient(90deg, var(--media-shade), var(--media-wash)), linear-gradient(0deg, var(--bg-primary), transparent 60%); }
 .hero-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; position: relative; z-index: 3; width: 100%; }
@@ -1172,7 +1172,7 @@ ul {
 .features-section {
     padding: 90px 0;
     position: relative;
-    background: radial-gradient(circle at 50% 0%, rgba(76, 29, 149, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 0%, rgba(127, 29, 29, 0.12) 0%, transparent 70%);
 }
 
 .features-grid {
@@ -1194,7 +1194,7 @@ ul {
 .feature-card:hover {
     transform: translateY(-4px);
     border-color: var(--border-glow);
-    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.22);
+    box-shadow: 0 12px 30px rgba(220, 38, 38, 0.22);
 }
 
 .feature-media {
@@ -1255,11 +1255,11 @@ ul {
 .lore-card {
     max-width: 880px;
     margin: 0 auto;
-    background: linear-gradient(135deg, rgba(22, 13, 41, 0.9) 0%, rgba(10, 5, 20, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(26, 7, 11, 0.92) 0%, rgba(12, 3, 5, 0.95) 100%);
     border: 1px solid var(--border-glow);
     border-radius: var(--border-radius-lg);
     padding: 48px 40px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(139, 92, 246, 0.08);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(220, 38, 38, 0.08);
     text-align: center;
 }
 
@@ -1285,21 +1285,21 @@ ul {
     font-style: italic;
     color: var(--accent-purple-light);
     padding: 20px 24px;
-    background: rgba(139, 92, 246, 0.08);
+    background: rgba(220, 38, 38, 0.08);
     border-radius: var(--border-radius-sm);
     border: 1px dashed var(--border-subtle);
     margin-top: 10px;
-    text-shadow: 0 0 14px rgba(168, 85, 247, 0.35);
+    text-shadow: 0 0 14px rgba(239, 68, 68, 0.35);
 }
 
 /* 3. Steam Eyleme Çağrı Şeridi (CTA Banner) */
 .steam-cta-banner {
     margin: 60px 0;
     padding: 56px 0;
-    background: linear-gradient(90deg, rgba(15, 9, 28, 0.95) 0%, rgba(76, 29, 149, 0.35) 50%, rgba(15, 9, 28, 0.95) 100%);
+    background: linear-gradient(90deg, rgba(18, 5, 8, 0.95) 0%, rgba(127, 29, 29, 0.35) 50%, rgba(18, 5, 8, 0.95) 100%);
     border-top: 1px solid var(--border-glow);
     border-bottom: 1px solid var(--border-glow);
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.15);
+    box-shadow: 0 0 40px rgba(220, 38, 38, 0.15);
 }
 
 .cta-banner-inner {
@@ -1334,7 +1334,7 @@ ul {
 .requirements-section {
     padding: 90px 0;
     position: relative;
-    background: radial-gradient(circle at 50% 100%, rgba(76, 29, 149, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 100%, rgba(127, 29, 29, 0.1) 0%, transparent 70%);
 }
 
 .requirements-container {
@@ -1353,7 +1353,7 @@ ul {
 
 .requirements-card:hover {
     border-color: var(--border-glow);
-    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.18);
+    box-shadow: 0 8px 24px rgba(220, 38, 38, 0.18);
 }
 
 .req-card-header {
@@ -1388,9 +1388,9 @@ ul {
 }
 
 .req-badge-recommended {
-    background: rgba(168, 85, 247, 0.15);
+    background: rgba(239, 68, 68, 0.15);
     color: var(--accent-purple-light);
-    border: 1px solid rgba(168, 85, 247, 0.35);
+    border: 1px solid rgba(239, 68, 68, 0.35);
 }
 
 .req-list {
@@ -1407,7 +1407,7 @@ ul {
     gap: 16px;
     font-size: 0.92rem;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+    border-bottom: 1px solid rgba(220, 38, 38, 0.08);
 }
 
 .req-item:last-child {
@@ -1504,12 +1504,12 @@ ul {
    Renk ve süre değerleri :root değişkenlerinden yönetilir.
    ========================================================================== */
 :root {
-    --fx-particle: rgba(192, 132, 252, 0.9);
-    --fx-particle-glow: rgba(168, 85, 247, 0.8);
-    --fx-ornament: rgba(168, 85, 247, 0.55);
-    --fx-header-scrolled-bg: rgba(7, 4, 13, 0.92);
-    --fx-scroll-track: #0b0614;
-    --fx-selection-bg: rgba(168, 85, 247, 0.45);
+    --fx-particle: rgba(252, 165, 165, 0.9);
+    --fx-particle-glow: rgba(239, 68, 68, 0.8);
+    --fx-ornament: rgba(239, 68, 68, 0.55);
+    --fx-header-scrolled-bg: rgba(9, 3, 4, 0.92);
+    --fx-scroll-track: #0d0406;
+    --fx-selection-bg: rgba(239, 68, 68, 0.45);
     --fx-reveal-distance: 28px;
     --fx-reveal-duration: 0.7s;
     --fx-header-height-scrolled: 62px;
@@ -1545,8 +1545,8 @@ html { scrollbar-color: var(--accent-purple-dark) var(--fx-scroll-track); scroll
 /* Hero başlığı: hafif parıltı nabzı */
 .hero-title { animation: titleGlow 5s ease-in-out infinite alternate; }
 @keyframes titleGlow {
-    from { text-shadow: 0 0 24px rgba(168, 85, 247, 0.35); }
-    to { text-shadow: 0 0 44px rgba(168, 85, 247, 0.8), 0 0 80px rgba(139, 92, 246, 0.35); }
+    from { text-shadow: 0 0 24px rgba(239, 68, 68, 0.35); }
+    to { text-shadow: 0 0 44px rgba(239, 68, 68, 0.8), 0 0 80px rgba(220, 38, 38, 0.35); }
 }
 
 /* Void parçacıkları: yalnız transform/opacity animasyonu (GPU dostu) */
@@ -1593,7 +1593,7 @@ html { scrollbar-color: var(--accent-purple-dark) var(--fx-scroll-track); scroll
 
 /* Galeri: hover'da hafif parlama ve görsel zoom */
 .gallery-card { transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
-.gallery-card:hover { box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); }
+.gallery-card:hover { box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3); }
 .gallery-card img { transition: transform 0.5s ease, filter 0.5s ease; filter: brightness(0.85); }
 .gallery-card:hover img { filter: brightness(1.05); }
 
@@ -1686,14 +1686,14 @@ html { scrollbar-color: var(--accent-purple-dark) var(--fx-scroll-track); scroll
    Düzeltme turu: patch köşe ışıması, sabit sayfa arka planı, güçlendirilmiş efektler
    ========================================================================== */
 :root {
-    --fx-corner: #a855f7;
-    --fx-corner-glow: rgba(168, 85, 247, 0.9);
+    --fx-corner: #ef4444;
+    --fx-corner-glow: rgba(239, 68, 68, 0.9);
     --fx-corner-size: 26px;
     --fx-corner-thick: 2px;
     --fx-page-bg-opacity: 0.32;
     --fx-page-bg-blur: 2px;
-    --fx-section-veil: rgba(10, 6, 20, 0.72);
-    --fx-section-veil-strong: rgba(15, 9, 28, 0.82);
+    --fx-section-veil: rgba(12, 4, 6, 0.74);
+    --fx-section-veil-strong: rgba(18, 5, 8, 0.84);
     --fx-reveal-distance: 44px;
     --fx-sheen: rgba(255, 255, 255, 0.35);
 }
@@ -1706,7 +1706,7 @@ html { scrollbar-color: var(--accent-purple-dark) var(--fx-scroll-track); scroll
 }
 .patch-card {
     position: relative;
-    box-shadow: 0 0 22px rgba(139, 92, 246, 0.12);
+    box-shadow: 0 0 22px rgba(220, 38, 38, 0.12);
 }
 .patch-card::before {
     content: '';
@@ -1726,7 +1726,7 @@ html { scrollbar-color: var(--accent-purple-dark) var(--fx-scroll-track); scroll
     filter: drop-shadow(0 0 6px var(--fx-corner-glow));
     animation: cornerPulse 3.2s ease-in-out infinite alternate;
 }
-.patch-card:hover { box-shadow: 0 0 34px rgba(168, 85, 247, 0.35); }
+.patch-card:hover { box-shadow: 0 0 34px rgba(239, 68, 68, 0.35); }
 .patch-card:hover::before { animation-duration: 1.4s; }
 @keyframes cornerPulse {
     from { opacity: 0.65; filter: drop-shadow(0 0 3px var(--fx-corner-glow)); }
@@ -1738,8 +1738,8 @@ html, body { background-color: var(--bg-primary); }
 body { background-color: transparent; }
 body::before {
     background:
-        radial-gradient(circle at 20% 20%, rgba(76, 29, 149, 0.22) 0%, transparent 45%),
-        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.16) 0%, transparent 50%);
+        radial-gradient(circle at 20% 20%, rgba(127, 29, 29, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(220, 38, 38, 0.16) 0%, transparent 50%);
     z-index: -1;
 }
 body::after {
@@ -1752,8 +1752,8 @@ body::after {
     opacity: var(--fx-page-bg-opacity);
     filter: blur(var(--fx-page-bg-blur)) saturate(0.9);
 }
-.hero-backdrop { background: transparent; -webkit-mask-image: linear-gradient(#000 70%, transparent 100%); mask-image: linear-gradient(#000 70%, transparent 100%); }
-.hero-overlay { background: linear-gradient(90deg, var(--media-shade), var(--media-wash)); }
+.hero-backdrop { background: transparent; -webkit-mask-image: linear-gradient(#000 82%, transparent 100%); mask-image: linear-gradient(#000 82%, transparent 100%); }
+.hero-overlay { background: linear-gradient(90deg, rgba(8, 2, 4, 0.84) 0%, rgba(8, 2, 4, 0.45) 45%, rgba(8, 2, 4, 0.05) 75%, rgba(8, 2, 4, 0.12) 100%); }
 .characters-section, .contact-section { background-color: var(--fx-section-veil-strong); }
 .patches-section, .features-section, .requirements-section, .lore-section, .media-section { background-color: var(--fx-section-veil); }
 .site-footer { background-color: var(--fx-section-veil-strong); }
@@ -1764,12 +1764,12 @@ body::after {
     to { transform: scale(1.22) translate3d(-1.5%, -1%, 0); }
 }
 @keyframes titleGlow {
-    from { text-shadow: 0 0 26px rgba(168, 85, 247, 0.45); }
-    to { text-shadow: 0 0 56px rgba(168, 85, 247, 0.95), 0 0 110px rgba(139, 92, 246, 0.5); }
+    from { text-shadow: 0 0 26px rgba(239, 68, 68, 0.45); }
+    to { text-shadow: 0 0 56px rgba(239, 68, 68, 0.95), 0 0 110px rgba(220, 38, 38, 0.5); }
 }
-.feature-card:hover, .requirements-card:hover { box-shadow: 0 16px 44px rgba(139, 92, 246, 0.4); }
-.gallery-card:hover { box-shadow: 0 14px 40px rgba(168, 85, 247, 0.45); }
-.section-title { text-shadow: 0 0 30px var(--text-glow), 0 0 60px rgba(139, 92, 246, 0.2); }
+.feature-card:hover, .requirements-card:hover { box-shadow: 0 16px 44px rgba(220, 38, 38, 0.4); }
+.gallery-card:hover { box-shadow: 0 14px 40px rgba(239, 68, 68, 0.45); }
+.section-title { text-shadow: 0 0 30px var(--text-glow), 0 0 60px rgba(220, 38, 38, 0.2); }
 
 /* Butonlarda ışık süpürme efekti */
 .btn { position: relative; overflow: hidden; }
@@ -1787,8 +1787,8 @@ body::after {
 .btn:hover::after { left: 130%; transition: left 0.7s ease; }
 .btn-primary { animation: btnGlow 2.8s ease-in-out infinite alternate; }
 @keyframes btnGlow {
-    from { box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4); }
-    to { box-shadow: 0 4px 34px rgba(168, 85, 247, 0.8); }
+    from { box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4); }
+    to { box-shadow: 0 4px 34px rgba(239, 68, 68, 0.8); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1840,10 +1840,10 @@ body::after { content: none; }
    Void Kuyruklu Yıldız İmleç İzi, Canlı Stat Dolumu ve Sinematik Q-W-E-R Vitrini
    ========================================================================== */
 :root {
-    --fx-trail-core: #f5d0fe;
-    --fx-trail-mid: #c084fc;
-    --fx-trail-outer: #7e22ce;
-    --fx-spark-alt: #38bdf8;
+    --fx-trail-core: #ffe4e6;
+    --fx-trail-mid: #f87171;
+    --fx-trail-outer: #991b1b;
+    --fx-spark-alt: #fbbf24;
     --stat-fill-duration: 0.95s;
 }
 
@@ -1866,8 +1866,8 @@ body::after { content: none; }
 .stat-bar-track {
     position: relative;
     height: 8px;
-    background: rgba(7, 4, 13, 0.85);
-    border: 1px solid rgba(192, 132, 252, 0.18);
+    background: rgba(9, 3, 4, 0.85);
+    border: 1px solid rgba(252, 165, 165, 0.18);
     border-radius: 999px;
     overflow: visible;
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
@@ -1901,7 +1901,7 @@ body::after { content: none; }
 
 .stat-value {
     font-variant-numeric: tabular-nums;
-    text-shadow: 0 0 10px rgba(192, 132, 252, 0.45);
+    text-shadow: 0 0 10px rgba(252, 165, 165, 0.45);
 }
 
 /* 3. Sinematik Q-W-E-R Yetenek Butonları ve Detay Kutusu */
@@ -1917,7 +1917,7 @@ body::after { content: none; }
     width: 68px;
     height: 68px;
     border-radius: 10px;
-    border: 1px solid rgba(192, 132, 252, 0.25);
+    border: 1px solid rgba(252, 165, 165, 0.25);
     background: var(--bg-primary);
     filter: saturate(0.75) brightness(0.78);
     transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), filter 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -1965,8 +1965,8 @@ body::after { content: none; }
     justify-content: center;
     padding: 0 6px;
     border-radius: 5px;
-    background: rgba(7, 4, 13, 0.92);
-    border: 1px solid rgba(192, 132, 252, 0.45);
+    background: rgba(9, 3, 4, 0.92);
+    border: 1px solid rgba(252, 165, 165, 0.45);
     color: var(--text-primary);
     font-family: var(--font-heading);
     font-size: 0.72rem;
@@ -1978,7 +1978,7 @@ body::after { content: none; }
 
 .skill-select-btn.active .skill-slot-badge {
     background: var(--class-accent, var(--accent-purple-glow));
-    color: #07040d;
+    color: #080304;
     border-color: #ffffff;
     box-shadow: 0 0 12px var(--class-accent, var(--accent-purple-glow));
 }
@@ -1988,13 +1988,13 @@ body::after { content: none; }
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(circle at 0% 0%, rgba(168, 85, 247, 0.16) 0%, transparent 65%),
-        rgba(7, 4, 13, 0.78);
-    border: 1px solid rgba(192, 132, 252, 0.22);
+        radial-gradient(circle at 0% 0%, rgba(239, 68, 68, 0.16) 0%, transparent 65%),
+        rgba(9, 3, 4, 0.78);
+    border: 1px solid rgba(252, 165, 165, 0.22);
     border-left: 3px solid var(--class-accent, var(--accent-purple-glow));
     border-radius: var(--border-radius-md);
     padding: 22px 24px;
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55), inset 0 0 28px rgba(139, 92, 246, 0.06);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55), inset 0 0 28px rgba(220, 38, 38, 0.06);
 }
 
 /* Yetenek değiştiğinde kutu üzerinden geçen büyü ışık süpürmesi */
@@ -2005,7 +2005,7 @@ body::after { content: none; }
     left: -120%;
     width: 65%;
     height: 100%;
-    background: linear-gradient(105deg, transparent 0%, rgba(192, 132, 252, 0.28) 50%, transparent 100%);
+    background: linear-gradient(105deg, transparent 0%, rgba(252, 165, 165, 0.28) 50%, transparent 100%);
     transform: skewX(-22deg);
     pointer-events: none;
 }

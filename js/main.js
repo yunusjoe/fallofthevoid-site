@@ -76,10 +76,10 @@ function loadSavedLanguage() {
 
 async function loadAllData() {
     const [siteRes, langRes, patchesRes, charactersRes] = await Promise.all([
-        fetch('data/site.json?v=20261030-steam', { cache: 'no-cache' }),
-        fetch('data/lang.json?v=20261030-steam', { cache: 'no-cache' }),
-        fetch('data/patches.json', { cache: 'no-cache' }),
-        fetch('data/characters.json', { cache: 'no-cache' })
+        fetch('data/site.json?v=20261109-crimson2', { cache: 'no-cache' }),
+        fetch('data/lang.json?v=20261109-crimson2', { cache: 'no-cache' }),
+        fetch('data/patches.json?v=20261109-crimson2', { cache: 'no-cache' }),
+        fetch('data/characters.json?v=20261109-crimson2', { cache: 'no-cache' })
     ]);
 
     if (!siteRes.ok || !langRes.ok || !patchesRes.ok || !charactersRes.ok) {
@@ -587,15 +587,19 @@ function renderMedia() {
     document.getElementById('hero-image').src = media.heroImage;
     // Aynı oyun görseli sayfa boyunca sabit arka plan olarak da kullanılır (CSS değişkeni).
     document.documentElement.style.setProperty('--page-bg-image', 'url(' + new URL(media.heroImage, document.baseURI).href + ')');
-    document.getElementById('trailer-poster').src = media.poster;
-    document.getElementById('trailer-duration').textContent = media.duration;
+    const trailerPoster = document.getElementById('trailer-poster');
+    if (trailerPoster) trailerPoster.src = media.poster;
+    const trailerDuration = document.getElementById('trailer-duration');
+    if (trailerDuration) trailerDuration.textContent = media.duration;
     document.getElementById('steam-wishlist').href = siteData.store.wishlist;
-    document.getElementById('steam-demo').href = siteData.store.demo;
+    const steamDemo = document.getElementById('steam-demo');
+    if (steamDemo && siteData.store.demo) steamDemo.href = siteData.store.demo;
     const ctaWishlist = document.getElementById('cta-wishlist');
     if (ctaWishlist) ctaWishlist.href = siteData.store.wishlist;
     const ctaDemo = document.getElementById('cta-demo');
-    if (ctaDemo) ctaDemo.href = siteData.store.demo;
-    document.getElementById('trailer-trigger').setAttribute('aria-label', mediaLabel('trailer_watch'));
+    if (ctaDemo && siteData.store.demo) ctaDemo.href = siteData.store.demo;
+    const trailerTrigger = document.getElementById('trailer-trigger');
+    if (trailerTrigger) trailerTrigger.setAttribute('aria-label', mediaLabel('trailer_watch'));
     document.getElementById('media-close').textContent = mediaLabel('media_close');
     document.getElementById('gallery-previous').textContent = mediaLabel('media_previous');
     document.getElementById('gallery-next').textContent = mediaLabel('media_next');
@@ -638,17 +642,20 @@ function showMediaDialog() {
 function setupMediaEvents() {
     const dialog = document.getElementById('media-dialog');
     const player = document.getElementById('montage-player');
-    document.getElementById('trailer-trigger').addEventListener('click', () => {
-        document.getElementById('gallery-full-image').hidden = true;
-        document.getElementById('gallery-controls').hidden = true;
-        document.getElementById('media-error').hidden = true;
-        document.getElementById('media-dialog-title').textContent = mediaLabel('media_video_title');
-        player.hidden = false; player.poster = AppState.siteData.media.poster;
-        if (!player.getAttribute('src')) player.src = AppState.siteData.media.video;
-        showMediaDialog();
-        // Sesli oynatma yalnız ziyaretçinin bu düğmeye basmasıyla başlar.
-        player.play().catch(() => { /* Tarayıcı izin vermezse yerel video kontrolleri kullanılabilir. */ });
-    });
+    const trailerTrigger = document.getElementById('trailer-trigger');
+    if (trailerTrigger) {
+        trailerTrigger.addEventListener('click', () => {
+            document.getElementById('gallery-full-image').hidden = true;
+            document.getElementById('gallery-controls').hidden = true;
+            document.getElementById('media-error').hidden = true;
+            document.getElementById('media-dialog-title').textContent = mediaLabel('media_video_title');
+            player.hidden = false; player.poster = AppState.siteData.media.poster;
+            if (!player.getAttribute('src')) player.src = AppState.siteData.media.video;
+            showMediaDialog();
+            // Sesli oynatma yalnız ziyaretçinin bu düğmeye basmasıyla başlar.
+            player.play().catch(() => { /* Tarayıcı izin vermezse yerel video kontrolleri kullanılabilir. */ });
+        });
+    }
     player.addEventListener('error', () => { const error = document.getElementById('media-error'); error.textContent = mediaLabel('media_error'); error.hidden = false; });
     document.getElementById('media-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('close', () => { player.pause(); document.body.classList.remove('media-open'); });
@@ -986,8 +993,13 @@ function setupRandomBackground() {
     const media = AppState.siteData?.media;
     if (!media || document.querySelector('.page-bg')) return;
 
+    // Arka plan havuzuna yalnızca metin/arayüz içermeyen atmosferik sahneleri dahil et
     const pool = [media.heroImage];
-    if (Array.isArray(media.gallery)) media.gallery.forEach(item => pool.push(item.full));
+    if (Array.isArray(media.gallery)) {
+        media.gallery.forEach((item, idx) => {
+            if (idx >= 1 && idx <= 3) pool.push(item.full);
+        });
+    }
     BgState.pool = pool.map(src => new URL(src, document.baseURI).href);
     if (BgState.pool.length < 2) return;
 

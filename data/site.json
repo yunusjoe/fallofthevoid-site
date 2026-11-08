@@ -68,8 +68,8 @@
       "headerScrolledOffset": 40,
       "tiltMaxDeg": 8,
       "heroParallaxFactor": 0.4,
-      "classHueStart": 265,
-      "classHueStep": 38,
+      "classHueStart": 352,
+      "classHueStep": 24,
       "cursorTrailLength": 22,
       "cursorSparkPool": 28,
       "statFillDurationMs": 950,
@@ -113,72 +113,72 @@
         "full": "img/gameplay/gallery-1.webp",
         "thumbnail": "img/gameplay/gallery-1-thumb.webp",
         "caption": {
-          "tr": "Kadim diyarlar",
-          "en": "Ancient realms"
+          "tr": "Parçalanmış Aziz Astra",
+          "en": "Shattered Saint Astra"
         },
         "alt": {
-          "tr": "Karanlık taş avluda mavi bir ışık sütunu.",
-          "en": "A blue pillar of light in a dark stone courtyard."
+          "tr": "Parçalanmış Aziz Astra ve Fall of the Void ana kapak görseli.",
+          "en": "Shattered Saint Astra and Fall of the Void key art."
         }
       },
       {
         "full": "img/gameplay/gallery-2.webp",
         "thumbnail": "img/gameplay/gallery-2-thumb.webp",
         "caption": {
-          "tr": "Büyünün gücü",
-          "en": "The power of magic"
+          "tr": "Yüksek Tempolu Savaş",
+          "en": "High-Octane Combat"
         },
         "alt": {
-          "tr": "Savaş alanında mor bir büyü çemberi.",
-          "en": "A purple spell circle on the battlefield."
+          "tr": "Kesintisiz yakın dövüş ve büyü çatışmaları.",
+          "en": "Relentless hack-and-slash and spell combat."
         }
       },
       {
         "full": "img/gameplay/gallery-3.webp",
         "thumbnail": "img/gameplay/gallery-3-thumb.webp",
         "caption": {
-          "tr": "Alevlerin ortasında",
-          "en": "Amid the flames"
+          "tr": "Acımasız Başdüşman Savaşları",
+          "en": "Brutal Boss Encounters"
         },
         "alt": {
-          "tr": "Düşmanlarla çevrili karakterin alevli saldırısı.",
-          "en": "A fiery attack from a character surrounded by enemies."
+          "tr": "Çok aşamalı Hiçlik başdüşmanı karşılaşması.",
+          "en": "Multi-phase Void boss encounter."
         }
       },
       {
         "full": "img/gameplay/gallery-4.webp",
         "thumbnail": "img/gameplay/gallery-4-thumb.webp",
         "caption": {
-          "tr": "Hiçlik enerjisi",
-          "en": "Void energy"
+          "tr": "Hiçlik Yarıkları ve Görevler",
+          "en": "Void Rifts & Quests"
         },
         "alt": {
-          "tr": "Düşmanlara yönelen parlak mor büyüler.",
-          "en": "Bright purple spells directed at enemies."
+          "tr": "Karanlık diyarlarda yıkıcı alan yetenekleri ve ganimetler.",
+          "en": "Devastating area abilities and loot across dark realms."
         }
       },
       {
         "full": "img/gameplay/gallery-5.webp",
         "thumbnail": "img/gameplay/gallery-5-thumb.webp",
         "caption": {
-          "tr": "Yeteneklerini geliştir",
-          "en": "Master your abilities"
+          "tr": "Sınıfa Özel Efsanevi Silahlar",
+          "en": "Class-Specific Mythic Weapons"
         },
         "alt": {
-          "tr": "Oyundaki yetenek geliştirme ekranı.",
-          "en": "The in-game ability upgrade screen."
+          "tr": "Yetenekleri değiştiren efsanevi silahlar ve karakter envanteri.",
+          "en": "Skill-transforming Mythic weapons and character inventory."
         }
       },
       {
         "full": "img/gameplay/gallery-6.webp",
         "thumbnail": "img/gameplay/gallery-6-thumb.webp",
         "caption": {
-          "tr": "Gücünü şekillendir",
-          "en": "Shape your power"
+          "tr": "Efsuncu ve Güç Kodeksi",
+          "en": "Occultist & Codex of Power"
         },
         "alt": {
-          "tr": "Karakterin güç seçimlerini gösteren oyun ekranı.",
-          "en": "The in-game character power selection screen."
+          "tr": "Efsuncu ekranında efsanevi güçleri ekipmana işleme.",
+          "en": "Imprinting legendary powers onto equipment at the Occultist."
         }
       }
     ]
@@ -203,32 +203,32 @@
       "icon": "⚔️",
       "titleKey": "feat_combat_title",
       "descKey": "feat_combat_desc",
-      "video": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/5ebedac0e9ac0381efb4fcbf54302eca.mp4?t=1792939747",
-      "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/5ebedac0e9ac0381efb4fcbf54302eca.poster.avif?t=1792939747"
+      "video": "img/gameplay/feat-combat.mp4",
+      "poster": "img/gameplay/feat-combat.webp"
     },
     {
       "id": "synergies",
       "icon": "💎",
       "titleKey": "feat_synergies_title",
       "descKey": "feat_synergies_desc",
-      "video": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/51fcf2861289681360ce31f348346f0f.mp4?t=1792939747",
-      "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/51fcf2861289681360ce31f348346f0f.poster.avif?t=1792939747"
+      "video": "img/gameplay/feat-synergies.mp4",
+      "poster": "img/gameplay/feat-synergies.webp"
     },
     {
       "id": "bosses",
       "icon": "👑",
       "titleKey": "feat_bosses_title",
       "descKey": "feat_bosses_desc",
-      "video": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/6fa9080327a3ac74109bf4b10962aaee.mp4?t=1792939747",
-      "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/6fa9080327a3ac74109bf4b10962aaee.poster.avif?t=1792939747"
+      "video": "img/gameplay/feat-bosses.mp4",
+      "poster": "img/gameplay/feat-bosses.webp"
     },
     {
       "id": "rifts",
-      "icon": "🌀",
+      "icon": "🔮",
       "titleKey": "feat_rifts_title",
       "descKey": "feat_rifts_desc",
-      "video": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/427db8b85b53785388318fe0fed285fe.mp4?t=1792939747",
-      "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5146420/extras/427db8b85b53785388318fe0fed285fe.poster.avif?t=1792939747"
+      "video": "img/gameplay/feat-occultist.mp4",
+      "poster": "img/gameplay/feat-occultist.webp"
     }
   ],
   "systemRequirements": {
@@ -238,7 +238,7 @@
       "memory": "8 GB RAM",
       "graphics": "NVIDIA GeForce GTX 960 / AMD Radeon RX 560 (4 GB VRAM)",
       "directx": "Version 11",
-      "storage": "10 GB",
+      "storage": "30 GB",
       "notesKey": "req_notes_val"
     },
     "recommended": {
@@ -247,7 +247,7 @@
       "memory": "16 GB RAM",
       "graphics": "NVIDIA GeForce GTX 1060 / RTX 2060 / AMD RX 5600 XT",
       "directx": "Version 12",
-      "storage": "10 GB",
+      "storage": "30 GB",
       "notesKey": "req_notes_val"
     }
   }

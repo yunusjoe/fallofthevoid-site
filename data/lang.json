@@ -24,8 +24,8 @@
     "en": "Darkness Falls, The Void Arises"
   },
   "hero_description": {
-    "tr": "Fall of the Void, yüksek tempolu kılıç ve büyü savaşını derinlemesine karakter geliştirmeyle birleştiren karanlık izometrik bir aksiyon rol yapma oyunudur. Parçalanmış diyarlardaki tehlikeli zindanlara inin, gelişen yeteneklerinizde ustalaşın ve kaderinizi şekillendirmek için yıkıcı güç sinerjileri oluşturun.",
-    "en": "Fall of the Void is a dark fantasy isometric ARPG merging high-octane hack-and-slash combat with deep build crafting. Descend into perilous dungeons across fractured realms, master evolving abilities, and forge devastating power synergies to shape your destiny."
+    "tr": "Fall of the Void; baş döndürücü yakın dövüş ve büyü çatışmalarını derin sınıf ustalığı, kader değiştiren efsanevi silahlar ve rün işlemeciliğiyle harmanlayan karanlık fantezi bir aksiyon rol yapma oyunudur. Ölümcül zindanlara inin, kadim başdüşmanları avlayın ve Hiçlik'e hükmedin.",
+    "en": "Fall of the Void is a dark fantasy action RPG blending relentless hack-and-slash combat with deep class mastery, build-defining mythic weapons, and arcane rune crafting. Descend into treacherous dungeons, vanquish multi-phase bosses, and bend the power of the Void to your will."
   },
   "hero_cta_characters": {
     "tr": "Sınıfları Keşfet",
@@ -240,36 +240,36 @@
     "en": "Fight to survive in the depths of the Void, combine your powers, and push the limits."
   },
   "feat_combat_title": {
-    "tr": "Yüksek Tempolu Savaş",
-    "en": "High-Octane Hack & Slash Combat"
+    "tr": "Baş Döndürücü Yakın Dövüş ve Büyü Çatışmaları",
+    "en": "High-Octane, Fluid ARPG Combat"
   },
   "feat_combat_desc": {
-    "tr": "Duyarlı kontrolleri, akıcı hareket kabiliyetini ve kesintisiz aksiyon için tasarlanmış ekranı temizleyen büyü bileşimlerini tecrübe edin.",
-    "en": "Experience responsive controls, fluid mobility, and screen-clearing spell combos engineered for visceral, non-stop ARPG action."
+    "tr": "Hareket halindeyken kesintisiz yetenek kullanımı, anlık kaçınma atılımları, akıcı kombo geçişleri ve ekranı temizleyen büyü uyumlarıyla saf aksiyon tatminini deneyimleyin.",
+    "en": "Experience responsive movement, seamless cast-on-the-move mechanics, iframe dashes, and screen-clearing spell combinations built for pure hack-and-slash satisfaction."
   },
   "feat_synergies_title": {
-    "tr": "Sınırsız Karakter Dizilimleri ve Güç Uyumları",
-    "en": "Boundless Build Synergies"
+    "tr": "Sınıfa Özel Efsanevi Silahlar ve Dizilim Çeşitliliği",
+    "en": "Build-Defining Mythic Weapons & Synergies"
   },
   "feat_synergies_desc": {
-    "tr": "Çeşitli pasif yetenekler, tetikleyici güçler (Zamansal Kırılma, Göksel Yargı, Felaket) ve Yükseliş ağacı ile savaş tarzınızı şekillendirin. Savaşın gidişatını değiştiren durdurulamaz uyumlar yaratın.",
-    "en": "Tailor your combat style with diverse passive perks, triggering powers (Temporal Fracture, Celestial Judgment, Cataclysm), and the Ascension tree. Create unstoppable synergies that turn the tides of battle."
+    "tr": "Sıradan nitelik artışlarının ötesine geçin! Yeteneklerinizin çalışma biçimini baştan aşağı değiştiren Sınıfa Özel Efsanevi Silahlar ve Eşsiz Zırhlar kuşanarak durdurulamaz savaş dizilimleri oluşturun.",
+    "en": "Go far beyond simple stat boosts! Equip Class-Specific Mythic Weapons and Unique Gear that fundamentally transform how your abilities behave and forge unstoppable synergies."
   },
   "feat_bosses_title": {
-    "tr": "Acımasız Elebaşı Karşılaşmaları ve Sunaklar",
-    "en": "Brutal Boss Encounters & Altars"
+    "tr": "Çok Aşamalı Acımasız Başdüşman Karşılaşmaları",
+    "en": "Brutal Multi-Phase Boss Encounters"
   },
   "feat_bosses_desc": {
-    "tr": "Kadim koruyucuları uyandırın; reflekslerinizi, konumlanmanızı ve karakter gücünüzü sınayan çok aşamalı Hiçlik canavarlarıyla yüzleşin.",
-    "en": "Awaken ancient guardians and face multi-phase Void monstrosities that test your reflexes, positioning, and build strength."
+    "tr": "Kadim koruyucuları uyandırın; reflekslerinizi, konum alma becerinizi ve karakter gücünüzü son sınırına kadar sınayan çok aşamalı Hiçlik devleriyle yüzleşin.",
+    "en": "Awaken ancient guardians and face multi-phase Void monstrosities that test your reflexes, positioning, and build power to the absolute limit."
   },
   "feat_rifts_title": {
-    "tr": "Zorlu Yarıklar ve Tehlikeli Zindanlar",
-    "en": "Challenge Rifts & Perilous Dungeons"
+    "tr": "Efsuncu, Güç Kodeksi ve Rün İşlemeciliği",
+    "en": "Occultist, Codex of Power & Voidrunes"
   },
   "feat_rifts_desc": {
-    "tr": "Gittikçe zorlaşan aşamalara meydan okuyun, ölümcül arena mücadelelerinde ustalaşın ve parçalanmış dünyanın en karanlık derinliklerinde unutulmuş hazineleri ele geçirin.",
-    "en": "Brave escalating difficulty tiers, master deadly arena challenges, and claim forgotten treasures in the darkest depths of the fractured world."
+    "tr": "Efsanevi eşyaların güçlerini Güç Kodeksinize çıkarın, dilediğiniz ekipmana kalıcı olarak işleyin ve Hiçlik Rünleri ile vuruş anında yıkıcı patlamalar tetikleyin.",
+    "en": "Extract legendary powers into your Codex of Power, imprint them onto your favored gear at the Occultist, and socket Void Runes to trigger devastating eruptions."
   },
   "lore_eyebrow": {
     "tr": "KADİM GEÇMİŞ",
@@ -296,8 +296,8 @@
     "en": "Ready to Defy the Void?"
   },
   "cta_banner_subtitle": {
-    "tr": "Karanlık çöküyor, kadim güçler uyanıyor. Steam üzerinden istek listenize ekleyin veya ücretsiz demoyu hemen deneyin.",
-    "en": "Darkness falls, ancient powers awaken. Add to your Steam wishlist or play the free demo today."
+    "tr": "Karanlık çöküyor, kadim güçler uyanıyor. Gelişmeleri kaçırmamak için hemen Steam üzerinden istek listenize ekleyin.",
+    "en": "Darkness falls, ancient powers awaken. Add Fall of the Void to your Steam wishlist today."
   },
   "cta_banner_wishlist": {
     "tr": "Steam’de İstek Listesine Ekle",
