@@ -7,7 +7,7 @@
     <title></title>
     <link rel="icon" id="site-favicon">
     <link rel="apple-touch-icon" id="site-touch-icon">
-    <link rel="stylesheet" href="css/style.css?v=20261109-crimson2">
+    <link rel="stylesheet" href="css/style.css?v=20261124-polish2">
     <!-- Sinematik karanlık fantezi atmosferi için Google Fonts bağlantıları -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +50,8 @@
                 </div>
             </nav>
         </div>
+        <!-- Sayfa kaydırma ilerleme çizgisi -->
+        <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     </header>
 
     <main>
@@ -64,7 +66,7 @@
                     <p class="hero-description" data-i18n="hero_description"></p>
                     <div class="hero-actions">
                         <a id="steam-wishlist" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="steam_wishlist"></a>
-                        <a href="#features" class="btn btn-secondary" data-i18n="hero_cta_characters"></a>
+                        <a href="#characters" class="btn btn-secondary" data-i18n="hero_cta_characters"></a>
                     </div>
                     <a href="#features" class="hero-explore" data-i18n="hero_explore"></a>
                 </div>
@@ -192,6 +194,9 @@
         </div>
     </footer>
 
+    <!-- Aşağı kaydırılınca beliren yukarı çık butonu -->
+    <button type="button" id="back-to-top" class="back-to-top-btn" aria-label=""></button>
+
     <dialog id="media-dialog" class="media-dialog" aria-labelledby="media-dialog-title">
         <div class="media-dialog-top"><h2 id="media-dialog-title"></h2><button id="media-close" type="button"></button></div>
         <video id="montage-player" controls playsinline preload="none" hidden></video>
@@ -200,6 +205,6 @@
         <p id="media-error" hidden></p>
     </dialog>
 
-    <script src="js/main.js?v=20261109-crimson2"></script>
+    <script src="js/main.js?v=20261124-polish2"></script>
 </body>
 </html>

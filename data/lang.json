@@ -358,5 +358,21 @@
   "req_notes_val": {
     "tr": "Katı hal sürücüsü (SSD) önerilir",
     "en": "SSD recommended"
+  },
+  "patch_latest": {
+    "tr": "Son Güncelleme",
+    "en": "Latest"
+  },
+  "patch_show_older": {
+    "tr": "Eski güncellemeleri göster ({count})",
+    "en": "Show older updates ({count})"
+  },
+  "patch_hide_older": {
+    "tr": "Eski güncellemeleri gizle",
+    "en": "Hide older updates"
+  },
+  "back_to_top": {
+    "tr": "Yukarı çık",
+    "en": "Back to top"
   }
 }

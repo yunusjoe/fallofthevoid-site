@@ -2062,3 +2062,158 @@ body::after { content: none; }
         filter: brightness(1) saturate(1);
     }
 }
+
+/* ==========================================================================
+   Sayfa İlerleme Çubuğu, Güncel Yama Vurgusu ve Yukarı Çık Butonu Cilası
+   ========================================================================== */
+:root {
+    --gold-soft-bg: rgba(245, 158, 11, 0.14);
+    --gold-border: rgba(245, 158, 11, 0.42);
+    --gold-glow: rgba(245, 158, 11, 0.22);
+}
+
+.scroll-progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-purple-glow), var(--accent-gold));
+    transform-origin: left center;
+    transform: scaleX(0);
+    will-change: transform;
+    pointer-events: none;
+    box-shadow: 0 0 10px var(--border-glow);
+}
+
+.patch-title-area {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.patch-card-latest {
+    border-color: var(--gold-border);
+    border-left: 3px solid var(--accent-gold);
+    box-shadow: 0 12px 36px var(--media-shade), inset 0 0 28px var(--gold-soft-bg);
+}
+
+.patch-card-latest:hover {
+    border-color: var(--accent-gold);
+}
+
+.patch-latest-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: var(--border-radius-sm);
+    background: var(--gold-soft-bg);
+    border: 1px solid var(--gold-border);
+    color: var(--accent-gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    box-shadow: 0 0 14px var(--gold-glow);
+}
+
+.patches-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.patches-toggle-btn {
+    appearance: none;
+    cursor: pointer;
+    padding: 12px 26px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.patches-toggle-btn:hover {
+    border-color: var(--accent-purple-light);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--media-shade);
+}
+
+.patches-toggle-btn:focus-visible {
+    outline: 2px solid var(--accent-purple-light);
+    outline-offset: 4px;
+}
+
+.back-to-top-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    z-index: 950;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.back-to-top-btn::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--accent-purple-light);
+    border-left: 2px solid var(--accent-purple-light);
+    transform: rotate(45deg) translate(2px, 2px);
+    transition: border-color var(--transition-fast);
+}
+
+.back-to-top-btn.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 22px var(--gold-glow);
+    transform: translateY(-3px);
+}
+
+.back-to-top-btn:hover::before {
+    border-color: var(--accent-gold);
+}
+
+.back-to-top-btn:focus-visible {
+    outline: 2px solid var(--accent-purple-light);
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .back-to-top-btn {
+        right: 16px;
+        bottom: 16px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-progress,
+    .back-to-top-btn,
+    .patches-toggle-btn {
+        transition: none;
+    }
+}

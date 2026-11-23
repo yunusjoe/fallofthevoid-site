@@ -18,7 +18,7 @@
       "armor": 30,
       "magicResist": 30,
       "abilityPower": 150,
-      "critChance": 5.0,
+      "critChance": 5,
       "cooldownReduction": 0
     },
     "skills": [
@@ -188,7 +188,7 @@
       "armor": 12,
       "magicResist": 0,
       "abilityPower": 0,
-      "critChance": 5.0,
+      "critChance": 5,
       "cooldownReduction": 0
     },
     "skills": [
@@ -273,7 +273,7 @@
       "armor": 30,
       "magicResist": 30,
       "abilityPower": 30,
-      "critChance": 5.0,
+      "critChance": 5,
       "cooldownReduction": 0
     },
     "skills": [
@@ -528,7 +528,7 @@
       "armor": 10,
       "magicResist": 10,
       "abilityPower": 0,
-      "critChance": 5.0,
+      "critChance": 5,
       "cooldownReduction": 0
     },
     "skills": [
@@ -868,7 +868,7 @@
       "armor": 15,
       "magicResist": 15,
       "abilityPower": 90,
-      "critChance": 10.0,
+      "critChance": 10,
       "cooldownReduction": 0
     },
     "skills": [
@@ -1038,7 +1038,7 @@
       "armor": 0,
       "magicResist": 0,
       "abilityPower": 0,
-      "critChance": 5.0,
+      "critChance": 5,
       "cooldownReduction": 0
     },
     "skills": [
@@ -1123,8 +1123,8 @@
       "armor": 10,
       "magicResist": 10,
       "abilityPower": 100,
-      "critChance": 5.0,
-      "cooldownReduction": 10.0
+      "critChance": 5,
+      "cooldownReduction": 10
     },
     "skills": [
       {
@@ -1612,6 +1612,1026 @@
         "en": "While gliding over plasma flame waves you slide without friction. Movement speed increases by 35% while gliding, and you are protected from enemy damage (I-frames) for as long as you keep moving. The protection ends the moment you stop."
       },
       "icon": "img/icons/skills/dawn-seraph_p.png"
+    }
+  },
+  {
+    "id": "necromancer",
+    "sourceClassId": "class_necromancer",
+    "name": {
+      "tr": "Necromancer",
+      "en": "Necromancer"
+    },
+    "description": {
+      "tr": "Ölüleri mezarlarından kaldıran, kemik orduları yöneten ve gölgelerin içinden karanlık lanetler yağdıran ölüm büyücüsü.",
+      "en": "Commander of the dead, raising bone legions and casting bone-chilling curses from the shadows."
+    },
+    "icon": "img/icons/classes/necromancer.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Hortlak Uyandırma & Dehşet Hücumu",
+          "en": "Awaken Revenants & Dread Charge"
+        },
+        "description": {
+          "tr": "Yerdeki kalıntıları tüketerek en fazla 4 kişilik Hortlak Ordusu uyandırır. Ordu tamken tekrar kullanıldığında tüm hortlaklar hedef noktaya hücum ederek ölçeklenen Fiziksel Hasar verir ve düşmanları sersemletir.",
+          "en": "Consumes ground remnants to awaken up to 4 Revenants. When the army is full, recasting commands all minions to charge the target point, dealing scaling Physical Damage and stunning enemies."
+        },
+        "icon": "img/icons/skills/necromancer_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Kalıntı İnfilakı & Kızıl Titreşim",
+          "en": "Ossuary Detonation & Sanguine Pulsar"
+        },
+        "description": {
+          "tr": "Hedef bölgedeki tüm kalıntıları patlatarak her biri için ölçeklenen alan hasarı verir. Alanda kalıntı yoksa gövdeden yayılan Kızıl Titreşim ile ölçeklenen Büyü Hasarı vurur ve isabet alan her düşmandan can çalar.",
+          "en": "Detonates all ground remnants in the target area for scaling area damage each. If no remnants are present, emits a Sanguine Pulsar around you for scaling Magic Damage and siphons health from every enemy hit."
+        },
+        "icon": "img/icons/skills/necromancer_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Kızıl Hayalet Formu",
+          "en": "Crimson Phantasm"
+        },
+        "description": {
+          "tr": "Kısa süreliğine hasar almaz bir kan sisine dönüşerek hareket hızını artırır ve içinden geçtiği düşmanları %40 yavaşlatır. Form sona erdiğinde arkasında taze bir kalıntı bırakır.",
+          "en": "Dissolves into invulnerable blood mist for a short duration, gaining bonus movement speed and slowing enemies passed through by 40%. Leaves a fresh remnant behind upon exit."
+        },
+        "icon": "img/icons/skills/necromancer_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Hiçlik Lejyonu Yürüyüşü",
+          "en": "March of the Abyssal Legion"
+        },
+        "description": {
+          "tr": "Devasa bir kan ritüeli başlatarak savaş alanındaki tüm kalıntıları zincirleme infilak ettirir ve tüm hortlak ordusunu bonus saldırı hızı ile can çalma kazandıran Kudurma Moduna sokar.",
+          "en": "Ignites a colossal abyssal blood ritual, chain-detonating every remnant on the battlefield and sending your Revenant army into a frenzy with bonus Attack Speed and Lifesteal."
+        },
+        "icon": "img/icons/skills/necromancer_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Oyuk Kalıntılar & Kızıl Öz",
+        "en": "Hollow Remnants & Crimson Essence"
+      },
+      "description": {
+        "tr": "Katledilen düşmanlar yerde tüketilebilir Kalıntılar bırakır. Kritik vuruşlarda düşen Kızıl Öz Küreleri toplandığında can yeniler ve kan büyülerini güçlendiren yığınlar biriktirir.",
+        "en": "Slain enemies leave consumable Remnants on the ground. Critical strikes drop Crimson Orbs that restore health when collected and build stacks that empower your blood spells."
+      },
+      "icon": "img/icons/skills/necromancer_p.png"
+    }
+  },
+  {
+    "id": "paladin",
+    "sourceClassId": "class_paladin",
+    "name": {
+      "tr": "Paladin",
+      "en": "Paladin"
+    },
+    "description": {
+      "tr": "Kalkanı ve kutsal kılıcıyla ön safta savaşan ilahi bir savaşçı. Düşmanları Güneş Damgası ile işaretler, biriktirdiği yeminlerle dayanıklılaşır ve Hükümdar Yükselişi ile havada süzülen kanatlı bir ışık formuna bürünür.",
+      "en": "A holy frontline warrior who fights with shield and blessed sword. Marks foes with Suncrest Brand, grows sturdier with every oath, and becomes a levitating winged form of light with Sovereign Ascendance."
+    },
+    "icon": "img/icons/classes/paladin.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Hükümdar Hükmü",
+          "en": "Sovereign Verdict"
+        },
+        "description": {
+          "tr": "İleri doğru bir ışık yarığı açarak hattaki düşmanlara ölçeklenen Büyü Hasarı verir ve onları Güneş Damgası ile işaretler. Yarığın ucunda yükselen Güneş Anıtı kısa süre sonra çökerek çevredeki düşmanları merkeze çeker ve alan hasarı vurur. Yükseliş sırasında üç yöne yelpaze hâlinde atılır ve üç anıt oluşturur.",
+          "en": "Tears a rift of light forward, dealing scaling Magic Damage to enemies in its path and applying Suncrest Brand. A Sunspire Monolith rises at the end and collapses shortly after, pulling nearby foes inward for area Magic Damage. While Ascended, fires in a three-way fan and raises three monoliths."
+        },
+        "icon": "img/icons/skills/paladin_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Sancak Kubbesi",
+          "en": "Sovereign Reliquary"
+        },
+        "description": {
+          "tr": "Hedef noktaya bir sancak dikerek ışık kubbesi açar. Kubbe her atımda içindeki düşmanlara ölçeklenen Büyü Hasarı verir, onları damgalar ve yavaşlatır. İçerideyken hasar azaltma ve her atımda yenilenen kalkan kazanırsın. Yükseliş sırasında kubbe seninle birlikte hareket eder.",
+          "en": "Plants a banner to conjure a dome of light. Each pulse deals scaling Magic Damage to enemies inside, applies Suncrest Brand, and slows them. While inside, you gain damage reduction and a refreshing shield. While Ascended, the dome moves with you."
+        },
+        "icon": "img/icons/skills/paladin_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Zirve İnişi",
+          "en": "Zenith Descent"
+        },
+        "description": {
+          "tr": "Işık kanatlarıyla hedef konuma sıçrar; havadayken hasar almazsın. İnişte çevredeki düşmanlara ölçeklenen Büyü Hasarı verir, onları damgalar ve sersemletir. İniş noktasında kalan Güneş Sütunu yakındaki düşmanlara düzenli büyü hasarı verir. Yükseliş sırasında kalkış noktasına da sütun bırakır ve arada hasar veren ışık perdesi kurar.",
+          "en": "Leaps to the target location on wings of light, becoming invulnerable mid-air. On landing, deals scaling Magic Damage to nearby foes, brands them, and stuns them while leaving a Sun Pillar that pulses Magic Damage. While Ascended, leaves a second pillar at takeoff connected by a searing wall of light."
+        },
+        "icon": "img/icons/skills/paladin_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Hükümdar Yükselişi",
+          "en": "Sovereign Ascendance"
+        },
+        "description": {
+          "tr": "Çevredeki düşmanlara ölçeklenen Büyü Hasarı verip damgalayarak kanatlı ışık formuna bürünürsün. Form süresince yetenekler İlahi Güç harcamaz; hasar azaltma, hareket hızı ve güçlenmiş temel saldırı/Q/W/E kazanırsın. Patlatılan her Güneş Damgası süreyi uzatır; form bitiminde patlayan nova tüm damgaları tetikler.",
+          "en": "Deals scaling Magic Damage and brands nearby foes while ascending into a winged form of light. Skills cost no Divine Power while active, granting damage reduction, movement speed, and empowered basic attacks, Q, W, and E. Detonating Suncrest Brands extends the duration; when it ends, a final nova detonates all remaining brands."
+        },
+        "icon": "img/icons/skills/paladin_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Egemenin Yemini",
+        "en": "Oath of the Sovereign"
+      },
+      "description": {
+        "tr": "Yetenek kullanımları ve 3. kombo vuruşu hasar azaltma ile saldırı hızı sağlayan Yemin Yükü biriktirir. Yığınlar dolduğunda patlayan Altın Yankı çevreye ölçeklenen Büyü Hasarı verir, yakındaki Güneş Damgalarını patlatır, Hükümdar Yükselişi bekleme süresini azaltır ve İlahi Güç yeniler.",
+        "en": "Casting abilities and landing your 3rd combo hit grant Oath Stacks that provide damage reduction and attack speed. At max stacks, a Golden Echo erupts for scaling Magic Damage, detonating nearby Suncrest Brands, reducing Sovereign Ascendance's cooldown, and restoring Divine Power."
+      },
+      "icon": "img/icons/skills/paladin_p.png"
+    }
+  },
+  {
+    "id": "eclipse-envoy",
+    "sourceClassId": "class_eclipseenvoy",
+    "name": {
+      "tr": "Eclipse Envoy",
+      "en": "Eclipse Envoy"
+    },
+    "description": {
+      "tr": "Can çekişen bir imparatorluğun Void'e dokunmuş altın elçisi. Düşmanlarına Hüküm yığınları biriktirir, aldıkları hasarı Tutulma Senedi ile kayda geçirip tahsil eder ve eşiği geçenleri tek bir altın sözle infaz eder.",
+      "en": "The Void-touched golden envoy of a dying empire. Builds Verdict stacks on foes, records the damage they take with an Eclipse Writ to collect it later, and executes anyone who falls below the threshold with a single golden word."
+    },
+    "icon": "img/icons/classes/eclipse-envoy.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 10,
+      "abilityPower": 15,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Işıltılı Yaylım",
+          "en": "Radiant Volley"
+        },
+        "description": {
+          "tr": "Hedef bölgeye art arda altın göktaşları yağdırır. Her göktaşı çarptığı düşmanlara ölçeklenen Büyü Hasarı verir ve 1 Hüküm yığını bırakır.",
+          "en": "Rains golden meteors in rapid succession onto the target area. Each impact deals scaling Magic Damage and applies 1 Verdict stack."
+        },
+        "icon": "img/icons/skills/eclipse-envoy_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Tutulma Senedi",
+          "en": "Eclipse Writ"
+        },
+        "description": {
+          "tr": "Hedef alandaki yakın düşmanlara altın senet mühürler, ölçeklenen Büyü Hasarı ve Hüküm verir. Senet süresince düşmanın senden aldığı tüm hasar kaydedilir; süre bitince kaydın bir bölümü tekrar vurulur ve ek Hüküm yığınlarına dönüşür. Mühürlü düşmanlar sana daha az hasar verir ve ölürlerse borç yakındaki mühürlü düşmana devredilir.",
+          "en": "Seals a golden writ onto nearby enemies in the target area, dealing scaling Magic Damage and applying Verdict. While active, it records all damage they take from you; on expiry, a portion strikes again and converts into bonus Verdict stacks. Sealed foes deal reduced damage to you and pass remaining debt to another sealed enemy on death."
+        },
+        "icon": "img/icons/skills/eclipse-envoy_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Güneş Kapanı",
+          "en": "Solar Snare"
+        },
+        "description": {
+          "tr": "İleri doğru ilerleyen bir güneş küresi fırlatır. İlk düşmana çarpınca veya menzil sonunda patlayarak çekirdekteki düşmanları sersemletir (başdüşmanlar hariç), ölçeklenen Büyü Hasarı verir ve Hüküm bırakır. Ardından kalan güneş alanı içindekileri yavaşlatır, düzenli büyü hasarı vurur ve her saniye Hüküm ekler.",
+          "en": "Hurls a slow-moving solar sphere that detonates on first impact or at max range, stunning enemies in the core (except bosses), dealing scaling Magic Damage, and applying Verdict. Leaves behind a lingering solar field that slows foes, pulses Magic Damage, and adds Verdict every second."
+        },
+        "icon": "img/icons/skills/eclipse-envoy_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Tutulma Divanı",
+          "en": "Eclipse Tribunal"
+        },
+        "description": {
+          "tr": "Hedef alanın üzerinde kara bir tutulma güneşi asılı kalır ve düzenli aralıklarla en çok Hüküm taşıyan düşmana ışın indirerek büyü hasarı ile ek Hüküm verir. Alan içinde infaz eşiği artar; infaz edilen her düşman mana ve bekleme süresi azaltması sağlayan güneş kıymığı bırakır. Süre sonunda güneş çökerek yığınlara göre ölçeklenen büyük bir nova patlatır.",
+          "en": "Suspends a black eclipse sun over the target area, periodically striking the foe with the most Verdict for Magic Damage and bonus stacks. Raises the execute threshold inside; each execution drops a sun shard restoring mana and cutting Q/E cooldowns. Collapses on expiry into a massive nova scaled by Verdict stacks."
+        },
+        "icon": "img/icons/skills/eclipse-envoy_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Ezici Hüküm",
+        "en": "Crushing Verdict"
+      },
+      "description": {
+        "tr": "Yetenekler ve Işıltı Yankısı mermileri düşmanlara Hüküm yığını biriktirir. Canı Hüküm yığınlarıyla yükselen eşiğin altına düşen normal düşmanlar anında infaz edilir ve mana yeniler; elit ve başdüşmanlar ise maksimum yığında yüksek büyü hasarı ve eksik cana bağlı ek hasarla patlar. Yetenek sonrası ilk temel saldırı ek ışık mermileri fırlatır.",
+        "en": "Abilities and Radiant Echo bolts build Verdict stacks on enemies. Standard foes falling below the stack-scaled threshold are executed and restore mana, while elites and bosses burst at max stacks for scaling Magic Damage plus missing-health bonus damage. After casting a skill, your next basic attack fires extra light bolts."
+      },
+      "icon": "img/icons/skills/eclipse-envoy_p.png"
+    }
+  },
+  {
+    "id": "pyrefall",
+    "sourceClassId": "class_pyrefall",
+    "name": {
+      "tr": "Pyrefall",
+      "en": "Pyrefall"
+    },
+    "description": {
+      "tr": "Gökten alevli kılıçlar yağdıran akıcı bir yakın dövüş hasatçısı. Saldırılarınla Kor biriktir, yeteneklerle harca; harcadığın Kor sürüleri yakan kılıçlara dönüşür.",
+      "en": "A fluid melee harvester who rains flaming swords from the sky. Build Ember with attacks and spend it on skills; every Ember spent becomes a sword that burns the pack."
+    },
+    "icon": "img/icons/classes/pyrefall.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 0,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Gök Kılıcı",
+          "en": "Sky Blade"
+        },
+        "description": {
+          "tr": "Seçilen noktaya gökten dev bir alevli kılıç indirerek ölçeklenen alan hasarı verir. Kılıç yere saplı kalarak çevresindeki zemini yakar ve çoklu yük biriktirebilir.",
+          "en": "Drops a giant flaming sword onto the target area for scaling area damage. The blade remains planted, scorching the ground around it, and holds multiple charges."
+        },
+        "icon": "img/icons/skills/pyrefall_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Kılıç Çağrısı",
+          "en": "Blade Recall"
+        },
+        "description": {
+          "tr": "Saplı tüm kılıçları sana doğru geri çağırır. Yol üzerindeki düşmanlar hasar alıp sana doğru sürüklenir; kılıçlar ulaştığında etrafında dönen her kılıçla güçlenen alevli bir patlama gerçekleşir.",
+          "en": "Recalls every planted sword back to you, damaging and pulling enemies in their path. Upon arrival, a fiery blast erupts around you, gaining bonus damage for each returning sword."
+        },
+        "icon": "img/icons/skills/pyrefall_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Alev Atılışı",
+          "en": "Flame Dash"
+        },
+        "description": {
+          "tr": "İmleç yakınındaki saplı bir kılıca hızla atılıp onu infilak ettirerek yüksek alan hasarı verir. Yakında kılıç yoksa imleç yönüne atılır ve yol üzerindeki düşmanlara hasar verir.",
+          "en": "Dashes to the planted sword nearest your cursor and detonates it for heavy area damage. If no sword is nearby, dashes toward the cursor and damages enemies along the path."
+        },
+        "icon": "img/icons/skills/pyrefall_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Kor Avatarı",
+          "en": "Ember Avatar"
+        },
+        "description": {
+          "tr": "Alevlere bürünerek tüm yetenek menzillerini genişletir, daha az Kor ile kılıç düşürür ve sahadaki maksimum kılıç sınırını artırır. Yakındaki düşmanlar sürekli yanar; süre bitiminde en kalabalık sürünün üzerine dev bir kılıç iner.",
+          "en": "Wreathes you in flame, expanding all skill ranges, dropping swords for less Ember, and raising the planted sword limit while burning nearby foes. When it ends, a colossal sword crashes onto the densest pack."
+        },
+        "icon": "img/icons/skills/pyrefall_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Kor Yağmuru",
+        "en": "Ember Rain"
+      },
+      "description": {
+        "tr": "Harcadığın belirli miktardaki her Kor için gökten bir Alevli Kılıç iner, alan hasarı verir ve saplandığı zemini yakar. Yanan zeminde ölen düşmanlar ek Kor kazandırır ve yeni bir kılıç çağırır.",
+        "en": "For every threshold of Ember spent, a Flaming Sword crashes from the sky for area damage and ignites the ground. Enemies slain on Burning Ground grant bonus Ember and summon another sword."
+      },
+      "icon": "img/icons/skills/pyrefall_p.png"
+    }
+  },
+  {
+    "id": "cairnlord",
+    "sourceClassId": "class_mordekaiser",
+    "name": {
+      "tr": "Cairnlord",
+      "en": "Cairnlord"
+    },
+    "description": {
+      "tr": "Hiç yavaşlamayan demir bir tank. Höyük Taşları dik, zincirle kendini savaşın ortasına çek ve tüm taşları aynı anda çökert.",
+      "en": "An iron tank who never slows down. Raise Cairn Stones, chain yourself into the fight and bring every stone crashing down at once."
+    },
+    "icon": "img/icons/classes/cairnlord.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Höyük Darbesi",
+          "en": "Cairn Smash"
+        },
+        "description": {
+          "tr": "Önündeki zemine ağır bir darbe vurarak ölçeklenen Fiziksel Hasar verir ve savaş alanında kalan bir Höyük Taşı diker.",
+          "en": "Smashes the ground ahead for scaling Physical Damage and raises a persistent Cairn Stone on the battlefield."
+        },
+        "icon": "img/icons/skills/cairnlord_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Demir Alay",
+          "en": "Iron Procession"
+        },
+        "description": {
+          "tr": "Bonus hareket hızı kazanarak arkasında hayalet bir demir izi bırakır. İz üzerinde kalan düşmanlar düzenli olarak ölçeklenen Fiziksel Hasar alır.",
+          "en": "Grants bonus movement speed while leaving a spectral trail behind you. Enemies caught on the trail take periodic scaling Physical Damage."
+        },
+        "icon": "img/icons/skills/cairnlord_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Gömülülerin Zinciri",
+          "en": "Chain of the Buried"
+        },
+        "description": {
+          "tr": "Bir düşmana, Höyük Taşı'na veya zemine zincir fırlatarak kendini oraya çeker. Varış noktasında çevredeki düşmanlara ölçeklenen Fiziksel Hasar vurur.",
+          "en": "Hurls a chain at an enemy, a Cairn Stone, or the ground and pulls yourself to it, dealing scaling Physical Damage around the impact point."
+        },
+        "icon": "img/icons/skills/cairnlord_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Boş Taht",
+          "en": "Hollow Throne"
+        },
+        "description": {
+          "tr": "Sen ve sahadaki tüm Höyük Taşları yakındaki düşmanları merkeze çeker, ardından tüm taşlar aynı anda çökerek ölçeklenen ağır Fiziksel Hasar patlatır ve tükenir.",
+          "en": "You and every active Cairn Stone pull nearby enemies inward before crashing down simultaneously for heavy scaling Physical Damage, consuming the stones."
+        },
+        "icon": "img/icons/skills/cairnlord_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Gömülü Yemin",
+        "en": "Buried Vow"
+      },
+      "description": {
+        "tr": "Her yetenek isabeti azami canına göre ölçeklenen bir kalkan ve kısa süreli bonus hareket hızı kazandırır.",
+        "en": "Every skill hit grants a shield scaling with your maximum health along with a brief burst of movement speed."
+      },
+      "icon": "img/icons/skills/cairnlord_p.png"
+    }
+  },
+  {
+    "id": "riftduelist",
+    "sourceClassId": "class_samira",
+    "name": {
+      "tr": "Riftduelist",
+      "en": "Riftduelist"
+    },
+    "description": {
+      "tr": "Hiç durmayan kızıl bir düellocu. Farklı yetenekleri zincirleyip Tempo kazan, sürülerin içinden kesip öbür tarafta bitir.",
+      "en": "A crimson duelist who never stops moving. Chain different skills to build Tempo, cut through packs and finish on the far side."
+    },
+    "icon": "img/icons/classes/riftduelist.png",
+    "stats": {
+      "health": 0,
+      "mana": 0,
+      "damage": 0,
+      "armor": 0,
+      "magicResist": 0,
+      "abilityPower": 0,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Hilal Çekişi",
+          "en": "Crescent Draw"
+        },
+        "description": {
+          "tr": "İmleç yönüne hızla atılıp önünde hilal biçiminde bir kılıç darbesi savurarak ölçeklenen Fiziksel Hasar verir.",
+          "en": "Dashes toward the cursor and sweeps a crescent slash ahead for scaling Physical Damage."
+        },
+        "icon": "img/icons/skills/riftduelist_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Boş Vals",
+          "en": "Hollow Waltz"
+        },
+        "description": {
+          "tr": "Serbestçe hareket ederken kılıcıyla dönerek art arda çevresindeki tüm düşmanlara ölçeklenen Fiziksel Hasar verir.",
+          "en": "Spins rapidly while moving freely, repeatedly slashing nearby enemies for scaling Physical Damage."
+        },
+        "icon": "img/icons/skills/riftduelist_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Yarık Adımı",
+          "en": "Riftstep"
+        },
+        "description": {
+          "tr": "Düşmanların içinden hızla geçerek ölçeklenen Fiziksel Hasar verir ve 2 yük biriktirir. Kestiğin bir düşman ölürse atılım başına bir yük anında yenilenir.",
+          "en": "Dashes through enemies for scaling Physical Damage with 2 charges. If a slashed enemy dies, immediately refunds 1 charge (once per dash)."
+        },
+        "icon": "img/icons/skills/riftduelist_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "İnfaz Hattı",
+          "en": "Execution Line"
+        },
+        "description": {
+          "tr": "Belirlenen hat boyunca kızıl klonlar belirip sırayla çevresini biçer ve ölçeklenen Fiziksel Hasar vurur; ardından hattın ucuna hızla atılırsın.",
+          "en": "Summons crimson clones along a line to strike in rapid sequence for scaling Physical Damage before you dash to the far end."
+        },
+        "icon": "img/icons/skills/riftduelist_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Tempo",
+        "en": "Tempo"
+      },
+      "description": {
+        "tr": "Bir öncekinden farklı bir yetenekle yapılan her isabet hareket hızı sağlayan Tempo yığını kazandırır. Maksimum yığına ulaşıldığında İnfaz Hattı'nın kalan bekleme süresi belirgin ölçüde kısalır.",
+        "en": "Landing hits with different consecutive skills builds Tempo stacks that grant bonus movement speed. Reaching max stacks significantly reduces Execution Line's remaining cooldown."
+      },
+      "icon": "img/icons/skills/riftduelist_p.png"
+    }
+  },
+  {
+    "id": "voidstalker",
+    "sourceClassId": "class_voidstalker",
+    "name": {
+      "tr": "Voidstalker",
+      "en": "Voidstalker"
+    },
+    "description": {
+      "tr": "Avını işaretleyip patlatan bir Hiçlik avcısı. Sürüleri yavaşlamadan sarar, tuzağa düşürür ve içlerinden süzülür.",
+      "en": "A hunter of the Void who marks prey and makes it burst. Swarm, trap and glide through packs without slowing down."
+    },
+    "icon": "img/icons/classes/voidstalker.png",
+    "stats": {
+      "health": 80,
+      "mana": 150,
+      "damage": 10,
+      "armor": 10,
+      "magicResist": 15,
+      "abilityPower": 40,
+      "critChance": 5,
+      "cooldownReduction": 10
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Sürü Yaylımı",
+          "en": "Swarm Volley"
+        },
+        "description": {
+          "tr": "Yakındaki düşmanlara dağılan güdümlü Hiçlik mermileri fırlatır. Her mermi ölçeklenen Büyü Hasarı verir ve hedefe Av İzi bırakır.",
+          "en": "Launches homing Void bolts that spread across nearby enemies, dealing scaling Magic Damage and applying a Hunt Mark."
+        },
+        "icon": "img/icons/skills/voidstalker_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Yarık Tuzağı",
+          "en": "Rift Snare"
+        },
+        "description": {
+          "tr": "Zemine birden fazla kurulabilen bir Hiçlik tuzağı yerleştirir. Düşman bastığında patlayarak ölçeklenen Büyü Hasarı verir, çoklu Av İzi bırakır ve düşmanı yavaşlatır.",
+          "en": "Places a Void snare on the ground. When triggered by an enemy, it explodes for scaling Magic Damage, applies multiple Hunt Marks, and slows the target."
+        },
+        "icon": "img/icons/skills/voidstalker_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Faz Süzülüşü",
+          "en": "Phase Glide"
+        },
+        "description": {
+          "tr": "Kısa süreliğine faza geçerek yüksek hareket hızı kazanır; etki sona erdiğinde etrafına ölçeklenen Büyü Hasarı veren bir dalga yayar.",
+          "en": "Phases out briefly with high bonus movement speed, releasing a shockwave of scaling Magic Damage around you when the glide ends."
+        },
+        "icon": "img/icons/skills/voidstalker_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Tutulma Kanatları",
+          "en": "Eclipse Wings"
+        },
+        "description": {
+          "tr": "Hiçlik kanatlarını açarak %20 hareket hızı kazanır ve süre boyunca yakındaki düşmanlara düzenli olarak küçük alan hasarı veren güdümlü mermiler yağdırır.",
+          "en": "Spreads Void wings for 20% bonus movement speed while continuously raining explosive homing bolts onto nearby enemies."
+        },
+        "icon": "img/icons/skills/voidstalker_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Av İzi",
+        "en": "Hunt Mark"
+      },
+      "description": {
+        "tr": "Yetenek isabetleri düşmanlara Av İzi bırakır. Yeterli iz biriktiğinde işaret patlayarak ölçeklenen Büyü Hasarı verir ve 2 saniye boyunca bonus hareket hızı kazandırır.",
+        "en": "Skill hits apply Hunt Marks. At max marks, the mark bursts for scaling Magic Damage and grants bonus movement speed for 2 seconds."
+      },
+      "icon": "img/icons/skills/voidstalker_p.png"
+    }
+  },
+  {
+    "id": "spirecaller",
+    "sourceClassId": "class_spirecaller",
+    "name": {
+      "tr": "Spirecaller",
+      "en": "Spirecaller"
+    },
+    "description": {
+      "tr": "Yeraltındaki kor damarları ve obsidyen dikenleri komuta eden orta menzilli bir melez savaşçı. İsabetlerle Beş Diken Mührü biriktirir, düşmanları Diken Kafesi içine çeker ve altı yüzen gök kazığıyla savaş alanını yarıp geçer.",
+      "en": "A mid-range hybrid combatant commanding molten core veins and jagged obsidian spires. Builds Five-Spire Seals on hit, pulls foes into a Closing Spire Cage, and shatters the battlefield with six floating colossus spires."
+    },
+    "icon": "img/icons/classes/spirecaller.png",
+    "stats": {
+      "health": 45,
+      "mana": 0,
+      "damage": 14,
+      "armor": 12,
+      "magicResist": 5,
+      "abilityPower": 0,
+      "critChance": 4,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Zıplayan Yer Dikenleri",
+          "en": "Hopping Ground Spikes"
+        },
+        "description": {
+          "tr": "Yer altından ilerleyen diken zinciri birden fazla düşman kümesine sıçrayarak ölçeklenen Fiziksel Hasar verir; son hedefin üzerine gökten dev bir kazık iner.",
+          "en": "Sends a subterranean chain of spikes hopping across enemy clusters for scaling Physical Damage, finishing with a giant sky spire plunging onto the final target."
+        },
+        "icon": "img/icons/skills/spirecaller_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Diken Kapanı & Gök Kazığı",
+          "en": "Spire Snare & Sky Colossus"
+        },
+        "description": {
+          "tr": "Hedef bölgede açılan diken kapanı düşmanları merkeze çekip yavaşlatır ve fiziksel hasar verir. Kısa bir gecikmenin ardından gökten inen dev bazalt kazığı yüksek alan hasarı vurur ve ağır olmayan düşmanları sersemletir.",
+          "en": "Opens a spike snare that pulls enemies inward, slows them, and deals Physical Damage. Moments later, a colossal basalt spire slams down for heavy Physical Damage and stuns non-heavy foes."
+        },
+        "icon": "img/icons/skills/spirecaller_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Diken İtişi",
+          "en": "Spire Thrust"
+        },
+        "description": {
+          "tr": "Arkasından fırlayan eğimli bir dikenle ileri atılır, kalkış noktasındaki düşmanları geri itip hasar verir. İnişte patlayan üçlü diken kümesi alan hasarı vurur ve kısa süreli hareket hızı sağlar.",
+          "en": "Launches forward off an angled spike, knocking back and damaging foes at takeoff. On landing, three spikes erupt for area Physical Damage and grant brief bonus movement speed."
+        },
+        "icon": "img/icons/skills/spirecaller_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Altı Yüzen Diken Tacı",
+          "en": "Crown of Six Spires"
+        },
+        "description": {
+          "tr": "Arkasında 6 yüzen obsidyen kazık kuşanır; Q/W/E Odak bedelleri azalır ve kazıklar yakındaki düşmanların altından düzenli olarak diken çıkarır. Tekrar kullanıldığında veya süre bitiminde tüm kazıklar hedef alana çakılarak dev bir Diken Krateri oluşturur.",
+          "en": "Suspends 6 floating obsidian spires behind you, cutting Q/W/E Focus costs while auto-erupting spikes beneath nearby foes. Recasting or letting it expire slams all 6 spires down into a devastating Spire Crater."
+        },
+        "icon": "img/icons/skills/spirecaller_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Beş Diken Mührü",
+        "en": "Five-Spire Seal"
+      },
+      "description": {
+        "tr": "Saldırı ve yetenek isabetleri Diken Mührü biriktirir. Beş mühür dolduğunda Kapanan Diken Kafesi tetiklenerek çevredeki düşmanları merkeze çeker, ölçeklenen Fiziksel Hasar verir ve Odak yeniler.",
+        "en": "Basic attacks and skills build Spire Seals. At five seals, Closing Spire Cage triggers to pull nearby foes inward, deal scaling Physical Damage, and restore Focus."
+      },
+      "icon": "img/icons/skills/spirecaller_p.png"
+    }
+  },
+  {
+    "id": "abyssal-deep",
+    "sourceClassId": "class_abyssal_deep",
+    "name": {
+      "tr": "Abyssal Deep",
+      "en": "Abyssal Deep"
+    },
+    "description": {
+      "tr": "Derin Deniz dokunaçlarını komuta eden hibrit büyü savaşçısı; ayak izinde Yankı Dokunaçları biriktirir, su balonu kalkanıyla diken yağdırır ve dev bir Kraken nöbetçisi çağırır.",
+      "en": "A hybrid spell-fighter commanding Deep-Sea tentacles; trails Echo Tentacles at her feet, shields inside a water-bubble carapace, and summons a Kraken sentinel."
+    },
+    "icon": "img/icons/classes/abyssal-deep.png",
+    "stats": {
+      "health": 40,
+      "mana": 0,
+      "damage": 0,
+      "armor": 10,
+      "magicResist": 12,
+      "abilityPower": 18,
+      "critChance": 4,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "İkiz Çene",
+          "en": "Twin Pincer"
+        },
+        "description": {
+          "tr": "Hedef alanın iki yanından fışkıran iki dev dokunaç birbirine çarpışarak düşmanları merkeze çeker, ölçeklenen Büyü Hasarı verir, sersemletir ve yavaşlatır.",
+          "en": "Two giant tentacles erupt from both sides and slam together, pulling enemies inward for scaling Magic Damage while stunning and slowing them."
+        },
+        "icon": "img/icons/skills/abyssal-deep_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Kraken Zırhı",
+          "en": "Abyssal Carapace"
+        },
+        "description": {
+          "tr": "Şeffaf derin deniz dokunaçları ve su balonu bariyeri seni sararak kalkan kazandırır. Kalkan aktifken en yakın düşmanlara düzenli olarak büyü hasarı veren derin deniz dikenleri fırlatır.",
+          "en": "Translucent tentacles and a shimmering water-bubble barrier grant a shield while periodically firing abyssal thorns at nearby enemies for scaling Magic Damage."
+        },
+        "icon": "img/icons/skills/abyssal-deep_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Dokunaç Köprüsü",
+          "en": "Tentacle Surge"
+        },
+        "description": {
+          "tr": "İmleç doğrultusunda uzanan canlı dokunaç köprüsü üstünden su izi saçarak kayar; yol üzerindeki düşmanlara büyü hasarı verip yavaşlatır ve varışta alan patlaması oluşturur.",
+          "en": "Forms a living tentacle bridge toward the cursor and glides across in a wake of water, damaging and slowing foes along the path before erupting at the destination."
+        },
+        "icon": "img/icons/skills/abyssal-deep_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Kraken'in Gazabı",
+          "en": "Kraken's Wrath"
+        },
+        "description": {
+          "tr": "Yerden fışkıran dev Kraken dokunacı alan Büyü Hasarı verir ve nöbetçi olarak sahada kalır; süre boyunca yakındaki düşmanlara düzenli saldırılar indirir.",
+          "en": "Summons a colossal Kraken tentacle from below for area Magic Damage that stands sentinel and repeatedly lashes nearby enemies."
+        },
+        "icon": "img/icons/skills/abyssal-deep_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Yankı Dokunaçları",
+        "en": "Echo Tentacles"
+      },
+      "description": {
+        "tr": "Her aktif yetenek kullanımında ayaklarının dibinde gezen bir Yankı Dokunacı birikir. Bir sonraki temel saldırı tüm yığınları tüketerek yerden ek dokunaçlar çıkarır, Büyü Hasarı verir ve Mana yeniler.",
+        "en": "Each active ability summons an Echo Tentacle gliding at your feet. Your next basic attack consumes all stacks to erupt extra tentacles for scaling Magic Damage while restoring Mana."
+      },
+      "icon": "img/icons/skills/abyssal-deep_p.png"
+    }
+  },
+  {
+    "id": "druid",
+    "sourceClassId": "class_druid",
+    "name": {
+      "tr": "Druid",
+      "en": "Druid"
+    },
+    "description": {
+      "tr": "Doğanın hiddetini ve üç kadim biçimi komuta eden çok yönlü bekçi: menzilli İnsan fırtınalarından çevik Kurt Adam pençelerine ve sarsılmaz Taşpost Ayı darbelerine akıcı geçiş yapar.",
+      "en": "A versatile guardian mastering nature's wrath and three primal forms, flowing seamlessly between ranged Human storms, agile Werewolf claws, and unyielding Werebear impacts."
+    },
+    "icon": "img/icons/classes/druid.png",
+    "stats": {
+      "health": 40,
+      "mana": 20,
+      "damage": 10,
+      "armor": 10,
+      "magicResist": 10,
+      "abilityPower": 14,
+      "critChance": 5,
+      "cooldownReduction": 0
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Kurt Atılımı",
+          "en": "Werewolf Pounce"
+        },
+        "description": {
+          "tr": "Anında Kurt Adam biçimine dönüşüp çevredeki düşmanlara vahşi pençe dalgasıyla ölçeklenen hasar verir ve Vahşi Uyanış kazandırır.",
+          "en": "Shapeshifts into Werewolf on the spot, unleashing a feral claw burst for scaling damage and granting Savage Awakening."
+        },
+        "icon": "img/icons/skills/druid_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Ayı Çarpışı",
+          "en": "Werebear Slam"
+        },
+        "description": {
+          "tr": "Taşpost Ayı formuna dönüşerek yere sarsıcı bir darbe indirir; çevredeki düşmanlara ölçeklenen hasar verir ve onları sersemletir.",
+          "en": "Shapeshifts into Werebear and slams the earth, dealing scaling area damage and stunning nearby enemies."
+        },
+        "icon": "img/icons/skills/druid_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Dikenli Sarmaşıklar",
+          "en": "Entangling Roots"
+        },
+        "description": {
+          "tr": "Hedef noktada zehirli kök alanı açar; ölçeklenen doğa hasarı verir, ilk temasta düşmanları yere sabitler ve hareket hızlarını düşürür.",
+          "en": "Sprouts a thorny root zone at the target point, dealing scaling nature damage, rooting enemies on first contact, and slowing them."
+        },
+        "icon": "img/icons/skills/druid_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Doğanın Gazabı",
+          "en": "Nature's Wrath"
+        },
+        "description": {
+          "tr": "Druid'in etrafında dev bir burgaç ve yıldırım fırtınası çağırır; şok dalgalarıyla ölçeklenen Büyü Hasarı indirir ve her yıldırım isabetinde İlahi Güç kazandırır.",
+          "en": "Summons a raging storm vortex around the Druid, striking foes with lightning shockwaves for scaling Magic Damage and restoring Divine Power on hit."
+        },
+        "icon": "img/icons/skills/druid_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "İlksel Değişim",
+        "en": "Primal Shift"
+      },
+      "description": {
+        "tr": "Her form kendi ustalığını biriktirir (en fazla 5 yığın): İnsan formu saldırı ve hareket hızı, Kurt formu geçişte kritik şansı ve Vahşi Uyanış, Ayı formu hasar azaltma ve Toprak Zırhı kazanır. R bitiricisiyle İnsan formuna dönüş İlahi Güç yeniler.",
+        "en": "Each form builds its own mastery (up to 5 stacks): Human gains attack and move speed, Wolf gains entry Crit Chance and Savage Awakening, and Bear gains Damage Reduction and Earthen Armor. Reverting via R Finisher restores Divine Power."
+      },
+      "icon": "img/icons/skills/druid_p.png"
+    }
+  },
+  {
+    "id": "dragonlord",
+    "sourceClassId": "class_dragonlord",
+    "name": {
+      "tr": "Dragonlord",
+      "en": "Dragonlord"
+    },
+    "description": {
+      "tr": "Kadim volkanik alevin ve Öfke ateşinin efendisi. İnsan formunda magma pençeleriyle Öfke biriktirir, harcadığı her öfkeyle Ejderha Yükselişi süresini kısaltır ve savaş meydanında dev bir magma ejderhasına dönüşüp koşarken alev püskürterek düşmanları küle çevirir.",
+      "en": "Master of primeval volcanic flame and Fury. Builds Fury with scorching magma claws in human form, rapidly lowers Draconic Ascension cooldown by spending Fury, and transforms into a massive quadrupedal magma dragon that breathes fire while charging."
+    },
+    "icon": "img/icons/classes/dragonlord.png",
+    "stats": {
+      "health": 65,
+      "mana": 0,
+      "damage": 0,
+      "armor": 8,
+      "magicResist": 8,
+      "abilityPower": 16,
+      "critChance": 5,
+      "cooldownReduction": 4
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Magma Yırtığı / Cehennem Ağzı",
+          "en": "Magma Rend / Inferno Maw"
+        },
+        "description": {
+          "tr": "İleri doğru düşmanları yavaşlatıp büyü hasarı veren bir lav yarığı açar; kısa süre sonra yarık tekrar patlar.\n\nEjderha Formu (Cehennem Ağzı): Geniş bir alev yelpazesi savurur ve yanan hedeflerdeki Magma Külü'nü patlatarak ek Büyü Hasarı vurur.",
+          "en": "Tears a volcanic fissure forward that deals Magic Damage and slows enemies before erupting a second time.\n\nDragon Form (Inferno Maw): Unleashes a wide triple-flame fan and detonates Scorch on burning enemies for bonus Magic Damage."
+        },
+        "icon": "img/icons/skills/dragonlord_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Kuyruklu Yıldız Sıçrayışı / Yıkım Dalışı",
+          "en": "Comet Leap / Cataclysm Dive"
+        },
+        "description": {
+          "tr": "Hedef yöne atılarak inişte volkanik krater patlatır, düşmanları merkeze çekip sersemletir, Büyü Hasarı verir ve kalkan kazandırır.\n\nEjderha Formu (Yıkım Dalışı): Krater yarıçapı, sersemletme süresi ve hasar belirgin biçimde artar.",
+          "en": "Surges toward the target and slams down a volcanic crater, pulling foes inward, stunning them, dealing Magic Damage, and granting a shield.\n\nDragon Form (Cataclysm Dive): Greatly expands crater radius, stun duration, and damage."
+        },
+        "icon": "img/icons/skills/dragonlord_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Volkanik Pullar / Kanat Fırtınası",
+          "en": "Volcanic Scales / Wing Tempest"
+        },
+        "description": {
+          "tr": "Öfke ve kalkan kazanırken çevrede büyü hasarı patlatır; ardından süren alev halesi düzenli hasar verir, isabette Öfke üretir ve can çalar.\n\nEjderha Formu (Kanat Fırtınası): Daha geniş alanda hasar, daha güçlü kalkan ve bonus hareket hızı sağlar.",
+          "en": "Grants Fury and a shield while erupting for area Magic Damage, followed by a volcanic aura that pulses damage, builds Fury, and leeches health.\n\nDragon Form (Wing Tempest): Sweeps a wider area with heavier damage, a stronger shield, and bonus movement speed."
+        },
+        "icon": "img/icons/skills/dragonlord_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Ejderha Yükselişi",
+          "en": "Draconic Ascension"
+        },
+        "description": {
+          "tr": "Çevrede patlama yaratıp Öfke kazanarak devasa bir Magma Ejderhasına dönüşür. Hareket hızı, hasar azaltma ve kritik şansı kazanır; koşarken alev püskürtür ve güçlenmiş Q/W/E kullanır.\n\nTekrar Kullanım (Volkanik Süpernova): Büyük bir alan patlaması ve sersemletme ile insan formuna döner.",
+          "en": "Erupts for area Magic Damage and Fury to transform into a massive Magma Dragon with bonus movement speed, damage reduction, crit chance, running Fire Breath, and empowered Q/W/E.\n\nRecast (Volcanic Supernova): Detonates a massive stunning nova before reverting to human form."
+        },
+        "icon": "img/icons/skills/dragonlord_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Ejderha Tutuşması",
+        "en": "Draconic Ignition"
+      },
+      "description": {
+        "tr": "Tüm saldırı ve yetenekler düşmanları Magma Külü ile yakar ve hareket hızı ile hasar sağlayan Ejderha Nabzı biriktirir. Harcanan Öfke ve öldürülen yanan düşmanlar Ejderha Yükselişi bekleme süresini kısaltır; Ejderha formunda yanan hedeflere ek hasar verir ve can yenilersin.",
+        "en": "All attacks and skills scorch foes with Magic Damage over time and stack Wyrmfire Pulse for movement speed and damage. Spending Fury and slaying scorched enemies lower Draconic Ascension's cooldown; Dragon Form deals bonus damage to scorched foes and leeches health."
+      },
+      "icon": "img/icons/skills/dragonlord_p.png"
+    }
+  },
+  {
+    "id": "luminarch",
+    "sourceClassId": "class_luminarch",
+    "name": {
+      "tr": "Luminarch",
+      "en": "Luminarch"
+    },
+    "description": {
+      "tr": "Yıldız Korosu'nun kayıp başbüyücüsü. Koro ve Aşkın duruşları arasında geçiş yaparak kalkan/mana dengesini korur ya da can bedeliyle yıkıcı büyü gücüne ulaşır; Alev, Ayaz ve Eter mühürlerini birleştirip Koro Yakınsaması patlatır.",
+      "en": "Lost Archmage of the Star Choir. Shifts between Sanctum for shields and mana sustain and Empyrean for health-fueled spell devastation, weaving Fire, Frost, and Aether seals into Choir Convergence."
+    },
+    "icon": "img/icons/classes/luminarch.png",
+    "stats": {
+      "health": 20,
+      "mana": 85,
+      "damage": 0,
+      "armor": 3,
+      "magicResist": 10,
+      "abilityPower": 26,
+      "critChance": 6,
+      "cooldownReduction": 6
+    },
+    "skills": [
+      {
+        "slot": "Q",
+        "name": {
+          "tr": "Arş Alevi",
+          "en": "Empyrean Flare"
+        },
+        "description": {
+          "tr": "İmleç konumuna göksel alev sütunu indirir ve Alev Mührü kazandırır.\nKoro: Geniş alanda Büyü Hasarı ve yanma uygular; isabet alan düşman başına Mana yeniler.\nAşkın: Odaklanmış alanda daha yüksek hasar vurur ve hedeflerin aldığı hasarı artırır.",
+          "en": "Calls down a celestial fire pillar at the cursor and grants a Fire Seal.\nSanctum: Deals wide area Magic Damage plus burn and restores Mana per enemy hit.\nEmpyrean: Condenses into a focused blast with higher damage and makes targets take increased damage."
+        },
+        "icon": "img/icons/skills/luminarch_q.png"
+      },
+      {
+        "slot": "W",
+        "name": {
+          "tr": "Kozmik Usturlab",
+          "en": "Glacial Astrolabe"
+        },
+        "description": {
+          "tr": "Hedef konuma düzenli titreşen dönen bir buz usturlabı indirir ve Ayaz Mührü kazandırır.\nKoro: Nabız hasarı ve yavaşlatma uygular; anında kalkan ve can yenilemesi verir.\nAşkın: Daha hızlı nabızlar vurur, kalkan verir ve düşük canlı hedeflere ek infaz hasarı uygular.",
+          "en": "Conjures a spinning frost astrolabe that pulses repeatedly and grants a Frost Seal.\nSanctum: Pulses Magic Damage with a slow while granting a shield and instant healing.\nEmpyrean: Pulses faster, grants a shield, and deals bonus execute damage to low-health enemies."
+        },
+        "icon": "img/icons/skills/luminarch_w.png"
+      },
+      {
+        "slot": "E",
+        "name": {
+          "tr": "Eter Kanalı",
+          "en": "Aetherial Conduit"
+        },
+        "description": {
+          "tr": "İmleç yönüne yoğun eter dalgası yollar ve Eter Mührü kazandırır.\nKoro: İlk hedefe Büyü Hasarı vurup yakındaki düşmanlara zincirleme sıçrar.\nAşkın: Hat boyunca tüm düşmanları delen prizmatik bir ışın ateşler.",
+          "en": "Channels starlight toward the cursor and grants an Aether Seal.\nSanctum: Strikes the first enemy for Magic Damage and chains across nearby foes.\nEmpyrean: Fires a piercing prismatic beam through every enemy in its line."
+        },
+        "icon": "img/icons/skills/luminarch_e.png"
+      },
+      {
+        "slot": "R",
+        "name": {
+          "tr": "Yükseliş Değişimi",
+          "en": "Ascension Shift"
+        },
+        "description": {
+          "tr": "Çevrede Büyü Hasarı patlatarak Koro ve Aşkın duruşları arasında geçiş yapar.\nKoro Duruşu: Anında Mana yeniler ve kısa süreli hareket hızı kazandırır.\nAşkın Duruş: Tüm Hasar ve Bekleme Süresi Azaltma kazandırır; Q/W/E kullanımı mevcut canın bir kısmını harcar.",
+          "en": "Triggers an area shockwave to toggle between Sanctum and Empyrean stances.\nSanctum Stance: Instantly restores Mana and grants a burst of movement speed.\nEmpyrean Stance: Grants bonus All Damage and Cooldown Reduction while Q/W/E spend a portion of current health."
+        },
+        "icon": "img/icons/skills/luminarch_r.png"
+      }
+    ],
+    "passive": {
+      "slot": "P",
+      "name": {
+        "tr": "Koro Yakınsaması",
+        "en": "Choir Convergence"
+      },
+      "description": {
+        "tr": "Q (Alev), W (Ayaz) ve E (Eter) yetenekleri benzersiz element mühürleri kazandırır. 3 farklı mühür tamamlandığında otomatik prizma patlaması tetiklenir.\nKoro: Alan Büyü Hasarı, kalkan ve Mana yenilemesi sağlar.\nAşkın: Garantili kritik patlama vurur ve Q/W/E bekleme sürelerini kısaltır.",
+        "en": "Casting Q (Fire), W (Frost), and E (Aether) grants unique elemental seals. Completing all 3 seals triggers an automatic prismatic detonation.\nSanctum: Deals area Magic Damage while granting a shield and Mana.\nEmpyrean: Deals a guaranteed critical detonation and refunds Q/W/E cooldowns."
+      },
+      "icon": "img/icons/skills/luminarch_p.png"
     }
   }
 ]

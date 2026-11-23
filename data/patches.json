@@ -2,6 +2,58 @@
     {
         "version":  "DEV",
         "name":  {
+                     "tr":  "Geliştirme Güncellemesi: Luminarch, Yeni Bölgeler, Başdüşman SkarVex ve Arayüz Cilası",
+                     "en":  "Development Update: Luminarch, New Regions, Boss SkarVex & UI Polish"
+                 },
+        "date":  "2026-11-24",
+        "changes":  [
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Işık odaklı yeni sınıf Luminarch oyuna katıldı. Druid ise çatışma sırasında farklı formlara dönüşerek oynanış tarzını anlık değiştirebiliyor.",
+                                         "en":  "The light-wielding Luminarch class has joined the roster, and the Druid can now shapeshift mid-combat to adapt on the fly."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Abyssal Trench bölgesi açıldı; Earth Sanctuary, Dağ haritası ve Bastion kasabası baştan aşağı zenginleştirildi. Açılış sinematiği, yaşayan yaban hayatı ve kampta sevebileceğiniz kedilerle dünya daha canlı.",
+                                         "en":  "Abyssal Trench is now open, while Earth Sanctuary, the Mountain map, and Bastion town have been richly expanded. A new opening cinematic, roaming wildlife, and pettable camp cats bring the world to life."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Meydan Okuma Zindanı yenilendi ve yeni başdüşman SkarVex sahneye çıktı. Ayrıca dünyada beklenmedik anlarda tetiklenen Void Incursion etkinlikleri ve yeni kozmetik setler eklendi.",
+                                         "en":  "The Challenge Dungeon has been reworked with the new boss SkarVex, alongside dynamic Void Incursion world events and new cosmetic sets."
+                                     }
+                        },
+                        {
+                            "type":  "new",
+                            "text":  {
+                                         "tr":  "Normal ve başdüşmanlar için yeni gotik sağlık barları ile yarı saydam görev takipçisi eklendi. Ana hikâye ipucuna tıklandığında zemin yönlendirmesi ve harita rotası artık doğrudan hedefe götürüyor.",
+                                         "en":  "Added redesigned gothic health bars for enemies and bosses along with a frosted-glass quest tracker. Clicking the main story prompt now guides you straight to the objective with ground indicators and a map route."
+                                     }
+                        },
+                        {
+                            "type":  "fix",
+                            "text":  {
+                                         "tr":  "Demirci ve Okültist ekranlarında giyili eşyalar tek sağ tıkla işlem yuvasına taşınabiliyor. Tılsım yerleştirirken geçerli yuvalar net biçimde parlıyor; açık paneller ESC ile sırayla kapanıyor.",
+                                         "en":  "Equipped gear can now be sent directly to Blacksmith and Occultist slots with a single right-click. Valid talisman slots now highlight clearly while dragging, and ESC cleanly closes open panels before pausing."
+                                     }
+                        },
+                        {
+                            "type":  "fix",
+                            "text":  {
+                                         "tr":  "Genel doku ve bellek optimizasyonları sayesinde oyunun disk boyutu belirgin ölçüde küçüldü; ana menü yenilendi ve yoğun çatışmalarda kare hızı kararlılığı artırıldı.",
+                                         "en":  "Broad texture and memory optimizations noticeably reduced the game's install footprint, paired with a refreshed main menu and steadier frame rates in heavy combat."
+                                     }
+                        }
+                    ]
+    },
+    {
+        "version":  "DEV",
+        "name":  {
                      "tr":  "Geliştirme Güncellemesi: Efsanevi Sınıf Silahları, Başdüşman Vharok ve Eşya İşlemeciliği",
                      "en":  "Development Update: Mythic Class Weapons, Boss Vharok \u0026 Item Crafting"
                  },

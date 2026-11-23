@@ -11,6 +11,7 @@ const AppState = {
     selectedClassId: null,
     selectedSkillSlot: 'Q',
     triggerSkillCast: false,
+    showOlderPatches: false,
     siteData: null,
     langData: null,
     patchesData: null,
@@ -76,10 +77,10 @@ function loadSavedLanguage() {
 
 async function loadAllData() {
     const [siteRes, langRes, patchesRes, charactersRes] = await Promise.all([
-        fetch('data/site.json?v=20261109-crimson3', { cache: 'no-cache' }),
-        fetch('data/lang.json?v=20261109-crimson3', { cache: 'no-cache' }),
-        fetch('data/patches.json?v=20261109-crimson3', { cache: 'no-cache' }),
-        fetch('data/characters.json?v=20261109-crimson3', { cache: 'no-cache' })
+        fetch('data/site.json?v=20261124-polish2', { cache: 'no-cache' }),
+        fetch('data/lang.json?v=20261124-polish2', { cache: 'no-cache' }),
+        fetch('data/patches.json?v=20261124-polish2', { cache: 'no-cache' }),
+        fetch('data/characters.json?v=20261124-polish2', { cache: 'no-cache' })
     ]);
 
     if (!siteRes.ok || !langRes.ok || !patchesRes.ok || !charactersRes.ok) {
@@ -111,6 +112,13 @@ function setupEventListeners() {
             link.addEventListener('click', () => {
                 siteNav.classList.remove('active');
             });
+        });
+    }
+
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: FxState.reducedMotion ? 'auto' : 'smooth' });
         });
     }
 }
@@ -157,6 +165,13 @@ function renderStaticI18nTexts() {
             element.textContent = langData[key][currentLang];
         }
     });
+
+    const backToTopBtn = document.getElementById('back-to-top');
+    const backToTopLabel = langData.back_to_top && langData.back_to_top[currentLang];
+    if (backToTopBtn && backToTopLabel) {
+        backToTopBtn.setAttribute('aria-label', backToTopLabel);
+        backToTopBtn.setAttribute('title', backToTopLabel);
+    }
 }
 
 function renderSiteMetadata() {
@@ -489,17 +504,29 @@ function renderPatches() {
 
     clearElement(container);
 
-    const { currentLang, langData } = AppState;
+    const { currentLang, langData, siteData } = AppState;
+    const defaultVisible = (siteData && siteData.settings && siteData.settings.visiblePatchesDefault) || 2;
+    const totalPatches = AppState.patchesData.length;
+    const patchesToShow = AppState.showOlderPatches
+        ? AppState.patchesData
+        : AppState.patchesData.slice(0, defaultVisible);
 
-    AppState.patchesData.forEach(patch => {
+    patchesToShow.forEach((patch, index) => {
         const patchCard = document.createElement('article');
-        patchCard.className = 'patch-card';
+        patchCard.className = index === 0 ? 'patch-card patch-card-latest' : 'patch-card';
 
         const patchHeader = document.createElement('div');
         patchHeader.className = 'patch-header';
 
         const titleArea = document.createElement('div');
         titleArea.className = 'patch-title-area';
+
+        if (index === 0 && langData.patch_latest && langData.patch_latest[currentLang]) {
+            const latestBadge = document.createElement('span');
+            latestBadge.className = 'patch-latest-badge';
+            latestBadge.textContent = langData.patch_latest[currentLang];
+            titleArea.appendChild(latestBadge);
+        }
 
         const versionEl = document.createElement('span');
         versionEl.className = 'patch-version';
@@ -547,6 +574,34 @@ function renderPatches() {
 
         container.appendChild(patchCard);
     });
+
+    // Eski güncellemeler varsa okunaklılık için tek tıkla aç/kapa düğmesi ekle
+    if (totalPatches > defaultVisible) {
+        const actionsWrap = document.createElement('div');
+        actionsWrap.className = 'patches-actions';
+
+        const toggleBtn = document.createElement('button');
+        toggleBtn.type = 'button';
+        toggleBtn.className = 'patches-toggle-btn';
+        toggleBtn.setAttribute('aria-expanded', String(AppState.showOlderPatches));
+
+        const hiddenCount = totalPatches - defaultVisible;
+        if (AppState.showOlderPatches) {
+            toggleBtn.textContent = (langData.patch_hide_older && langData.patch_hide_older[currentLang]) || '';
+        } else {
+            const template = (langData.patch_show_older && langData.patch_show_older[currentLang]) || '';
+            toggleBtn.textContent = template.replace('{count}', String(hiddenCount));
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            AppState.showOlderPatches = !AppState.showOlderPatches;
+            renderPatches();
+            if (typeof refreshReveals === 'function') refreshReveals();
+        });
+
+        actionsWrap.appendChild(toggleBtn);
+        container.appendChild(actionsWrap);
+    }
 }
 
 function renderSocialLinks() {
@@ -818,6 +873,7 @@ const FxState = {
     tiltY: 0,
     scrollFrame: 0,
     scrolled: false,
+    backToTopVisible: false,
     heroBackdrop: null,
     heroHeight: 0
 };
@@ -870,9 +926,12 @@ function createVoidParticles(fx) {
     hero.insertBefore(layer, hero.querySelector('.hero-overlay'));
 }
 
-// Header küçülmesi ve hero parallax tek bir pasif scroll dinleyicisiyle, rAF ile yürür.
+// Header küçülmesi, okuma ilerleme çubuğu, yukarı çık butonu ve hero parallax tek bir pasif scroll dinleyicisiyle yürür.
 function setupHeaderAndHeroScroll(fx) {
     const header = document.querySelector('.site-header');
+    const progressBar = document.getElementById('scroll-progress');
+    const backToTopBtn = document.getElementById('back-to-top');
+    const backToTopOffset = fx.backToTopOffset || 420;
     FxState.heroBackdrop = document.querySelector('.hero-backdrop');
 
     const update = () => {
@@ -883,6 +942,18 @@ function setupHeaderAndHeroScroll(fx) {
         if (isScrolled !== FxState.scrolled && header) {
             FxState.scrolled = isScrolled;
             header.classList.toggle('is-scrolled', isScrolled);
+        }
+
+        if (progressBar) {
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const ratio = maxScroll > 0 ? Math.min(1, Math.max(0, y / maxScroll)) : 0;
+            progressBar.style.transform = `scaleX(${ratio})`;
+        }
+
+        const showBackToTop = y > backToTopOffset;
+        if (showBackToTop !== FxState.backToTopVisible && backToTopBtn) {
+            FxState.backToTopVisible = showBackToTop;
+            backToTopBtn.classList.toggle('is-visible', showBackToTop);
         }
 
         if (!FxState.reducedMotion && FxState.heroBackdrop && y < window.innerHeight) {
@@ -1374,6 +1445,6 @@ function setupVoidCursor(fx) {
     }, { passive: true });
 
     document.addEventListener('pointerover', e => {
-        isHovering = Boolean(e.target.closest('a, button, [role="button"], .class-tab-btn, .skill-select-btn, .gallery-card'));
+        isHovering = Boolean(e.target.closest('a, button, [role="button"], .class-tab-btn, .skill-select-btn, .gallery-card, .patches-toggle-btn, .back-to-top-btn'));
     }, { passive: true });
 }

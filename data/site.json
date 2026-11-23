@@ -55,6 +55,7 @@
       }
     ],
     "defaultLanguage": "tr",
+    "visiblePatchesDefault": 2,
     "effects": {
       "particleCount": 48,
       "particleMinSize": 2,
@@ -66,6 +67,7 @@
       "revealStaggerMs": 120,
       "revealStaggerMax": 6,
       "headerScrolledOffset": 40,
+      "backToTopOffset": 420,
       "tiltMaxDeg": 8,
       "heroParallaxFactor": 0.4,
       "classHueStart": 352,
@@ -113,72 +115,144 @@
         "full": "img/gameplay/gallery-1.webp",
         "thumbnail": "img/gameplay/gallery-1-thumb.webp",
         "caption": {
-          "tr": "Parçalanmış Aziz Astra",
-          "en": "Shattered Saint Astra"
+          "tr": "Tutulma Güneşi ve Hiçlik Patlaması",
+          "en": "Eclipse Sun & Void Detonation"
         },
         "alt": {
-          "tr": "Parçalanmış Aziz Astra ve Fall of the Void ana kapak görseli.",
-          "en": "Shattered Saint Astra and Fall of the Void key art."
+          "tr": "Gökyüzünde açılan tutulma güneşi ve mor-altın alan patlaması.",
+          "en": "Eclipse sun and purple-gold area detonation in combat."
         }
       },
       {
         "full": "img/gameplay/gallery-2.webp",
         "thumbnail": "img/gameplay/gallery-2-thumb.webp",
         "caption": {
-          "tr": "Yüksek Tempolu Savaş",
-          "en": "High-Octane Combat"
+          "tr": "Mühürlü Rün Arenası",
+          "en": "Sealed Rune Arena"
         },
         "alt": {
-          "tr": "Kesintisiz yakın dövüş ve büyü çatışmaları.",
-          "en": "Relentless hack-and-slash and spell combat."
+          "tr": "Gece arenasında zemini kaplayan devasa mor ve turkuaz rün çemberi.",
+          "en": "Giant purple and turquoise rune circle spanning a nocturnal battle arena."
         }
       },
       {
         "full": "img/gameplay/gallery-3.webp",
         "thumbnail": "img/gameplay/gallery-3-thumb.webp",
         "caption": {
-          "tr": "Acımasız Başdüşman Savaşları",
-          "en": "Brutal Boss Encounters"
+          "tr": "Karlı Dağlarda Prizmatik Savaş",
+          "en": "Prismatic Combat in the Snowy Peaks"
         },
         "alt": {
-          "tr": "Çok aşamalı Hiçlik başdüşmanı karşılaşması.",
-          "en": "Multi-phase Void boss encounter."
+          "tr": "Karlı dağ bölgesinde parlak prizmatik büyü halkası içinde çoklu çatışma.",
+          "en": "Multi-enemy battle inside a radiant prismatic spell ring in the snowy mountains."
         }
       },
       {
         "full": "img/gameplay/gallery-4.webp",
         "thumbnail": "img/gameplay/gallery-4-thumb.webp",
         "caption": {
-          "tr": "Hiçlik Yarıkları ve Görevler",
-          "en": "Void Rifts & Quests"
+          "tr": "Alevli Gök Kılıcı",
+          "en": "Blazing Sky Blade"
         },
         "alt": {
-          "tr": "Karanlık diyarlarda yıkıcı alan yetenekleri ve ganimetler.",
-          "en": "Devastating area abilities and loot across dark realms."
+          "tr": "Yeşil ovada yere saplanan dev alevli kılıç ve kor dalgaları.",
+          "en": "A giant flaming sword slammed into the ground amid waves of embers."
         }
       },
       {
         "full": "img/gameplay/gallery-5.webp",
         "thumbnail": "img/gameplay/gallery-5-thumb.webp",
         "caption": {
-          "tr": "Sınıfa Özel Efsanevi Silahlar",
-          "en": "Class-Specific Mythic Weapons"
+          "tr": "Meydan Okuma Zindanı",
+          "en": "Challenge Dungeon"
         },
         "alt": {
-          "tr": "Yetenekleri değiştiren efsanevi silahlar ve karakter envanteri.",
-          "en": "Skill-transforming Mythic weapons and character inventory."
+          "tr": "Meydan Okuma Zindanı dalgasında yoğun ateş nefesi ve büyü çatışması.",
+          "en": "Intense fire breath and spell combat during a Challenge Dungeon wave."
         }
       },
       {
         "full": "img/gameplay/gallery-6.webp",
         "thumbnail": "img/gameplay/gallery-6-thumb.webp",
         "caption": {
-          "tr": "Efsuncu ve Güç Kodeksi",
-          "en": "Occultist & Codex of Power"
+          "tr": "Kıyı Suları ve Batık Enkaz",
+          "en": "Coastal Waters & Sunken Wreckage"
         },
         "alt": {
-          "tr": "Efsuncu ekranında efsanevi güçleri ekipmana işleme.",
-          "en": "Imprinting legendary powers onto equipment at the Occultist."
+          "tr": "Batık gemi enkazı çevresinde açık sularda yüzme ve keşif.",
+          "en": "Swimming and exploring open coastal waters beside a sunken ship."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-7.webp",
+        "thumbnail": "img/gameplay/gallery-7-thumb.webp",
+        "caption": {
+          "tr": "Doğanın Dikenli Kapanı",
+          "en": "Nature's Thorny Snare"
+        },
+        "alt": {
+          "tr": "Orman yolunda yükselen zümrüt yeşili dikenli sarmaşık kafesi.",
+          "en": "Emerald thorny vine snare erupting along a forest path."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-8.webp",
+        "thumbnail": "img/gameplay/gallery-8-thumb.webp",
+        "caption": {
+          "tr": "Kozmik Usturlab ve Yıldız Büyüsü",
+          "en": "Cosmic Astrolabe & Starlight Magic"
+        },
+        "alt": {
+          "tr": "Karanlık diyarda dönen kozmik usturlab ve göksel büyü halkası.",
+          "en": "Spinning cosmic astrolabe and celestial spell ring in a dark realm."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-9.webp",
+        "thumbnail": "img/gameplay/gallery-9-thumb.webp",
+        "caption": {
+          "tr": "Hiçlik İstilası Dünya Etkinliği",
+          "en": "Void Incursion World Event"
+        },
+        "alt": {
+          "tr": "Hiçlik İstilası dünya etkinliği uyarısı ve karanlık rün taşları.",
+          "en": "Void Incursion world event alert surrounded by dark runestones."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-10.webp",
+        "thumbnail": "img/gameplay/gallery-10-thumb.webp",
+        "caption": {
+          "tr": "Yaşayan Dünya ve Kamp Kedileri",
+          "en": "Living World & Camp Cats"
+        },
+        "alt": {
+          "tr": "Çiçekli orman çayırlarında gece kedisi ve huzurlu doğa atmosferi.",
+          "en": "Midnight cat roaming wildflower meadows in a living forest."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-11.webp",
+        "thumbnail": "img/gameplay/gallery-11-thumb.webp",
+        "caption": {
+          "tr": "Bastion Kasabası ve Hikâye Diyalogları",
+          "en": "Bastion Town & Story Dialogues"
+        },
+        "alt": {
+          "tr": "Bastion kasabası gece atmosferinde Rahip Vane ile hikâye diyaloğu.",
+          "en": "Story dialogue with Priest Vane in the nocturnal Bastion hub."
+        }
+      },
+      {
+        "full": "img/gameplay/gallery-12.webp",
+        "thumbnail": "img/gameplay/gallery-12-thumb.webp",
+        "caption": {
+          "tr": "Yıkıcı Alan Yetenekleri",
+          "en": "Devastating Area Abilities"
+        },
+        "alt": {
+          "tr": "Karanlık bölgede açılan altın alevli alan yeteneği.",
+          "en": "Fiery golden area-of-effect ability unleashed in a shadowed region."
         }
       }
     ]
@@ -238,7 +312,7 @@
       "memory": "8 GB RAM",
       "graphics": "NVIDIA GeForce GTX 960 / AMD Radeon RX 560 (4 GB VRAM)",
       "directx": "Version 11",
-      "storage": "30 GB",
+      "storage": "20 GB",
       "notesKey": "req_notes_val"
     },
     "recommended": {
@@ -247,7 +321,7 @@
       "memory": "16 GB RAM",
       "graphics": "NVIDIA GeForce GTX 1060 / RTX 2060 / AMD RX 5600 XT",
       "directx": "Version 12",
-      "storage": "30 GB",
+      "storage": "20 GB",
       "notesKey": "req_notes_val"
     }
   }
